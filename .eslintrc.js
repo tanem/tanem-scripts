@@ -11,6 +11,9 @@ module.exports = {
     'prettier/@typescript-eslint'
   ],
   plugins: ['@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off'
+  },
   overrides: [
     {
       files: ['*.js'],
