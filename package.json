@@ -53,7 +53,7 @@
     "compile": "tsc -p tsconfig.base.json",
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .ts",
-    "postversion": "git push && git push --tags && npm publish --access=public",
+    "postversion": "git push && git push --tags && npm publish",
     "release": "npm version -m 'Release v%s'",
     "test": "run-s check:* lint build",
     "// test": "run-s check:* lint build test:*",
