@@ -37,6 +37,8 @@
     "eslint-config-prettier": "6.0.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
+    "shelljs": "^0.8.3",
+    "shelljs-plugin-authors": "^2.0.11",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -51,7 +53,7 @@
     "compile": "tsc -p tsconfig.base.json",
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .ts",
-    "postversion": "git push && git push --tags && npm publish --access=public",
+    "postversion": "git push && git push --tags && npm publish",
     "release": "npm version -m 'Release v%s'",
     "test": "run-s check:* lint build",
     "// test": "run-s check:* lint build test:*",
