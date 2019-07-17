@@ -1,5 +1,12 @@
 # Changelog
 
+## [v0.0.3](https://github.com/tanem/tanem-scripts/tree/v0.0.3) (2019-07-17)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.2...v0.0.3)
+
+**Merged pull requests:**
+
+- Fix audit [\#6](https://github.com/tanem/tanem-scripts/pull/6) ([tanem](https://github.com/tanem))
+
 ## [v0.0.2](https://github.com/tanem/tanem-scripts/tree/v0.0.2) (2019-07-17)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.1...v0.0.2)
 
