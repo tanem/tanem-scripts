@@ -13,7 +13,8 @@ export const audit = ({ fix }: { fix?: boolean } = {}) => {
       absolute: true
     })
     .map(path.dirname)
-    .forEach(() => {
+    .forEach(dir => {
+      exec('cd', [dir])
       exec('npm', ['i'])
       exec('npm', ['audit', ...(fix ? ['fix'] : [])])
     })
