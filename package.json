@@ -29,6 +29,13 @@
   "devDependencies": {
     "@types/glob": "^7.1.1",
     "@types/node": "^12.6.4",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "del-cli": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
     "typescript": "^3.5.3"
   },
   "scripts": {
@@ -42,12 +49,13 @@
     "clean:dist": "del dist",
     "compile": "tsc -p tsconfig.base.json",
     "format": "prettier --write \"**/*.{js,ts}\"",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .ts",
     "postversion": "git push && git push --tags && npm publish --access=public",
     "release": "npm version -m 'Release v%s'",
-    "test": "run-s check:* lint build test:*",
-    "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
-    "test:src": "jest --config ./scripts/jest/config.src.js",
+    "test": "run-s check:* lint build",
+    "// test": "run-s check:* lint build test:*",
+    "// test:cjs": "jest --config ./scripts/jest/config.cjs.js",
+    "// test:src": "jest --config ./scripts/jest/config.src.js",
     "version": "run-s test changelog authors && git add ."
   }
 }
