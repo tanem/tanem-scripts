@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base", ":disableRateLimiting", ":rebaseStalePrs"],
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "groupName": "dev dependencies",
+      "rangeStrategy": "pin"
+    }
+  ],
+  "rangeStrategy": "bump"
+}

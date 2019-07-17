@@ -1,0 +1,54 @@
+{
+  "name": "tanem-scripts",
+  "version": "0.0.0",
+  "description": "CLI for common scripts for my projects.",
+  "author": "Tane Morgan (https://github.com/tanem)",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "bin": {
+    "tanem-scripts": "./dist/bin/tanem-scripts.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/tanem/tanem-scripts",
+  "bugs": "https://github.com/tanem/tanem-scriptsissues",
+  "repository": "github:tanem/tanem-scripts",
+  "keywords": [
+    "cli",
+    "javascript",
+    "scripts",
+    "typescript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "execa": "^2.0.3",
+    "glob": "^7.1.4"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/node": "^12.6.4",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "authors": "shelljs-authors > AUTHORS",
+    "build": "run-s clean compile",
+    "changelog": "github_changelog_generator --no-issues --header-label \"# Changelog\" --future-release v$npm_package_version",
+    "check:format": "prettier --list-different \"**/*.{js,ts}\"",
+    "check:types": "tsc --noEmit",
+    "clean": "run-p clean:*",
+    "clean:coverage": "del coverage",
+    "clean:dist": "del dist",
+    "compile": "tsc -p tsconfig.base.json",
+    "format": "prettier --write \"**/*.{js,ts}\"",
+    "lint": "eslint .",
+    "postversion": "git push && git push --tags && npm publish --access=public",
+    "release": "npm version -m 'Release v%s'",
+    "test": "run-s check:* lint build test:*",
+    "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
+    "test:src": "jest --config ./scripts/jest/config.src.js",
+    "version": "run-s test changelog authors && git add ."
+  }
+}
