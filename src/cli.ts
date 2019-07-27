@@ -6,10 +6,14 @@ import { authors } from './authors';
 
 program
   .command('audit')
-  .description('run a security audit')
-  .option('-f, --fix', 'fix vulnerabilities')
-  .action(cmd => {
-    audit({ fix: cmd.fix });
+  .description('fix security vulnerabilities')
+  .action(async () => {
+    try {
+      await audit();
+    } catch (error) {
+      console.error(error);
+      process.exit(1);
+    }
   });
 
 program

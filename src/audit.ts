@@ -1,21 +1,18 @@
-import execa from 'execa'
-import glob from 'glob'
-import path from 'path'
+import execa from 'execa';
+import globCore from 'glob';
+import path from 'path';
+import { promisify } from 'util';
 
-const exec = (file: string, args?: readonly string[]) => {
-  execa.sync(file, args, { stdio: 'inherit' })
-}
+const glob = promisify(globCore);
 
-export const audit = ({ fix }: { fix?: boolean } = {}) => {
-  glob
-    .sync('**/package.json', {
-      ignore: '**/node_modules/**',
-      absolute: true
-    })
-    .map(path.dirname)
-    .forEach(dir => {
-      process.chdir(dir)
-      exec('npm', ['i'])
-      exec('npm', ['audit', ...(fix ? ['fix'] : [])])
-    })
-}
+export const audit = async () => {
+  const paths = await glob('**/package.json', {
+    ignore: '**/node_modules/**',
+    absolute: true
+  });
+  for (const dir of paths.map(path.dirname)) {
+    console.log(`${dir}/package.json`);
+    process.chdir(dir);
+    await execa('npm', ['audit', 'fix', '-s'], { stdio: 'inherit' });
+  }
+};
