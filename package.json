@@ -4,7 +4,7 @@
   "description": "CLI for common scripts for my projects.",
   "author": "Tane Morgan (https://github.com/tanem)",
   "bin": {
-    "tanem-scripts": "dist/cli"
+    "tanem-scripts": "dist/cli.js"
   },
   "files": [
     "dist"
