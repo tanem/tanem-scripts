@@ -6,6 +6,23 @@
 
 > CLI for common scripts for my projects.
 
+## Usage
+
+```
+Usage: tanem-scripts [options] [command]
+
+CLI for common scripts for my projects.
+
+Options:
+  -V, --version  output the version number
+  -h, --help     output usage information
+
+Commands:
+  audit          fix security vulnerabilities
+  authors        write an AUTHORS file to process.cwd()
+  changelog      write a CHANGELOG.md file to process.cwd()
+```
+
 ## Installation
 
 ```
