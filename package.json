@@ -3,16 +3,14 @@
   "version": "0.0.5",
   "description": "CLI for common scripts for my projects.",
   "author": "Tane Morgan (https://github.com/tanem)",
-  "main": "dist/src/index.js",
-  "typings": "dist/src/index.d.ts",
   "bin": {
-    "tanem-scripts": "./dist/bin/tanem-scripts.js"
+    "tanem-scripts": "dist/cli"
   },
   "files": [
     "dist"
   ],
   "homepage": "https://github.com/tanem/tanem-scripts",
-  "bugs": "https://github.com/tanem/tanem-scriptsissues",
+  "bugs": "https://github.com/tanem/tanem-scripts/issues",
   "repository": "github:tanem/tanem-scripts",
   "keywords": [
     "cli",
@@ -22,12 +20,13 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@tanem/authors": "^1.0.0",
+    "@tanem/github-changelog-generator": "^1.0.2",
     "commander": "^2.20.0",
     "execa": "^2.0.3",
     "glob": "^7.1.4"
   },
   "devDependencies": {
-    "@tanem/github-changelog-generator": "1.0.2",
     "@types/glob": "7.1.1",
     "@types/node": "12.6.8",
     "@typescript-eslint/eslint-plugin": "1.13.0",
@@ -38,28 +37,21 @@
     "eslint-config-prettier": "6.0.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
-    "shelljs": "0.8.3",
-    "shelljs-plugin-authors": "2.0.12",
     "typescript": "3.5.3"
   },
   "scripts": {
-    "authors": "shelljs-authors > AUTHORS",
+    "audit": "node dist/cli audit",
+    "authors": "node dist/cli authors",
     "build": "run-s clean compile",
-    "changelog": "github-changelog-generator -f v$npm_package_version > CHANGELOG.md",
+    "changelog": "node dist/cli changelog",
     "check:format": "prettier --list-different \"**/*.{js,ts}\"",
     "check:types": "tsc --noEmit",
-    "clean": "run-p clean:*",
-    "clean:coverage": "del coverage",
-    "clean:dist": "del dist",
-    "compile": "tsc -p tsconfig.base.json",
+    "clean": "del dist",
+    "compile": "tsc",
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .ts",
     "postversion": "git push && git push --tags && npm publish",
     "release": "npm version -m 'Release v%s'",
-    "test": "run-s check:* lint build",
-    "// test": "run-s check:* lint build test:*",
-    "// test:cjs": "jest --config ./scripts/jest/config.cjs.js",
-    "// test:src": "jest --config ./scripts/jest/config.src.js",
-    "version": "run-s test changelog authors && git add ."
+    "version": "run-s changelog authors && git add ."
   }
 }
