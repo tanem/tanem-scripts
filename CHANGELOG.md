@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.0](https://github.com/tanem/tanem-scripts/tree/1.0.0) (2019-07-28)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.5...1.0.0)
+
+**Merged pull requests:**
+
+- Improve docs [#14](https://github.com/tanem/tanem-scripts/pull/14) ([tanem](https://github.com/tanem))
+- Fix release scripts [#13](https://github.com/tanem/tanem-scripts/pull/13) ([tanem](https://github.com/tanem))
+- Update dependency @tanem/github-changelog-generator to ^1.0.4 [#12](https://github.com/tanem/tanem-scripts/pull/12) ([renovate[bot]](https://github.com/apps/renovate))
+- Update scripts [#11](https://github.com/tanem/tanem-scripts/pull/11) ([tanem](https://github.com/tanem))
+
 ## [v0.0.5](https://github.com/tanem/tanem-scripts/tree/v0.0.5) (2019-07-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.4...v0.0.5)
 
