@@ -5,6 +5,14 @@ import { audit } from './audit'
 import { authors } from './authors'
 import { changelog } from './changelog'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { description, version } = require('../package.json')
+
+program
+  .version(version)
+  .name('tanem-scripts')
+  .description(description)
+
 program
   .command('audit')
   .description('fix security vulnerabilities')
