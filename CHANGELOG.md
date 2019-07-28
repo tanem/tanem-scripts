@@ -1,7 +1,14 @@
 # Changelog
 
-## [1.0.0](https://github.com/tanem/tanem-scripts/tree/1.0.0) (2019-07-28)
-[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.5...1.0.0)
+## [1.0.1](https://github.com/tanem/tanem-scripts/tree/1.0.1) (2019-07-28)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.0...1.0.1)
+
+**Merged pull requests:**
+
+- Fix badge links [#15](https://github.com/tanem/tanem-scripts/pull/15) ([tanem](https://github.com/tanem))
+
+## [v1.0.0](https://github.com/tanem/tanem-scripts/tree/v1.0.0) (2019-07-28)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.5...v1.0.0)
 
 **Merged pull requests:**
 
