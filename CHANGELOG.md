@@ -1,7 +1,14 @@
 # Changelog
 
-## [1.0.1](https://github.com/tanem/tanem-scripts/tree/1.0.1) (2019-07-28)
-[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.0...1.0.1)
+## [1.0.2](https://github.com/tanem/tanem-scripts/tree/1.0.2) (2019-07-29)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.1...1.0.2)
+
+**Merged pull requests:**
+
+- Fix bin link [#16](https://github.com/tanem/tanem-scripts/pull/16) ([tanem](https://github.com/tanem))
+
+## [v1.0.1](https://github.com/tanem/tanem-scripts/tree/v1.0.1) (2019-07-28)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.0...v1.0.1)
 
 **Merged pull requests:**
 
