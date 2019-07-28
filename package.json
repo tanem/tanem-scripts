@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@tanem/authors": "^1.0.0",
-    "@tanem/github-changelog-generator": "^1.0.2",
+    "@tanem/github-changelog-generator": "^1.0.4",
     "commander": "^2.20.0",
     "execa": "^2.0.3",
     "glob": "^7.1.4"
