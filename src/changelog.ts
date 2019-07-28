@@ -2,6 +2,7 @@ import { generateChangelog } from '@tanem/github-changelog-generator'
 import { promises as fs } from 'fs'
 import path from 'path'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { version } = require(path.join(process.cwd(), 'package.json'))
 
 export const changelog = async () => {

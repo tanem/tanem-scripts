@@ -3,4 +3,3 @@ notifications:
   email: false
 script:
   - npm t
-  - $(npm bin)/codecov
