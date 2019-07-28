@@ -4,7 +4,7 @@
   "description": "CLI for common scripts for my projects.",
   "author": "Tane Morgan (https://github.com/tanem)",
   "bin": {
-    "tanem-scripts": "dist/cli.js"
+    "tanem-scripts": "dist/cli"
   },
   "files": [
     "dist"
@@ -20,13 +20,13 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@tanem/authors": "1.0.0",
+    "@tanem/authors": "^1.0.0",
+    "@tanem/github-changelog-generator": "^1.0.2",
     "commander": "^2.20.0",
     "execa": "^2.0.3",
     "glob": "^7.1.4"
   },
   "devDependencies": {
-    "@tanem/github-changelog-generator": "1.0.2",
     "@types/glob": "7.1.1",
     "@types/node": "12.6.8",
     "@typescript-eslint/eslint-plugin": "1.13.0",
@@ -43,7 +43,7 @@
     "audit": "node dist/cli audit",
     "authors": "node dist/cli authors",
     "build": "run-s clean compile",
-    "changelog": "github-changelog-generator -f v$npm_package_version > CHANGELOG.md",
+    "changelog": "node dist/cli changelog",
     "check:format": "prettier --list-different \"**/*.{js,ts}\"",
     "check:types": "tsc --noEmit",
     "clean": "del dist",
