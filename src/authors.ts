@@ -1,8 +1,31 @@
-import generateAuthors from '@tanem/authors'
-import { promises as fs } from 'fs'
-import path from 'path'
+import execa from 'execa';
 
-export const authors = async () => {
-  const result = await generateAuthors()
-  await fs.writeFile(path.join(process.cwd(), 'AUTHORS'), result)
+interface Options {
+  isNumbered?: boolean;
 }
+
+const clean = (result: string) =>
+  result
+    .split('\n')
+    .map(line => line.replace(/ *\d+\t/g, ''))
+    .join('\n');
+
+const authors = async ({ isNumbered }: Options = {}) => {
+  const { stdout } = await execa('git', [
+    'shortlog',
+    'HEAD',
+    `-se${isNumbered ? 'n' : ''}`
+  ]);
+  return clean(stdout);
+};
+
+authors.sync = ({ isNumbered }: Options = {}) => {
+  const { stdout } = execa.sync('git', [
+    'shortlog',
+    'HEAD',
+    `-se${isNumbered ? 'n' : ''}`
+  ]);
+  return clean(stdout);
+};
+
+export default authors;

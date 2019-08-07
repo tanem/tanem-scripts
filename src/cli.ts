@@ -1,52 +1,76 @@
 #!/usr/bin/env node
 
-import program from 'commander'
-import { audit } from './audit'
-import { authors } from './authors'
-import { changelog } from './changelog'
+import program from 'commander';
+import authors from './authors';
+import changelog from './changelog';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { description, version } = require('../package.json')
+const { description, version } = require('../package.json');
 
 program
   .version(version)
   .name('tanem-scripts')
-  .description(description)
+  .description(description);
 
-program
-  .command('audit')
-  .description('fix security vulnerabilities')
-  .action(async () => {
-    try {
-      await audit()
-    } catch (error) {
-      console.error(error)
-      process.exit(1)
-    }
-  })
+program.on('command:*', function() {
+  console.error(
+    'Invalid command: %s\nSee --help for a list of available commands.',
+    program.args.join(' ')
+  );
+  process.exit(1);
+});
 
 program
   .command('authors')
-  .description('write an AUTHORS file to process.cwd()')
-  .action(async () => {
+  .description(
+    'generates a list of authors in a format suitable for inclusion in an AUTHORS file'
+  )
+  .option('-n, --numbered', 'sort by number of commits per author')
+  .action(async cmd => {
     try {
-      await authors()
+      const result = await authors({ isNumbered: cmd.numbered });
+      process.stdout.write(result);
     } catch (error) {
-      console.error(error)
-      process.exit(1)
+      console.error(error);
+      process.exit(1);
     }
   })
+  .on('--help', () => {
+    console.log(`
+Examples:
+  $ authors
+  $ authors -n`);
+  });
 
 program
   .command('changelog')
-  .description('write a CHANGELOG.md file to process.cwd()')
-  .action(async () => {
+  .description('generates a changelog using GitHub tags and pull requests')
+  .option(
+    '-f, --future-release <tag>',
+    'tag to use for PRs merged since the last published tag'
+  )
+  .option('-o, --owner <owner>', 'repo owner')
+  .option('-r, --repo <repo>', 'repo name')
+  .action(async cmd => {
     try {
-      await changelog()
+      const result = await changelog({
+        futureRelease: cmd.futureRelease,
+        owner: cmd.owner,
+        repo: cmd.repo
+      });
+      process.stdout.write(result);
     } catch (error) {
-      console.error(error)
-      process.exit(1)
+      console.error(error);
+      process.exit(1);
     }
   })
+  .on('--help', () => {
+    console.log(`
+  Examples:
+    $ github-changelog-generator -f v1.0.0
+    $ github-changelog-generator -o tanem -r react-svg
+    $ github-changelog-generator -f v2.0.0 -o tanem -r react-svg
+  `);
+  });
 
-program.parse(process.argv)
+program.parse(process.argv);
