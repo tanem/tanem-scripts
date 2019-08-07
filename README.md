@@ -25,10 +25,6 @@ Commands:
 
 ## API
 
-- [authors](<#authors([options])>)
-- [authors.sync](<#authors.sync([options])>)
-- [changelog](<#changelog([options])>)
-
 ### authors([options])
 
 Returns a `Promise` that will be resolved with a list of authors sorted alphabetically by author name. If an error occurs during execution, the `Promise` is rejected with an `Error` object.
