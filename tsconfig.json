@@ -1,22 +1,4 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "declaration": true,
-    "esModuleInterop": true,
-    "lib": ["es2017"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "dist",
-    "pretty": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2017"
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "extends": "./tsconfig.base.json",
+  "include": ["src", "test"]
 }
