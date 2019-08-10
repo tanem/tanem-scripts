@@ -67,9 +67,9 @@ program
   .on('--help', () => {
     console.log(`
   Examples:
-    $ github-changelog-generator -f v1.0.0
-    $ github-changelog-generator -o tanem -r react-svg
-    $ github-changelog-generator -f v2.0.0 -o tanem -r react-svg
+    $ changelog -f v1.0.0
+    $ changelog -o tanem -r react-svg
+    $ changelog -f v2.0.0 -o tanem -r react-svg
   `);
   });
 
