@@ -43,7 +43,7 @@
     "@types/jest": "24.0.17",
     "@types/lolex": "3.1.1",
     "@types/nock": "10.0.3",
-    "@types/node": "12.7.0",
+    "@types/node": "12.7.1",
     "@types/parse-github-url": "1.0.0",
     "@typescript-eslint/eslint-plugin": "1.13.0",
     "@typescript-eslint/parser": "1.13.0",
