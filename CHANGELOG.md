@@ -1,5 +1,14 @@
 # Changelog
 
+## [v2.0.2](https://github.com/tanem/tanem-scripts/tree/v2.0.2) (2019-08-19)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.1...v2.0.2)
+
+**Merged pull requests:**
+
+- Update dependency execa to ^2.0.4 [#29](https://github.com/tanem/tanem-scripts/pull/29) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dev dependencies [#28](https://github.com/tanem/tanem-scripts/pull/28) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dev dependencies to v2 (major) [#27](https://github.com/tanem/tanem-scripts/pull/27) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.0.1](https://github.com/tanem/tanem-scripts/tree/v2.0.1) (2019-08-10)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.0...v2.0.1)
 
