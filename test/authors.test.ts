@@ -18,6 +18,7 @@ beforeAll(() => {
   makeDir.sync(tempDir);
   process.chdir(tempDir);
   execa.sync('git', ['init']);
+  // eslint-disable-next-line prefer-const
   for (let [count, author] of commitData) {
     while (count--) {
       fs.writeFileSync('file.js', count);
