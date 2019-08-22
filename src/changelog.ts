@@ -79,7 +79,9 @@ const changelog = async ({
       userHtmlUrl: pull.user.html_url,
       userLogin: pull.user.login
     }));
-  cleanedPulls.sort((a, b) => compareAsc(a.mergedAt, b.mergedAt));
+  cleanedPulls.sort((a, b) =>
+    compareAsc(new Date(a.mergedAt), new Date(b.mergedAt))
+  );
 
   const pendingCleanedTags = [];
 
@@ -129,10 +131,12 @@ const changelog = async ({
       pulls: []
     });
   }
-  cleanedTags.sort((a, b) => compareAsc(a.date, b.date));
+  cleanedTags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
 
   cleanedPulls.map(p => {
-    const tag = cleanedTags.find(t => isBefore(p.mergedAt, t.date));
+    const tag = cleanedTags.find(t =>
+      isBefore(new Date(p.mergedAt), new Date(t.date))
+    );
     /* istanbul ignore else */
     if (tag) {
       tag.pulls.unshift(p);
@@ -148,8 +152,8 @@ const changelog = async ({
         let result = `\n## [${
           tag.name
         }](https://github.com/${owner}/${repo}/tree/${tag.name}) (${format(
-          tag.date,
-          'YYYY-MM-DD'
+          new Date(tag.date),
+          'yyyy-MM-dd'
         )})\n`;
 
         if (index + 1 !== array.length) {

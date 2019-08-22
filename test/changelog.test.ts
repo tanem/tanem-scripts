@@ -19,7 +19,7 @@ const tmpDirPath = path.join(__dirname, 'tmp-changelog');
 const gitConfigPath = path.join(tmpDirPath, 'config');
 
 let clock: InstalledClock;
-let now: string;
+let now: Date;
 
 beforeEach(() => {
   fs.mkdirSync(tmpDirPath);
@@ -31,7 +31,7 @@ beforeEach(() => {
   process.env.CHANGELOG_GITHUB_TOKEN = 'token';
   process.env.GIT_DIR = path.join(__dirname, 'tmp-changelog');
   clock = lolex.install({ now: new Date(2000, 1, 1) });
-  now = new Date().toISOString();
+  now = new Date(); //.toISOString();
 });
 
 afterEach(() => {
