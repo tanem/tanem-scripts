@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.0.5](https://github.com/tanem/tanem-scripts/tree/v2.0.5) (2019-08-25)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.4...v2.0.5)
+
+**Merged pull requests:**
+
+- Update dependency eslint to v6.2.2 [#34](https://github.com/tanem/tanem-scripts/pull/34) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency date-fns to ^2.0.1 [#33](https://github.com/tanem/tanem-scripts/pull/33) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.0.4](https://github.com/tanem/tanem-scripts/tree/v2.0.4) (2019-08-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.3...v2.0.4)
 
