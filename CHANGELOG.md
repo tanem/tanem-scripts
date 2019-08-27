@@ -1,5 +1,12 @@
 # Changelog
 
+## [v2.0.6](https://github.com/tanem/tanem-scripts/tree/v2.0.6) (2019-08-28)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.5...v2.0.6)
+
+**Merged pull requests:**
+
+- Bump eslint-utils from 1.4.0 to 1.4.2 [#35](https://github.com/tanem/tanem-scripts/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v2.0.5](https://github.com/tanem/tanem-scripts/tree/v2.0.5) (2019-08-25)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.4...v2.0.5)
 
