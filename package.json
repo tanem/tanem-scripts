@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^16.28.7",
-    "commander": "^3.0.0",
+    "commander": "^3.0.1",
     "date-fns": "^2.0.1",
     "execa": "^2.0.4",
     "git-remote-origin-url": "^3.0.0",
