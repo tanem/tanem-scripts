@@ -30,7 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^16.28.9",
+    "@octokit/rest": "^16.30.0",
     "commander": "^3.0.1",
     "date-fns": "^2.2.1",
     "execa": "^2.0.4",
