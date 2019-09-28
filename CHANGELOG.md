@@ -1,5 +1,15 @@
 # Changelog
 
+## [v2.0.11](https://github.com/tanem/tanem-scripts/tree/v2.0.11) (2019-09-29)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.10...v2.0.11)
+
+**Merged pull requests:**
+
+- Update dependency commander to ^3.0.2 [#50](https://github.com/tanem/tanem-scripts/pull/50) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency date-fns to ^2.4.1 [#49](https://github.com/tanem/tanem-scripts/pull/49) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency @octokit/rest to ^16.30.1 [#48](https://github.com/tanem/tanem-scripts/pull/48) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dev dependencies [#47](https://github.com/tanem/tanem-scripts/pull/47) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.0.10](https://github.com/tanem/tanem-scripts/tree/v2.0.10) (2019-09-22)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.9...v2.0.10)
 
