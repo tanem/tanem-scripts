@@ -1,5 +1,15 @@
 # Changelog
 
+## [v2.0.12](https://github.com/tanem/tanem-scripts/tree/v2.0.12) (2019-10-08)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.11...v2.0.12)
+
+**Merged pull requests:**
+
+- Update dependency lolex to v5 [#54](https://github.com/tanem/tanem-scripts/pull/54) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency @octokit/rest to ^16.32.0 [#52](https://github.com/tanem/tanem-scripts/pull/52) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dev dependencies [#51](https://github.com/tanem/tanem-scripts/pull/51) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency execa to ^2.0.5 [#53](https://github.com/tanem/tanem-scripts/pull/53) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.0.11](https://github.com/tanem/tanem-scripts/tree/v2.0.11) (2019-09-29)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.10...v2.0.11)
 
