@@ -1,5 +1,12 @@
 # Changelog
 
+## [v2.0.13](https://github.com/tanem/tanem-scripts/tree/v2.0.13) (2019-10-08)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.12...v2.0.13)
+
+**Merged pull requests:**
+
+- Update dev dependencies [#55](https://github.com/tanem/tanem-scripts/pull/55) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v2.0.12](https://github.com/tanem/tanem-scripts/tree/v2.0.12) (2019-10-08)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.11...v2.0.12)
 
