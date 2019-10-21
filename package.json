@@ -35,7 +35,7 @@
     "date-fns": "^2.4.1",
     "execa": "^2.1.0",
     "git-remote-origin-url": "^3.0.0",
-    "glob": "^7.1.4",
+    "glob": "^7.1.5",
     "parse-github-url": "^1.0.2"
   },
   "devDependencies": {
