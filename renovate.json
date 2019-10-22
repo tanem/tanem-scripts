@@ -1,9 +1,3 @@
 {
-  "extends": ["config:js-lib", ":label(internal)"],
-  "packageRules": [
-    {
-      "updateTypes": ["major"],
-      "labels": ["internal"]
-    }
-  ]
+  "extends": ["config:js-lib", ":label(internal)"]
 }
