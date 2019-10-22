@@ -2,7 +2,7 @@
   "extends": ["config:js-lib", ":label(internal)"],
   "packageRules": [
     {
-      "depTypeList": ["dependencies"],
+      "updateTypes": ["major"],
       "labels": ["internal"]
     }
   ]
