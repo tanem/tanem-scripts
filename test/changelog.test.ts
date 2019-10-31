@@ -9,6 +9,8 @@ import { changelog } from '../src';
 
 nock.disableNetConnect();
 
+// TODO: Remove lolex.
+
 const originalChangelogGithubToken = process.env.CHANGELOG_GITHUB_TOKEN;
 const originalGitDir = process.env.GIT_DIR;
 const owner = 'owner';
@@ -51,6 +53,7 @@ test('handles GitHub API pagination', async () => {
       [
         {
           id: 2,
+          labels: [],
           merged_at: subHours(now, 1),
           number: 2,
           title: 'Pull request 2',
@@ -70,6 +73,7 @@ test('handles GitHub API pagination', async () => {
     .reply(200, [
       {
         id: 1,
+        labels: [],
         merged_at: subDays(subHours(now, 1), 1),
         number: 1,
         title: 'Pull request 1',
@@ -139,6 +143,7 @@ test('only uses merged PRs', async () => {
     .reply(200, [
       {
         id: 2,
+        labels: [],
         merged_at: subHours(now, 2),
         number: 2,
         title: 'Pull request 2',
@@ -149,6 +154,7 @@ test('only uses merged PRs', async () => {
       },
       {
         id: 1,
+        labels: [],
         merged_at: subDays(subHours(now, 2), 1),
         number: 1,
         title: 'Pull request 1',
@@ -159,6 +165,7 @@ test('only uses merged PRs', async () => {
       },
       {
         id: 3,
+        labels: [],
         merged_at: null,
         number: 3,
         title: 'Pull request 3',
@@ -214,6 +221,7 @@ test('refetches missing tag commits', async () => {
     .reply(200, [
       {
         id: 1,
+        labels: [],
         merged_at: subHours(now, 1),
         number: 1,
         title: 'Pull request 1',
@@ -224,6 +232,7 @@ test('refetches missing tag commits', async () => {
       },
       {
         id: 2,
+        labels: [],
         merged_at: subDays(subHours(now, 1), 1),
         number: 2,
         title: 'Pull request 2',
@@ -280,6 +289,7 @@ test('can create a future release', async () => {
     .reply(200, [
       {
         id: 2,
+        labels: [],
         merged_at: subHours(now, 1),
         number: 2,
         title: 'Pull request 2',
@@ -290,6 +300,7 @@ test('can create a future release', async () => {
       },
       {
         id: 1,
+        labels: [],
         merged_at: subHours(now, 3),
         number: 1,
         title: 'Pull request 1',
@@ -335,6 +346,7 @@ test('handles multiple PRs per tag', async () => {
     .reply(200, [
       {
         id: 4,
+        labels: [],
         merged_at: subHours(now, 1),
         number: 4,
         title: 'Pull request 4',
@@ -345,6 +357,7 @@ test('handles multiple PRs per tag', async () => {
       },
       {
         id: 3,
+        labels: [],
         merged_at: subHours(now, 2),
         number: 3,
         title: 'Pull request 3',
@@ -355,6 +368,7 @@ test('handles multiple PRs per tag', async () => {
       },
       {
         id: 2,
+        labels: [],
         merged_at: subHours(now, 4),
         number: 2,
         title: 'Pull request 2',
@@ -365,6 +379,7 @@ test('handles multiple PRs per tag', async () => {
       },
       {
         id: 1,
+        labels: [],
         merged_at: subHours(now, 5),
         number: 1,
         title: 'Pull request 1',
@@ -410,6 +425,7 @@ test('can infer repo info', async () => {
     .reply(200, [
       {
         id: 1,
+        labels: [],
         merged_at: subHours(now, 2),
         number: 1,
         title: 'Pull request 1',
@@ -452,4 +468,105 @@ test('throws when unable to get repo info', async () => {
   );
 
   await expect(changelog()).rejects.toThrow('Unable to parse GitHub url');
+});
+
+test('handles PR labels', async () => {
+  nock('https://api.github.com')
+    .get('/repos/owner/repo/pulls')
+    .query({ per_page: 100, state: 'closed' })
+    .reply(200, [
+      {
+        id: 6,
+        labels: [{ name: 'breaking' }],
+        merged_at: subHours(now, 1),
+        number: 6,
+        title: 'Pull request 6',
+        user: {
+          html_url: userHtmlUrl,
+          login: userLogin
+        }
+      },
+      {
+        id: 5,
+        labels: [{ name: 'bug' }],
+        merged_at: subHours(now, 2),
+        number: 5,
+        title: 'Pull request 5',
+        user: {
+          html_url: userHtmlUrl,
+          login: userLogin
+        }
+      },
+      {
+        id: 4,
+        labels: [{ name: 'documentation' }],
+        merged_at: subHours(now, 3),
+        number: 4,
+        title: 'Pull request 4',
+        user: {
+          html_url: userHtmlUrl,
+          login: userLogin
+        }
+      },
+      {
+        id: 3,
+        labels: [{ name: 'enhancement' }],
+        merged_at: subHours(now, 4),
+        number: 3,
+        title: 'Pull request 3',
+        user: {
+          html_url: userHtmlUrl,
+          login: userLogin
+        }
+      },
+      {
+        id: 2,
+        labels: [{ name: 'internal' }],
+        merged_at: subHours(now, 5),
+        number: 2,
+        title: 'Pull request 2',
+        user: {
+          html_url: userHtmlUrl,
+          login: userLogin
+        }
+      },
+      {
+        id: 1,
+        labels: [],
+        merged_at: subHours(now, 6),
+        number: 1,
+        title: 'Pull request 1',
+        user: {
+          html_url: userHtmlUrl,
+          login: userLogin
+        }
+      }
+    ]);
+
+  nock('https://api.github.com')
+    .get('/repos/owner/repo/tags')
+    .query({ per_page: 100 })
+    .reply(200, [{ name: 'v1.0.0', commit: { sha: '1' } }]);
+
+  nock('https://api.github.com')
+    .get('/repos/owner/repo/commits')
+    .query({ per_page: 100 })
+    .reply(200, [
+      {
+        sha: '1',
+        commit: {
+          committer: {
+            date: subHours(now, 3)
+          }
+        }
+      }
+    ]);
+
+  const result = await changelog({
+    futureRelease: 'v2.0.0',
+    owner,
+    repo
+  });
+
+  expect(result).toMatchSnapshot();
 });
