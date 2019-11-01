@@ -180,7 +180,7 @@ const changelog = async ({
             (result, label) =>
               (result += tag.pulls[label].reduce(
                 (result, pull) =>
-                  (result += `- [\#${pull.number}](https://github.com/${owner}/${repo}/pull/${pull.number}) ${pull.title} ([${pull.userLogin}](${pull.userHtmlUrl}))\n`),
+                  (result += `- [\#${pull.number}](https://github.com/${owner}/${repo}/pull/${pull.number}) ${pull.title} ([@${pull.userLogin}](${pull.userHtmlUrl}))\n`),
                 `\n#### ${labelHeadings[label]}\n\n`
               )),
             ''

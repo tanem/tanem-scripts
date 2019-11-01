@@ -8,13 +8,13 @@ exports[`can create a future release 1`] = `
 
 #### :question: Unlabelled
 
-- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([user](https://github.com/user))
+- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([@user](https://github.com/user))
 
 ## [v1.0.0](https://github.com/owner/repo/tree/v1.0.0) (2000-01-31)
 
 #### :question: Unlabelled
 
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 "
 `;
 
@@ -25,7 +25,7 @@ exports[`can infer repo info 1`] = `
 
 #### :question: Unlabelled
 
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 "
 `;
 
@@ -37,13 +37,13 @@ exports[`handles GitHub API pagination 1`] = `
 
 #### :question: Unlabelled
 
-- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([user](https://github.com/user))
+- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([@user](https://github.com/user))
 
 ## [v1.0.0](https://github.com/owner/repo/tree/v1.0.0) (2000-01-31)
 
 #### :question: Unlabelled
 
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 "
 `;
 
@@ -55,29 +55,29 @@ exports[`handles PR labels 1`] = `
 
 #### :boom: Breaking Change
 
-- [#6](https://github.com/owner/repo/pull/6) Pull request 6 ([user](https://github.com/user))
+- [#6](https://github.com/owner/repo/pull/6) Pull request 6 ([@user](https://github.com/user))
 
 #### :bug: Bug Fix
 
-- [#5](https://github.com/owner/repo/pull/5) Pull request 5 ([user](https://github.com/user))
+- [#5](https://github.com/owner/repo/pull/5) Pull request 5 ([@user](https://github.com/user))
 
 #### :memo: Documentation
 
-- [#4](https://github.com/owner/repo/pull/4) Pull request 4 ([user](https://github.com/user))
+- [#4](https://github.com/owner/repo/pull/4) Pull request 4 ([@user](https://github.com/user))
 
 ## [v1.0.0](https://github.com/owner/repo/tree/v1.0.0) (2000-01-31)
 
 #### :rocket: Enhancement
 
-- [#3](https://github.com/owner/repo/pull/3) Pull request 3 ([user](https://github.com/user))
+- [#3](https://github.com/owner/repo/pull/3) Pull request 3 ([@user](https://github.com/user))
 
 #### :house: Internal
 
-- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([user](https://github.com/user))
+- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([@user](https://github.com/user))
 
 #### :question: Unlabelled
 
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 "
 `;
 
@@ -89,15 +89,15 @@ exports[`handles multiple PRs per tag 1`] = `
 
 #### :question: Unlabelled
 
-- [#4](https://github.com/owner/repo/pull/4) Pull request 4 ([user](https://github.com/user))
-- [#3](https://github.com/owner/repo/pull/3) Pull request 3 ([user](https://github.com/user))
+- [#4](https://github.com/owner/repo/pull/4) Pull request 4 ([@user](https://github.com/user))
+- [#3](https://github.com/owner/repo/pull/3) Pull request 3 ([@user](https://github.com/user))
 
 ## [v1.0.0](https://github.com/owner/repo/tree/v1.0.0) (2000-01-31)
 
 #### :question: Unlabelled
 
-- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([user](https://github.com/user))
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([@user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 "
 `;
 
@@ -109,13 +109,13 @@ exports[`only uses merged PRs 1`] = `
 
 #### :question: Unlabelled
 
-- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([user](https://github.com/user))
+- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([@user](https://github.com/user))
 
 ## [v1.0.0](https://github.com/owner/repo/tree/v1.0.0) (2000-01-30)
 
 #### :question: Unlabelled
 
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 "
 `;
 
@@ -127,12 +127,12 @@ exports[`refetches missing tag commits 1`] = `
 
 #### :question: Unlabelled
 
-- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([user](https://github.com/user))
+- [#1](https://github.com/owner/repo/pull/1) Pull request 1 ([@user](https://github.com/user))
 
 ## [v1.0.0](https://github.com/owner/repo/tree/v1.0.0) (2000-01-31)
 
 #### :question: Unlabelled
 
-- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([user](https://github.com/user))
+- [#2](https://github.com/owner/repo/pull/2) Pull request 2 ([@user](https://github.com/user))
 "
 `;
