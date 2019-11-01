@@ -3,6 +3,17 @@ import { compareAsc, format, isBefore } from 'date-fns';
 import gitRemoteOriginUrl from 'git-remote-origin-url';
 import parseGithubUrl from 'parse-github-url';
 
+const UNLABELLED = 'unlabelled';
+
+const labelHeadings: { [label: string]: string } = {
+  breaking: ':boom: Breaking Change',
+  bug: ':bug: Bug Fix',
+  documentation: ':memo: Documentation',
+  enhancement: ':rocket: Enhancement',
+  internal: ':house: Internal',
+  unlabelled: ':question: Unlabelled'
+};
+
 const getRepoInfo = async () => {
   const url = await gitRemoteOriginUrl();
   const parsed = parseGithubUrl(url);
@@ -73,6 +84,7 @@ const changelog = async ({
   const cleanedPulls = rawPulls
     .filter(pull => Boolean(pull.merged_at))
     .map(pull => ({
+      label: pull.labels.length ? pull.labels[0].name : UNLABELLED,
       mergedAt: pull.merged_at,
       number: pull.number,
       title: pull.title,
@@ -92,7 +104,9 @@ const changelog = async ({
   ): Promise<{
     date: string;
     name: string;
-    pulls: typeof cleanedPulls;
+    pulls: {
+      [label: string]: typeof cleanedPulls;
+    };
   }> => {
     const existingTagCommit = rawCommits.find(
       commit => commit.sha === tag.commit.sha
@@ -102,7 +116,7 @@ const changelog = async ({
       return {
         date: existingTagCommit.commit.committer.date,
         name: tag.name,
-        pulls: []
+        pulls: {}
       };
     }
 
@@ -115,7 +129,7 @@ const changelog = async ({
     return {
       date: latestTagCommit.committer.date,
       name: tag.name,
-      pulls: []
+      pulls: {}
     };
   };
 
@@ -128,7 +142,7 @@ const changelog = async ({
     cleanedTags.unshift({
       date: new Date().toISOString(),
       name: futureRelease,
-      pulls: []
+      pulls: {}
     });
   }
   cleanedTags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
@@ -139,7 +153,7 @@ const changelog = async ({
     );
     /* istanbul ignore else */
     if (tag) {
-      tag.pulls.unshift(p);
+      tag.pulls[p.label] = [p, ...(tag.pulls[p.label] || [])];
     }
   });
 
@@ -160,12 +174,17 @@ const changelog = async ({
           result += `[Full Changelog](https://github.com/${owner}/${repo}/compare/${array[index + 1].name}...${tag.name})\n`;
         }
 
-        tag.pulls.map((pull, index: number) => {
-          if (index === 0) {
-            result += `\n**Merged pull requests:**\n\n`;
-          }
-          result += `- ${pull.title} [\#${pull.number}](https://github.com/${owner}/${repo}/pull/${pull.number}) ([${pull.userLogin}](${pull.userHtmlUrl}))\n`;
-        });
+        result += Object.keys(tag.pulls)
+          .sort()
+          .reduce(
+            (result, label) =>
+              (result += tag.pulls[label].reduce(
+                (result, pull) =>
+                  (result += `- [\#${pull.number}](https://github.com/${owner}/${repo}/pull/${pull.number}) ${pull.title} ([${pull.userLogin}](${pull.userHtmlUrl}))\n`),
+                `\n#### ${labelHeadings[label]}\n\n`
+              )),
+            ''
+          );
 
         return result;
       })
