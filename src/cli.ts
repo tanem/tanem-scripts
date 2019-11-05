@@ -5,6 +5,7 @@ import authors from './authors';
 import changelog from './changelog';
 import release from './release';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { description, version } = require('../package.json');
 
 program

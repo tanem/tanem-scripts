@@ -12,10 +12,11 @@ const release = async (options: Options = {}) => {
 
   const latestTag = tags.pop();
 
-  const pullsToRelease = pulls.filter(pull =>
-    // @ts-ignore
-    isAfter(new Date(pull.merged_at), new Date(latestTag.date))
-  );
+  const pullsToRelease = latestTag
+    ? pulls.filter(pull =>
+        isAfter(new Date(pull.merged_at), new Date(latestTag.date))
+      )
+    : pulls;
 
   const labelsToRelease = [
     ...new Set(
