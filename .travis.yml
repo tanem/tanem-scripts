@@ -2,5 +2,8 @@ language: node_js
 notifications:
   email: false
 script:
-  - npm t
-  - $(npm bin)/codecov
+- npm t
+- "$(npm bin)/codecov"
+env:
+  global:
+    secure: i/F0fJdm7jE6/5iJgZ7Y7uiRj0M2crYx/PMJH+pwshnPg6M7RpTa0jx/dBIoeMn8EymJMSZAEkQIlYHiKZGRIQMNMdBh0DexMKnbpvwQcZ7Ljmdb/cPsMmb1FyETb+CO5pc8RqxK0FVyoLxvFZiAPL4EV3Zu9BXjYGXdO3ZSbX4E5207ZfpuCdZt/7Eht7iQMEkOkNhijmBtnrIn4Fld00Kt/NJNFdnCSviN4oQXptbfNwxThNJXfmZKmm9qBZiRbAHDir2zcdJsoJbv0FzflKGSAxDtRey5upN4aIuSIjYk0IHQZdVqO323j8f4410DytgAKhbbS2Jlr8+IPvIa9hd+8D3GsCR79inwhtVaCBRUtZfcRiGSmZmJw32INXKsUeL3iqJslzyzH1fzqhZzVSbWNixDJgWxgBr5FaLigIGn9PvpM5jTI+OPIMLxgQzXxrdifi6NlzgjTiM/P3H19ULi3OtDlpu/EmtVdMHyQ1K9S2Y1UmUdhXTlcBl95ArbKC6HDgb9fbBWzBw9ZyL99o+mLqp75VPpbXnLsKdnmEgqptu7A+Ik9VUrHAYE3rt9Z5Qqb+1QzenbrH1DlzAj+qvHV0wCk7wHTdJqvTg/DGuMYxCKnMAj501t2x6iA1SWNtlTqAMgbA8ItOfJPrfloRiDOwFJzaV6PVWIKG4Iav0=
