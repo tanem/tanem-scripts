@@ -1,5 +1,12 @@
 # Changelog
 
+## [v3.1.2](https://github.com/tanem/tanem-scripts/tree/v3.1.2) (2019-11-06)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.1...v3.1.2)
+
+#### :house: Internal
+
+- [#81](https://github.com/tanem/tanem-scripts/pull/81) Add real time release output ([@tanem](https://github.com/tanem))
+
 ## [v3.1.1](https://github.com/tanem/tanem-scripts/tree/v3.1.1) (2019-11-06)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.0...v3.1.1)
 
