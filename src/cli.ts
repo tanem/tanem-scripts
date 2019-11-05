@@ -3,8 +3,8 @@
 import program from 'commander';
 import authors from './authors';
 import changelog from './changelog';
+import release from './release';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { description, version } = require('../package.json');
 
 program
@@ -70,6 +70,30 @@ program
     $ changelog -f v1.0.0
     $ changelog -o tanem -r react-svg
     $ changelog -f v2.0.0 -o tanem -r react-svg
+  `);
+  });
+
+program
+  .command('release')
+  .description('publishes a package to npm')
+  .option('-o, --owner <owner>', 'repo owner')
+  .option('-r, --repo <repo>', 'repo name')
+  .action(async cmd => {
+    try {
+      const result = await release({
+        owner: cmd.owner,
+        repo: cmd.repo
+      });
+      process.stdout.write(result);
+    } catch (error) {
+      console.error(error);
+      process.exit(1);
+    }
+  })
+  .on('--help', () => {
+    console.log(`
+  Examples:
+    $ release -o tanem -r react-svg
   `);
   });
 
