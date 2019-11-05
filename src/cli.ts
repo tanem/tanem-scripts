@@ -81,13 +81,11 @@ program
   .option('-r, --repo <repo>', 'repo name')
   .action(async cmd => {
     try {
-      const result = await release({
+      await release({
         owner: cmd.owner,
         repo: cmd.repo
       });
-      process.stdout.write(result);
     } catch (error) {
-      console.error(error);
       process.exit(1);
     }
   })

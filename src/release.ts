@@ -38,9 +38,19 @@ const release = async (options: Options = {}) => {
     ? 'minor'
     : 'patch';
 
-  const { stdout } = execa.sync('npm', ['run', 'release', releaseType]);
+  const result = execa('npm', ['run', 'release', releaseType]);
 
-  return stdout;
+  result.stdout &&
+    result.stdout.pipe(
+      process.stdout,
+      { end: false }
+    );
+
+  result.stderr &&
+    result.stderr.pipe(
+      process.stderr,
+      { end: false }
+    );
 };
 
 export default release;
