@@ -1,5 +1,21 @@
 # Changelog
 
+## [v3.1.0](https://github.com/tanem/tanem-scripts/tree/v3.1.0) (2019-11-06)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.0.1...v3.1.0)
+
+#### :bug: Bug Fix
+
+- [#80](https://github.com/tanem/tanem-scripts/pull/80) Use correct npm token ([@tanem](https://github.com/tanem))
+
+#### :rocket: Enhancement
+
+- [#79](https://github.com/tanem/tanem-scripts/pull/79) Add release script ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#60](https://github.com/tanem/tanem-scripts/pull/60) Update dependency execa to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#64](https://github.com/tanem/tanem-scripts/pull/64) Update dependency @types/jest to v24.0.21 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v3.0.1](https://github.com/tanem/tanem-scripts/tree/v3.0.1) (2019-11-01)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.0.0...v3.0.1)
 
