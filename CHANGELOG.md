@@ -1,5 +1,12 @@
 # Changelog
 
+## [v3.1.1](https://github.com/tanem/tanem-scripts/tree/v3.1.1) (2019-11-06)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.0...v3.1.1)
+
+#### :house: Internal
+
+- [#69](https://github.com/tanem/tanem-scripts/pull/69) Update dependency @types/node to v12.12.5 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v3.1.0](https://github.com/tanem/tanem-scripts/tree/v3.1.0) (2019-11-06)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.0.1...v3.1.0)
 
