@@ -24,12 +24,11 @@ program.on('command:*', function() {
 program
   .command('authors')
   .description(
-    'generates a list of authors in a format suitable for inclusion in an AUTHORS file'
+    'generates an alphabetised list of authors in a format suitable for inclusion in an AUTHORS file'
   )
-  .option('-n, --numbered', 'sort by number of commits per author')
   .action(async cmd => {
     try {
-      const result = await authors({ isNumbered: cmd.numbered });
+      const result = await authors();
       process.stdout.write(result);
     } catch (error) {
       console.error(error);
@@ -39,8 +38,7 @@ program
   .on('--help', () => {
     console.log(`
 Examples:
-  $ authors
-  $ authors -n`);
+  $ authors`);
   });
 
 program

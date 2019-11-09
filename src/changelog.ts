@@ -1,7 +1,12 @@
-import Octokit from '@octokit/rest';
-import { compareAsc, format, isBefore } from 'date-fns';
-import gitRemoteOriginUrl from 'git-remote-origin-url';
-import parseGithubUrl from 'parse-github-url';
+import { format, isBefore } from 'date-fns';
+import { Data, get as getData } from './data';
+
+interface Options {
+  data?: Data;
+  futureRelease?: string;
+  owner?: string;
+  repo?: string;
+}
 
 const UNLABELLED = 'unlabelled';
 
@@ -14,138 +19,37 @@ const labelHeadings: { [label: string]: string } = {
   unlabelled: ':question: Unlabelled'
 };
 
-const getRepoInfo = async () => {
-  const url = await gitRemoteOriginUrl();
-  const parsed = parseGithubUrl(url);
-
-  /* istanbul ignore else */
-  if (parsed && parsed.owner && parsed.name) {
-    return {
-      owner: parsed.owner,
-      repo: parsed.name
-    };
-  }
-
-  throw new Error('Unable to parse GitHub url');
-};
-
 const changelog = async ({
   futureRelease,
-  owner,
-  repo
-}: {
-  futureRelease?: string;
-  owner?: string;
-  repo?: string;
-} = {}) => {
-  if (!owner || !repo) {
-    const repoInfo = await getRepoInfo();
-
-    /* istanbul ignore else */
-    if (!owner) {
-      owner = repoInfo.owner;
-    }
-
-    /* istanbul ignore else */
-    if (!repo) {
-      repo = repoInfo.repo;
-    }
-  }
-
-  const octokit = new Octokit({
-    auth: process.env.CHANGELOG_GITHUB_TOKEN
+  owner: passedOwner,
+  repo: passedRepo
+}: Options = {}) => {
+  const { owner, pulls: rawPulls, repo, tags: rawTags } = await getData({
+    owner: passedOwner,
+    repo: passedRepo
   });
 
-  const baseEndpointOptions = {
-    owner,
-    per_page: 100, // eslint-disable-line @typescript-eslint/camelcase
-    repo
-  };
+  const cleanedPulls = rawPulls.map(pull => ({
+    label: pull.labels.length ? pull.labels[0].name : UNLABELLED,
+    mergedAt: pull.merged_at,
+    number: pull.number,
+    title: pull.title,
+    userHtmlUrl: pull.user.html_url,
+    userLogin: pull.user.login
+  }));
 
-  const [rawPulls, rawTags, rawCommits]: [
-    Octokit.PullsListResponseItem[],
-    Octokit.ReposListTagsResponseItem[],
-    Octokit.ReposListCommitsResponseItem[]
-  ] = await Promise.all([
-    octokit.paginate(
-      octokit.pulls.list.endpoint.merge({
-        ...baseEndpointOptions,
-        state: 'closed'
-      })
-    ),
-    octokit.paginate(
-      octokit.repos.listTags.endpoint.merge(baseEndpointOptions)
-    ),
-    octokit.paginate(
-      octokit.repos.listCommits.endpoint.merge(baseEndpointOptions)
-    )
-  ]);
+  const cleanedTags = rawTags.map(tag => ({
+    ...tag,
+    pulls: {} as { [key: string]: typeof cleanedPulls }
+  }));
 
-  const cleanedPulls = rawPulls
-    .filter(pull => Boolean(pull.merged_at))
-    .map(pull => ({
-      label: pull.labels.length ? pull.labels[0].name : UNLABELLED,
-      mergedAt: pull.merged_at,
-      number: pull.number,
-      title: pull.title,
-      userHtmlUrl: pull.user.html_url,
-      userLogin: pull.user.login
-    }));
-  cleanedPulls.sort((a, b) =>
-    compareAsc(new Date(a.mergedAt), new Date(b.mergedAt))
-  );
-
-  const pendingCleanedTags = [];
-
-  const getCleanTagData = async (
-    tag: Octokit.ReposListTagsResponseItem,
-    owner: string,
-    repo: string
-  ): Promise<{
-    date: string;
-    name: string;
-    pulls: {
-      [label: string]: typeof cleanedPulls;
-    };
-  }> => {
-    const existingTagCommit = rawCommits.find(
-      commit => commit.sha === tag.commit.sha
-    );
-
-    if (existingTagCommit) {
-      return {
-        date: existingTagCommit.commit.committer.date,
-        name: tag.name,
-        pulls: {}
-      };
-    }
-
-    const { data: latestTagCommit } = await octokit.git.getCommit({
-      commit_sha: tag.commit.sha, // eslint-disable-line @typescript-eslint/camelcase
-      owner,
-      repo
-    });
-
-    return {
-      date: latestTagCommit.committer.date,
-      name: tag.name,
-      pulls: {}
-    };
-  };
-
-  for (const tag of rawTags) {
-    pendingCleanedTags.push(getCleanTagData(tag, owner, repo));
-  }
-
-  const cleanedTags = await Promise.all(pendingCleanedTags);
   if (futureRelease) {
-    cleanedTags.unshift({
+    cleanedTags.push({
       date: new Date().toISOString(),
       name: futureRelease,
       pulls: {}
     });
   }
-  cleanedTags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
 
   cleanedPulls.map(p => {
     const tag = cleanedTags.find(t =>

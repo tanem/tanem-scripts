@@ -3,6 +3,22 @@ import { compareAsc } from 'date-fns';
 import gitRemoteOriginUrl from 'git-remote-origin-url';
 import parseGithubUrl from 'parse-github-url';
 
+export interface Data {
+  commits: Octokit.ReposListCommitsResponseItem[];
+  owner: string;
+  pulls: Octokit.PullsListResponseItem[];
+  repo: string;
+  tags: {
+    date: string;
+    name: string;
+  }[];
+}
+
+interface Options {
+  owner?: string;
+  repo?: string;
+}
+
 const getRepoInfo = async () => {
   const url = await gitRemoteOriginUrl();
   const parsed = parseGithubUrl(url);
@@ -18,13 +34,13 @@ const getRepoInfo = async () => {
   throw new Error('Unable to parse GitHub url');
 };
 
-export const getData = async ({
-  owner,
-  repo
-}: {
-  owner?: string;
-  repo?: string;
-} = {}) => {
+let data: Data | null = null;
+
+export const get = async ({ owner, repo }: Options = {}): Promise<Data> => {
+  if (data) {
+    return data;
+  }
+
   if (!owner || !repo) {
     const repoInfo = await getRepoInfo();
 
@@ -47,7 +63,7 @@ export const getData = async ({
     repo
   };
 
-  const [pulls, rawTags, commits]: [
+  const [rawPulls, rawTags, commits]: [
     Octokit.PullsListResponseItem[],
     Octokit.ReposListTagsResponseItem[],
     Octokit.ReposListCommitsResponseItem[]
@@ -65,6 +81,8 @@ export const getData = async ({
       octokit.repos.listCommits.endpoint.merge(baseEndpointOptions)
     )
   ]);
+
+  const pulls = rawPulls.filter(pull => Boolean(pull.merged_at));
 
   pulls.sort((a, b) =>
     compareAsc(new Date(a.merged_at), new Date(b.merged_at))
@@ -96,8 +114,13 @@ export const getData = async ({
 
   tags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
 
-  return {
+  data = {
+    commits,
+    owner,
     pulls,
+    repo,
     tags
   };
+
+  return data;
 };

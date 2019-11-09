@@ -1,31 +1,27 @@
 import execa from 'execa';
+import { get as getData } from './data';
 
-interface Options {
-  isNumbered?: boolean;
-}
 
-const clean = (result: string) =>
-  result
-    .split('\n')
-    .map(line => line.replace(/ *\d+\t/g, ''))
-    .join('\n');
+// Note: This can only be run from the repo you are in... is this an assumption
+// we want to make for every script?
+const authors = async () => {
+  const { commits } = await getData();
 
-const authors = async ({ isNumbered }: Options = {}) => {
-  const { stdout } = await execa('git', [
-    'shortlog',
-    'HEAD',
-    `-se${isNumbered ? 'n' : ''}`
-  ]);
-  return clean(stdout);
-};
+  const authors = commits
+    .map(commit => {
+      let author = `${commit.commit.author.name} <${commit.commit.author.email}>`;
+      ({ stdout: author } = execa.sync('git', ['check-mailmap', author]));
+      return author;
+    })
+    .reduce(
+      (result, author) =>
+        result.includes(author) ? result : [...result, author],
+      [] as string[]
+    );
 
-authors.sync = ({ isNumbered }: Options = {}) => {
-  const { stdout } = execa.sync('git', [
-    'shortlog',
-    'HEAD',
-    `-se${isNumbered ? 'n' : ''}`
-  ]);
-  return clean(stdout);
+  authors.sort();
+
+  return authors.join('\n');
 };
 
 export default authors;

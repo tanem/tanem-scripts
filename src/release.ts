@@ -1,6 +1,6 @@
 import { isAfter } from 'date-fns';
 import execa from 'execa';
-import { getData } from './data';
+import { get as getData } from './data';
 
 interface Options {
   owner?: string;
