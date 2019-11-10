@@ -33,5 +33,6 @@ setupPolly({
     'custom-fs': {
       recordingsDir: path.resolve(process.cwd(), 'test', '__recordings__')
     }
-  }
+  },
+  recordIfMissing: false
 });
