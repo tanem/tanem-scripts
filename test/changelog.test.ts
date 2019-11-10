@@ -26,12 +26,3 @@ test('handles future release', async () => {
   });
   expect(result).toMatchSnapshot();
 });
-
-test('handles owner and repo', async () => {
-  const { changelog } = require('../src');
-  const result = await changelog({
-    owner: 'tanem',
-    repo: 'default-avatar-helper'
-  });
-  expect(result).toMatchSnapshot();
-});
