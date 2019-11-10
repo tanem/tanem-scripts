@@ -1,8 +1,10 @@
-const path = require('path');
-const { Polly } = require('@pollyjs/core');
-const { setupPolly } = require('setup-polly-jest');
-const NodeHttpAdapter = require('@pollyjs/adapter-node-http');
-const FSPersister = require('@pollyjs/persister-fs');
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
+
+import NodeHttpAdapter from '@pollyjs/adapter-node-http';
+import { Polly } from '@pollyjs/core';
+import FSPersister from '@pollyjs/persister-fs';
+import path from 'path';
+import { setupPolly } from 'setup-polly-jest';
 
 class CustomFSPersister extends FSPersister {
   // @ts-ignore
@@ -12,8 +14,10 @@ class CustomFSPersister extends FSPersister {
 
   // @ts-ignore
   saveRecording(recordingId, data) {
+    // @ts-ignore
     this.api.saveRecording(
       recordingId,
+      // @ts-ignore
       JSON.parse(this.stringify(data).replace(/"token.*?"/g, '"<redacted>"'))
     );
   }

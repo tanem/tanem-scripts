@@ -1,7 +1,6 @@
 import execa from 'execa';
 import { get as getData } from './data';
 
-
 // Note: This can only be run from the repo you are in... is this an assumption
 // we want to make for every script?
 const authors = async () => {

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 import lolex, { InstalledClock } from 'lolex';
 
 let clock: InstalledClock;

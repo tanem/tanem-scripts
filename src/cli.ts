@@ -26,7 +26,7 @@ program
   .description(
     'generates an alphabetised list of authors in a format suitable for inclusion in an AUTHORS file'
   )
-  .action(async cmd => {
+  .action(async () => {
     try {
       const result = await authors();
       process.stdout.write(result);
