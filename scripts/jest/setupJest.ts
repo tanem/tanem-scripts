@@ -28,6 +28,11 @@ Polly.register(CustomFSPersister);
 
 setupPolly({
   adapters: ['node-http'],
+  matchRequestsBy: {
+    headers: {
+      exclude: ['authorization']
+    }
+  },
   persister: 'custom-fs',
   persisterOptions: {
     'custom-fs': {
