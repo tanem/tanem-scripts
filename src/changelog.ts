@@ -1,4 +1,4 @@
-import { format, isBefore, parseISO } from 'date-fns';
+import { isBefore, lightFormat, parseISO } from 'date-fns';
 import { Data, get as getData } from './data';
 
 interface Options {
@@ -69,7 +69,7 @@ const changelog = async ({
       .map((tag, index, array) => {
         let result = `\n## [${
           tag.name
-        }](https://github.com/${owner}/${repo}/tree/${tag.name}) (${format(
+        }](https://github.com/${owner}/${repo}/tree/${tag.name}) (${lightFormat(
           parseISO(tag.date),
           'yyyy-MM-dd'
         )})\n`;
