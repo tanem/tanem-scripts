@@ -1,6 +1,4 @@
-// import { format, isBefore, lightFormat, parseISO } from 'date-fns';
-import { isBefore, parseISO } from 'date-fns';
-import { format } from 'date-fns-tz';
+import { isBefore } from 'date-fns';
 import { Data, get as getData } from './data';
 
 interface Options {
@@ -71,24 +69,11 @@ const changelog = async ({
     '# Changelog\n' +
     cleanedTags
       .map((tag, index, array) => {
-        const shortDate = tag.date.slice(0, tag.date.indexOf('T'));
-
-        console.log(
-          tag.date,
-          format(parseISO(tag.date), 'yyyy-MM-dd'),
-          format(parseISO(tag.date), 'yyyy-MM-dd', { timeZone: tz }),
-          shortDate,
-          format(parseISO(shortDate), 'yyyy-MM-dd'),
-          format(parseISO(shortDate), 'yyyy-MM-dd', { timeZone: tz })
-        );
-
         let result = `\n## [${
           tag.name
-        }](https://github.com/${owner}/${repo}/tree/${tag.name}) (${format(
-          parseISO(tag.date),
-          'yyyy-MM-dd',
-          { timeZone: tz }
-        )})\n`;
+        }](https://github.com/${owner}/${repo}/tree/${
+          tag.name
+        }) (${tag.date.slice(0, tag.date.indexOf('T'))})\n`;
 
         if (index + 1 !== array.length) {
           result += `[Full Changelog](https://github.com/${owner}/${repo}/compare/${array[index + 1].name}...${tag.name})\n`;
