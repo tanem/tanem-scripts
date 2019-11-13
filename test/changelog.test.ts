@@ -6,7 +6,7 @@ let clock: InstalledClock;
 
 beforeEach(() => {
   jest.resetModules();
-  clock = lolex.install({ now: new Date(2019, 10, 9, 12) });
+  clock = lolex.install({ now: new Date('2019-11-08T23:00:00.000Z') });
 });
 
 afterEach(() => {
