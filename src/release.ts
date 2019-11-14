@@ -2,13 +2,8 @@ import { isAfter } from 'date-fns';
 import execa from 'execa';
 import { get as getData } from './data';
 
-interface Options {
-  owner?: string;
-  repo?: string;
-}
-
-const release = async (options: Options = {}) => {
-  const { pulls, tags } = await getData(options);
+const release = async () => {
+  const { pulls, tags } = await getData();
 
   const latestTag = tags.pop();
 

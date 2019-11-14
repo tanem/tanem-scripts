@@ -1,14 +1,9 @@
 import { isBefore } from 'date-fns';
-import { Data, get as getData } from './data';
+import { get as getData } from './data';
 
 interface Options {
-  data?: Data;
   futureRelease?: string;
-  owner?: string;
-  repo?: string;
 }
-
-const tz = 'Pacific/Auckland';
 
 const UNLABELLED = 'unlabelled';
 
@@ -21,15 +16,8 @@ const labelHeadings: { [label: string]: string } = {
   unlabelled: ':question: Unlabelled'
 };
 
-const changelog = async ({
-  futureRelease,
-  owner: passedOwner,
-  repo: passedRepo
-}: Options = {}) => {
-  const { owner, pulls: rawPulls, repo, tags: rawTags } = await getData({
-    owner: passedOwner,
-    repo: passedRepo
-  });
+const changelog = async ({ futureRelease }: Options = {}) => {
+  const { owner, pulls: rawPulls, repo, tags: rawTags } = await getData();
 
   const cleanedPulls = rawPulls.map(pull => ({
     label: pull.labels.length ? pull.labels[0].name : UNLABELLED,

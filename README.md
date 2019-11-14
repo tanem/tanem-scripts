@@ -102,9 +102,7 @@ import { changelog } from 'tanem-scripts';
 (async () => {
   try {
     const result = await changelog({
-      futureRelease: 'v2.0.0',
-      owner: 'tanem',
-      repo: 'react-svg'
+      futureRelease: 'v2.0.0'
     });
     await fs.writeFile(path.join(__dirname, 'CHANGELOG.md'), result, 'utf-8');
   } catch (error) {

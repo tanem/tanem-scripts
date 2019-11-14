@@ -48,14 +48,10 @@ program
     '-f, --future-release <tag>',
     'tag to use for PRs merged since the last published tag'
   )
-  .option('-o, --owner <owner>', 'repo owner')
-  .option('-r, --repo <repo>', 'repo name')
   .action(async cmd => {
     try {
       const result = await changelog({
-        futureRelease: cmd.futureRelease,
-        owner: cmd.owner,
-        repo: cmd.repo
+        futureRelease: cmd.futureRelease
       });
       process.stdout.write(result);
     } catch (error) {
@@ -66,23 +62,17 @@ program
   .on('--help', () => {
     console.log(`
   Examples:
+    $ changelog
     $ changelog -f v1.0.0
-    $ changelog -o tanem -r react-svg
-    $ changelog -f v2.0.0 -o tanem -r react-svg
   `);
   });
 
 program
   .command('release')
   .description('publishes a package to npm')
-  .option('-o, --owner <owner>', 'repo owner')
-  .option('-r, --repo <repo>', 'repo name')
-  .action(async cmd => {
+  .action(async () => {
     try {
-      await release({
-        owner: cmd.owner,
-        repo: cmd.repo
-      });
+      await release();
     } catch (error) {
       process.exit(1);
     }
@@ -90,7 +80,7 @@ program
   .on('--help', () => {
     console.log(`
   Examples:
-    $ release -o tanem -r react-svg
+    $ release
   `);
   });
 

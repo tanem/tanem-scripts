@@ -14,11 +14,6 @@ export interface Data {
   }[];
 }
 
-interface Options {
-  owner?: string;
-  repo?: string;
-}
-
 const getRepoInfo = async () => {
   const url = await gitRemoteOriginUrl();
   const parsed = parseGithubUrl(url);
@@ -36,22 +31,12 @@ const getRepoInfo = async () => {
 
 let data: Data | null = null;
 
-export const get = async ({ owner, repo }: Options = {}): Promise<Data> => {
+export const get = async (): Promise<Data> => {
   if (data) {
     return data;
   }
 
-  if (!owner || !repo) {
-    const repoInfo = await getRepoInfo();
-
-    if (!owner) {
-      owner = repoInfo.owner;
-    }
-
-    if (!repo) {
-      repo = repoInfo.repo;
-    }
-  }
+  const { owner, repo } = await getRepoInfo();
 
   const octokit = new Octokit({
     auth: process.env.CHANGELOG_GITHUB_TOKEN
@@ -101,8 +86,8 @@ export const get = async ({ owner, repo }: Options = {}): Promise<Data> => {
 
       const { data: tagCommit } = await octokit.git.getCommit({
         commit_sha: tag.commit.sha, // eslint-disable-line @typescript-eslint/camelcase
-        owner: owner as string,
-        repo: repo as string
+        owner,
+        repo
       });
 
       return {
