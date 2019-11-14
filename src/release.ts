@@ -33,7 +33,7 @@ const release = async () => {
     ? 'minor'
     : 'patch';
 
-  const result = execa('npm', ['run', 'release', releaseType]);
+  const result = execa('npm', ['version', releaseType, '-m', 'Release v%s']);
 
   result.stdout &&
     result.stdout.pipe(

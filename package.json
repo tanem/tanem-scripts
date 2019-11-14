@@ -84,7 +84,7 @@
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .js,.ts",
     "postversion": "git push && git push --tags && npm publish",
-    "release": "npm version -m 'Release v%s'",
+    "release": "node dist/cli release",
     "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
     "test:src": "jest --config ./scripts/jest/config.src.js",
