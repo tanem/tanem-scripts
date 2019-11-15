@@ -3,6 +3,17 @@ import { compareAsc } from 'date-fns';
 import gitRemoteOriginUrl from 'git-remote-origin-url';
 import parseGithubUrl from 'parse-github-url';
 
+export interface Data {
+  commits: Octokit.ReposListCommitsResponseItem[];
+  owner: string;
+  pulls: Octokit.PullsListResponseItem[];
+  repo: string;
+  tags: {
+    date: string;
+    name: string;
+  }[];
+}
+
 const getRepoInfo = async () => {
   const url = await gitRemoteOriginUrl();
   const parsed = parseGithubUrl(url);
@@ -18,24 +29,14 @@ const getRepoInfo = async () => {
   throw new Error('Unable to parse GitHub url');
 };
 
-export const getData = async ({
-  owner,
-  repo
-}: {
-  owner?: string;
-  repo?: string;
-} = {}) => {
-  if (!owner || !repo) {
-    const repoInfo = await getRepoInfo();
+let data: Data | null = null;
 
-    if (!owner) {
-      owner = repoInfo.owner;
-    }
-
-    if (!repo) {
-      repo = repoInfo.repo;
-    }
+export const get = async (): Promise<Data> => {
+  if (data) {
+    return data;
   }
+
+  const { owner, repo } = await getRepoInfo();
 
   const octokit = new Octokit({
     auth: process.env.CHANGELOG_GITHUB_TOKEN
@@ -47,7 +48,7 @@ export const getData = async ({
     repo
   };
 
-  const [pulls, rawTags, commits]: [
+  const [rawPulls, rawTags, commits]: [
     Octokit.PullsListResponseItem[],
     Octokit.ReposListTagsResponseItem[],
     Octokit.ReposListCommitsResponseItem[]
@@ -66,6 +67,8 @@ export const getData = async ({
     )
   ]);
 
+  const pulls = rawPulls.filter(pull => Boolean(pull.merged_at));
+
   pulls.sort((a, b) =>
     compareAsc(new Date(a.merged_at), new Date(b.merged_at))
   );
@@ -83,8 +86,8 @@ export const getData = async ({
 
       const { data: tagCommit } = await octokit.git.getCommit({
         commit_sha: tag.commit.sha, // eslint-disable-line @typescript-eslint/camelcase
-        owner: owner as string,
-        repo: repo as string
+        owner,
+        repo
       });
 
       return {
@@ -96,8 +99,13 @@ export const getData = async ({
 
   tags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
 
-  return {
+  data = {
+    commits,
+    owner,
     pulls,
+    repo,
     tags
   };
+
+  return data;
 };

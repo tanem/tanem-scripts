@@ -1,14 +1,9 @@
 import { isAfter } from 'date-fns';
 import execa from 'execa';
-import { getData } from './data';
+import { get as getData } from './data';
 
-interface Options {
-  owner?: string;
-  repo?: string;
-}
-
-const release = async (options: Options = {}) => {
-  const { pulls, tags } = await getData(options);
+const release = async () => {
+  const { pulls, tags } = await getData();
 
   const latestTag = tags.pop();
 
@@ -38,7 +33,7 @@ const release = async (options: Options = {}) => {
     ? 'minor'
     : 'patch';
 
-  const result = execa('npm', ['run', 'release', releaseType]);
+  const result = execa('npm', ['version', releaseType, '-m', 'Release v%s']);
 
   result.stdout &&
     result.stdout.pipe(
