@@ -1,20 +1,44 @@
 # Changelog
 
-## [v3.1.2](https://github.com/tanem/tanem-scripts/tree/v3.1.2) (2019-11-06)
+## [v4.0.0](https://github.com/tanem/tanem-scripts/tree/v4.0.0) (2019-11-15)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.2...v4.0.0)
+
+#### :boom: Breaking Change
+
+- [#85](https://github.com/tanem/tanem-scripts/pull/85) Refactor scripts ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#92](https://github.com/tanem/tanem-scripts/pull/92) Pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+- [#84](https://github.com/tanem/tanem-scripts/pull/84) Update dependency prettier to v1.19.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#72](https://github.com/tanem/tanem-scripts/pull/72) Update typescript-eslint monorepo to v2.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#78](https://github.com/tanem/tanem-scripts/pull/78) Update dependency typescript to v3.7.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#71](https://github.com/tanem/tanem-scripts/pull/71) Update dependency nock to v11.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#91](https://github.com/tanem/tanem-scripts/pull/91) Update dependency eslint-config-prettier to v6.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#90](https://github.com/tanem/tanem-scripts/pull/90) Update dependency eslint to v6.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#82](https://github.com/tanem/tanem-scripts/pull/82) Update dependency @types/node to v12.12.7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#70](https://github.com/tanem/tanem-scripts/pull/70) Update dependency lolex to v5.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### :question: Unlabelled
+
+- [#89](https://github.com/tanem/tanem-scripts/pull/89) Reconfigure renovate ([@tanem](https://github.com/tanem))
+- [#86](https://github.com/tanem/tanem-scripts/pull/86) Reconfigure renovate ([@tanem](https://github.com/tanem))
+
+## [v3.1.2](https://github.com/tanem/tanem-scripts/tree/v3.1.2) (2019-11-05)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.1...v3.1.2)
 
 #### :house: Internal
 
 - [#81](https://github.com/tanem/tanem-scripts/pull/81) Add real time release output ([@tanem](https://github.com/tanem))
 
-## [v3.1.1](https://github.com/tanem/tanem-scripts/tree/v3.1.1) (2019-11-06)
+## [v3.1.1](https://github.com/tanem/tanem-scripts/tree/v3.1.1) (2019-11-05)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.0...v3.1.1)
 
 #### :house: Internal
 
 - [#69](https://github.com/tanem/tanem-scripts/pull/69) Update dependency @types/node to v12.12.5 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v3.1.0](https://github.com/tanem/tanem-scripts/tree/v3.1.0) (2019-11-06)
+## [v3.1.0](https://github.com/tanem/tanem-scripts/tree/v3.1.0) (2019-11-05)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.0.1...v3.1.0)
 
 #### :bug: Bug Fix
@@ -52,7 +76,7 @@
 - [#65](https://github.com/tanem/tanem-scripts/pull/65) Reconfigure renovate ([@tanem](https://github.com/tanem))
 - [#63](https://github.com/tanem/tanem-scripts/pull/63) Reconfigure renovate ([@tanem](https://github.com/tanem))
 
-## [v2.0.14](https://github.com/tanem/tanem-scripts/tree/v2.0.14) (2019-10-13)
+## [v2.0.14](https://github.com/tanem/tanem-scripts/tree/v2.0.14) (2019-10-12)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.13...v2.0.14)
 
 #### :house: Internal
@@ -61,14 +85,14 @@
 - [#57](https://github.com/tanem/tanem-scripts/pull/57) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#56](https://github.com/tanem/tanem-scripts/pull/56) Update dependency @octokit/rest to ^16.33.1 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.13](https://github.com/tanem/tanem-scripts/tree/v2.0.13) (2019-10-08)
+## [v2.0.13](https://github.com/tanem/tanem-scripts/tree/v2.0.13) (2019-10-07)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.12...v2.0.13)
 
 #### :house: Internal
 
 - [#55](https://github.com/tanem/tanem-scripts/pull/55) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.12](https://github.com/tanem/tanem-scripts/tree/v2.0.12) (2019-10-08)
+## [v2.0.12](https://github.com/tanem/tanem-scripts/tree/v2.0.12) (2019-10-07)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.11...v2.0.12)
 
 #### :house: Internal
@@ -78,7 +102,7 @@
 - [#51](https://github.com/tanem/tanem-scripts/pull/51) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#53](https://github.com/tanem/tanem-scripts/pull/53) Update dependency execa to ^2.0.5 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.11](https://github.com/tanem/tanem-scripts/tree/v2.0.11) (2019-09-29)
+## [v2.0.11](https://github.com/tanem/tanem-scripts/tree/v2.0.11) (2019-09-28)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.10...v2.0.11)
 
 #### :house: Internal
@@ -88,7 +112,7 @@
 - [#48](https://github.com/tanem/tanem-scripts/pull/48) Update dependency @octokit/rest to ^16.30.1 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#47](https://github.com/tanem/tanem-scripts/pull/47) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.10](https://github.com/tanem/tanem-scripts/tree/v2.0.10) (2019-09-22)
+## [v2.0.10](https://github.com/tanem/tanem-scripts/tree/v2.0.10) (2019-09-21)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.9...v2.0.10)
 
 #### :house: Internal
@@ -96,14 +120,14 @@
 - [#46](https://github.com/tanem/tanem-scripts/pull/46) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#45](https://github.com/tanem/tanem-scripts/pull/45) Update dependency @octokit/rest to ^16.30.0 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.9](https://github.com/tanem/tanem-scripts/tree/v2.0.9) (2019-09-18)
+## [v2.0.9](https://github.com/tanem/tanem-scripts/tree/v2.0.9) (2019-09-17)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.8...v2.0.9)
 
 #### :house: Internal
 
 - [#44](https://github.com/tanem/tanem-scripts/pull/44) Update dev dependencies to v2.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.8](https://github.com/tanem/tanem-scripts/tree/v2.0.8) (2019-09-16)
+## [v2.0.8](https://github.com/tanem/tanem-scripts/tree/v2.0.8) (2019-09-15)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.7...v2.0.8)
 
 #### :house: Internal
@@ -112,7 +136,7 @@
 - [#42](https://github.com/tanem/tanem-scripts/pull/42) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#41](https://github.com/tanem/tanem-scripts/pull/41) Update dependency del-cli to v3 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.7](https://github.com/tanem/tanem-scripts/tree/v2.0.7) (2019-09-08)
+## [v2.0.7](https://github.com/tanem/tanem-scripts/tree/v2.0.7) (2019-09-07)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.6...v2.0.7)
 
 #### :house: Internal
@@ -123,14 +147,14 @@
 - [#37](https://github.com/tanem/tanem-scripts/pull/37) Update dependency commander to ^3.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#36](https://github.com/tanem/tanem-scripts/pull/36) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.6](https://github.com/tanem/tanem-scripts/tree/v2.0.6) (2019-08-28)
+## [v2.0.6](https://github.com/tanem/tanem-scripts/tree/v2.0.6) (2019-08-27)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.5...v2.0.6)
 
 #### :house: Internal
 
 - [#35](https://github.com/tanem/tanem-scripts/pull/35) Bump eslint-utils from 1.4.0 to 1.4.2 ([@dependabot[bot]](https://github.com/apps/dependabot))
 
-## [v2.0.5](https://github.com/tanem/tanem-scripts/tree/v2.0.5) (2019-08-25)
+## [v2.0.5](https://github.com/tanem/tanem-scripts/tree/v2.0.5) (2019-08-24)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.4...v2.0.5)
 
 #### :house: Internal
@@ -138,7 +162,7 @@
 - [#34](https://github.com/tanem/tanem-scripts/pull/34) Update dependency eslint to v6.2.2 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#33](https://github.com/tanem/tanem-scripts/pull/33) Update dependency date-fns to ^2.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.4](https://github.com/tanem/tanem-scripts/tree/v2.0.4) (2019-08-23)
+## [v2.0.4](https://github.com/tanem/tanem-scripts/tree/v2.0.4) (2019-08-22)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.3...v2.0.4)
 
 #### :house: Internal
@@ -146,14 +170,14 @@
 - [#31](https://github.com/tanem/tanem-scripts/pull/31) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#32](https://github.com/tanem/tanem-scripts/pull/32) Update dependency date-fns to v2 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.3](https://github.com/tanem/tanem-scripts/tree/v2.0.3) (2019-08-20)
+## [v2.0.3](https://github.com/tanem/tanem-scripts/tree/v2.0.3) (2019-08-19)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.2...v2.0.3)
 
 #### :house: Internal
 
 - [#30](https://github.com/tanem/tanem-scripts/pull/30) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.2](https://github.com/tanem/tanem-scripts/tree/v2.0.2) (2019-08-19)
+## [v2.0.2](https://github.com/tanem/tanem-scripts/tree/v2.0.2) (2019-08-18)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v2.0.1...v2.0.2)
 
 #### :house: Internal
@@ -174,7 +198,7 @@
 - [#25](https://github.com/tanem/tanem-scripts/pull/25) Update dependency commander to v3 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#24](https://github.com/tanem/tanem-scripts/pull/24) Update dependency @types/node to v12.7.1 ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v2.0.0](https://github.com/tanem/tanem-scripts/tree/v2.0.0) (2019-08-08)
+## [v2.0.0](https://github.com/tanem/tanem-scripts/tree/v2.0.0) (2019-08-07)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.3...v2.0.0)
 
 #### :memo: Documentation
@@ -190,14 +214,14 @@
 - [#20](https://github.com/tanem/tanem-scripts/pull/20) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#22](https://github.com/tanem/tanem-scripts/pull/22) Pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 
-## [v1.0.3](https://github.com/tanem/tanem-scripts/tree/v1.0.3) (2019-07-29)
+## [v1.0.3](https://github.com/tanem/tanem-scripts/tree/v1.0.3) (2019-07-28)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.2...v1.0.3)
 
 #### :bug: Bug Fix
 
 - [#18](https://github.com/tanem/tanem-scripts/pull/18) Fix changelog script ([@tanem](https://github.com/tanem))
 
-## [v1.0.2](https://github.com/tanem/tanem-scripts/tree/v1.0.2) (2019-07-29)
+## [v1.0.2](https://github.com/tanem/tanem-scripts/tree/v1.0.2) (2019-07-28)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v1.0.1...v1.0.2)
 
 #### :bug: Bug Fix
@@ -235,7 +259,7 @@
 - [#8](https://github.com/tanem/tanem-scripts/pull/8) Update dev dependencies ([@renovate[bot]](https://github.com/apps/renovate))
 - [#9](https://github.com/tanem/tanem-scripts/pull/9) Update changelog generation script ([@tanem](https://github.com/tanem))
 
-## [v0.0.4](https://github.com/tanem/tanem-scripts/tree/v0.0.4) (2019-07-18)
+## [v0.0.4](https://github.com/tanem/tanem-scripts/tree/v0.0.4) (2019-07-17)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v0.0.3...v0.0.4)
 
 #### :bug: Bug Fix
