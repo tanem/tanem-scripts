@@ -35,17 +35,9 @@ const release = async () => {
 
   const result = execa('npm', ['version', releaseType, '-m', 'Release v%s']);
 
-  result.stdout &&
-    result.stdout.pipe(
-      process.stdout,
-      { end: false }
-    );
+  result.stdout && result.stdout.pipe(process.stdout, { end: false });
 
-  result.stderr &&
-    result.stderr.pipe(
-      process.stderr,
-      { end: false }
-    );
+  result.stderr && result.stderr.pipe(process.stderr, { end: false });
 };
 
 export default release;
