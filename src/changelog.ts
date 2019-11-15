@@ -64,7 +64,9 @@ const changelog = async ({ futureRelease }: Options = {}) => {
         }) (${tag.date.slice(0, tag.date.indexOf('T'))})\n`;
 
         if (index + 1 !== array.length) {
-          result += `[Full Changelog](https://github.com/${owner}/${repo}/compare/${array[index + 1].name}...${tag.name})\n`;
+          result += `[Full Changelog](https://github.com/${owner}/${repo}/compare/${
+            array[index + 1].name
+          }...${tag.name})\n`;
         }
 
         result += Object.keys(tag.pulls)
