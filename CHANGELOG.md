@@ -1,5 +1,16 @@
 # Changelog
 
+## [v4.0.1](https://github.com/tanem/tanem-scripts/tree/v4.0.1) (2019-11-19)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.0...v4.0.1)
+
+#### :house: Internal
+
+- [#77](https://github.com/tanem/tanem-scripts/pull/77) Update dependency commander to v4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#95](https://github.com/tanem/tanem-scripts/pull/95) Reconfigure build ([@tanem](https://github.com/tanem))
+- [#94](https://github.com/tanem/tanem-scripts/pull/94) Debugging travis ([@tanem](https://github.com/tanem))
+- [#93](https://github.com/tanem/tanem-scripts/pull/93) Update build conf ([@tanem](https://github.com/tanem))
+- [#83](https://github.com/tanem/tanem-scripts/pull/83) Update dependency @types/jest to v24.0.23 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v4.0.0](https://github.com/tanem/tanem-scripts/tree/v4.0.0) (2019-11-15)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.2...v4.0.0)
 
