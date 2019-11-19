@@ -19,20 +19,16 @@ Options:
   -h, --help           output usage information
 
 Commands:
-  authors [options]    generates a list of authors in a format suitable for inclusion in an AUTHORS file
+  authors              generates a list of authors in a format suitable for inclusion in an AUTHORS file
   changelog [options]  generates a changelog using GitHub tags and pull requests
+  release              runs npm-version with a valid semver.inc argument
 ```
 
 ## API
 
-### authors([options])
+### authors()
 
 Returns a `Promise` that will be resolved with a list of authors sorted alphabetically by author name. If an error occurs during execution, the `Promise` is rejected with an `Error` object.
-
-**Arguments**
-
-- `options` - _Optional_ An object containing the optional arguments defined below. Defaults to `{}`.
-  - `isNumbered` - _Optional_ Sort the list by number of commits per author.
 
 **Example**
 
@@ -44,38 +40,12 @@ import { authors } from 'tanem-scripts';
 
 (async () => {
   try {
-    const result = await authors({ isNumbered: true });
+    const result = await authors();
     await fs.writeFile(path.join(__dirname, 'AUTHORS'), result, 'utf-8');
   } catch (error) {
     console.error(error);
   }
 })();
-```
-
----
-
-### authors.sync([options])
-
-Synchronously returns a list of authors sorted alphabetically by author name. If an error occurs during execution, an `Error` object will be thrown.
-
-**Arguments**
-
-- `options` - _Optional_ An object containing the optional arguments defined below. Defaults to `{}`.
-  - `isNumbered` - _Optional_ Sort the list by number of commits per author.
-
-**Example**
-
-```ts
-import fs from 'fs';
-import path from 'path';
-import { authors } from 'tanem-scripts';
-
-try {
-  const result = authors.sync({ isNumbered: true });
-  fs.writeFileSync(path.join(__dirname, 'AUTHORS'), result, 'utf-8');
-} catch (error) {
-  console.error(error);
-}
 ```
 
 ---
@@ -88,8 +58,6 @@ Returns a `Promise` that will be resolved with the changelog. If an error occurs
 
 - `options` - _Optional_ An object containing the optional arguments defined below. Defaults to `{}`.
   - `futureRelease` - _Optional_ Tag to use for PRs merged since the last published tag. If unspecified, those PRs will be excluded.
-  - `owner` - _Optional_ Repo owner. If unspecified, the value will be resolved from the local git config.
-  - `repo` - _Optional_ Repo name. If unspecified, the value will be resolved from the local git config.
 
 **Example**
 
@@ -105,6 +73,29 @@ import { changelog } from 'tanem-scripts';
       futureRelease: 'v2.0.0'
     });
     await fs.writeFile(path.join(__dirname, 'CHANGELOG.md'), result, 'utf-8');
+  } catch (error) {
+    console.error(error);
+  }
+})();
+```
+
+---
+
+### release()
+
+Returns a `Promise` that will be resolved once the release script completes. If an error occurs during execution, the `Promise` is rejected with an `Error` object.
+
+**Example**
+
+```ts
+// Note: The `fs.promises` API was added in Node.js v10.0.0.
+import { promises as fs } from 'fs';
+import path from 'path';
+import { release } from 'tanem-scripts';
+
+(async () => {
+  try {
+    await release();
   } catch (error) {
     console.error(error);
   }

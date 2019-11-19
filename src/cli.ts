@@ -74,6 +74,7 @@ program
     try {
       await release();
     } catch (error) {
+      console.error(error);
       process.exit(1);
     }
   })
