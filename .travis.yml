@@ -9,7 +9,7 @@ jobs:
     - stage: deploy
       if: branch = master AND type != pull_request
       skip_cleanup: true
-      script: echo "running deploy script"
+      script: git config -l
 env:
   global:
     secure: sXCmwYtWLI92IMLjmml+33kDVmRKXi4V8dc8ueclKujznCIf1QMd6Fynfg3D2VHJvuYt6lLu5issohjcYnM+/gs3SObJHKy0KEucooE97QBdAanFajAP8li/nZQUjp9MA8JZfT+GTQupR3xce6vOgbOzGrDQFYVKqOh2n+I+GnK52t8f2uDX7irc7NqfXeWkMZwPg8N4NE56I0+ih0wE5bQGQxL++d1mcHQJchLGOlSk9k2WRZrJymf1I09hmlmbG5hdxzebR5n6xom+viXB/gD4qAMx9tE1RX849oH0N/KOqWJ6TQFe45KJFR7Y1WBMVRfdxbZ6u1QEg5g57KN1AYKW+emGGFuMWnNsNsELSHp6KrKY9mioBoM3voY4URA+egHXUCuZGihBrOlHt9053dhLOzjwKR2+fZCAMO3r0GVgUWdohiGUJw+VRWeZppsOA4W8Qdnz3YGfbdfh9ST64iW11EbePUZgkdWPLkM3JsH1Ve0kk1oJnsnS0+BFgPtN2WIA2bsdxGfCFQ3YX+9krP98kqiesXvIoog0sNIhqBgjULJEgWZ4BrHbGV48gApBoEhUzk76NGONYtICUJ/b1Z5woMsyggLy+JajmkpKvHWTZNExdhmxAORXLd1lXp6GVffY2mFdnJivw4VruS6Qrj728nqGSHCVJzZkbQmzoRU=
