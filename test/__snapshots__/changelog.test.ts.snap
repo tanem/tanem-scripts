@@ -42,12 +42,9 @@ exports[`handles future release 1`] = `
 - [#91](https://github.com/tanem/tanem-scripts/pull/91) Update dependency eslint-config-prettier to v6.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#90](https://github.com/tanem/tanem-scripts/pull/90) Update dependency eslint to v6.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#82](https://github.com/tanem/tanem-scripts/pull/82) Update dependency @types/node to v12.12.7 ([@renovate[bot]](https://github.com/apps/renovate))
-- [#70](https://github.com/tanem/tanem-scripts/pull/70) Update dependency lolex to v5.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
-
-#### :question: Unlabelled
-
 - [#89](https://github.com/tanem/tanem-scripts/pull/89) Reconfigure renovate ([@tanem](https://github.com/tanem))
 - [#86](https://github.com/tanem/tanem-scripts/pull/86) Reconfigure renovate ([@tanem](https://github.com/tanem))
+- [#70](https://github.com/tanem/tanem-scripts/pull/70) Update dependency lolex to v5.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
 
 ## [v3.1.2](https://github.com/tanem/tanem-scripts/tree/v3.1.2) (2019-11-05)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.1...v3.1.2)
@@ -347,12 +344,9 @@ exports[`handles no options passed 1`] = `
 - [#91](https://github.com/tanem/tanem-scripts/pull/91) Update dependency eslint-config-prettier to v6.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#90](https://github.com/tanem/tanem-scripts/pull/90) Update dependency eslint to v6.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
 - [#82](https://github.com/tanem/tanem-scripts/pull/82) Update dependency @types/node to v12.12.7 ([@renovate[bot]](https://github.com/apps/renovate))
-- [#70](https://github.com/tanem/tanem-scripts/pull/70) Update dependency lolex to v5.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
-
-#### :question: Unlabelled
-
 - [#89](https://github.com/tanem/tanem-scripts/pull/89) Reconfigure renovate ([@tanem](https://github.com/tanem))
 - [#86](https://github.com/tanem/tanem-scripts/pull/86) Reconfigure renovate ([@tanem](https://github.com/tanem))
+- [#70](https://github.com/tanem/tanem-scripts/pull/70) Update dependency lolex to v5.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
 
 ## [v3.1.2](https://github.com/tanem/tanem-scripts/tree/v3.1.2) (2019-11-05)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v3.1.1...v3.1.2)

@@ -1,11 +1,17 @@
 module.exports = {
+  clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['src/*.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
   preset: 'ts-jest',
   rootDir: process.cwd(),
   roots: ['<rootDir>/test'],
-  setupFilesAfterEnv: ['<rootDir>/scripts/jest/setupJest.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
   testMatch: ['<rootDir>/test/*.test.ts'],
-  transform: { '^.+\\.ts$': 'ts-jest' }
+  transform: { '^.+\\.ts$': 'ts-jest' },
+  globals: {
+    'ts-jest': {
+      tsConfig: 'tsconfig.json'
+    }
+  }
 };

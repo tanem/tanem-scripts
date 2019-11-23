@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 import lolex, { InstalledClock } from 'lolex';
+import { changelog } from '../src';
 
 let clock: InstalledClock;
 
@@ -14,13 +13,11 @@ afterEach(() => {
 });
 
 test('handles no options passed', async () => {
-  const { changelog } = require('../src');
   const result = await changelog();
   expect(result).toMatchSnapshot();
 });
 
 test('handles future release', async () => {
-  const { changelog } = require('../src');
   const result = await changelog({
     futureRelease: 'v4.0.2'
   });

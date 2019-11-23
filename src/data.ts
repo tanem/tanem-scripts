@@ -29,9 +29,11 @@ const getRepoInfo = async () => {
   throw new Error('Unable to parse GitHub url');
 };
 
-let data: Data | null = null;
+export const cache = new Map<'data', Data>();
 
 export const get = async (): Promise<Data> => {
+  let data = cache.get('data');
+
   if (data) {
     return data;
   }
@@ -106,6 +108,8 @@ export const get = async (): Promise<Data> => {
     repo,
     tags
   };
+
+  cache.set('data', data);
 
   return data;
 };

@@ -1,20 +1,18 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 jest.mock('execa');
 
-afterEach(() => {
-  jest.resetModules();
-});
+import execa from 'execa';
+import { release } from '../src';
 
 test('throws if any PRs are unlabelled', async () => {
-  const { release } = require('../src');
-
   await expect(release()).rejects.toThrow();
 });
 
-test('runs a major release', async () => {
-  const { release } = require('../src');
-  const execa = jest.requireMock('execa');
+test('handles no tags', async () => {
+  global.polly.server
+    .get('https://api.github.com/repos/tanem/tanem-scripts/tags')
+    .intercept((_, res) => {
+      res.status(200).json([]);
+    });
 
   await release();
 
@@ -27,10 +25,19 @@ test('runs a major release', async () => {
   ]);
 });
 
-test('runs a minor release', async () => {
-  const { release } = require('../src');
-  const execa = jest.requireMock('execa');
+test('runs a major release', async () => {
+  await release();
 
+  expect(execa).toHaveBeenCalledTimes(1);
+  expect(execa).toHaveBeenCalledWith('npm', [
+    'version',
+    'major',
+    '-m',
+    'Release v%s'
+  ]);
+});
+
+test('runs a minor release', async () => {
   await release();
 
   expect(execa).toHaveBeenCalledTimes(1);
@@ -43,9 +50,6 @@ test('runs a minor release', async () => {
 });
 
 test('runs a patch release', async () => {
-  const { release } = require('../src');
-  const execa = jest.requireMock('execa');
-
   await release();
 
   expect(execa).toHaveBeenCalledTimes(1);
