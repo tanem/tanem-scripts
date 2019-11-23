@@ -25,8 +25,8 @@ beforeEach(() => {
     recordIfMissing: false
   });
 
-  global.polly.server.any().on('beforePersist', (_: any, recording: any) => {
-    recording.request.headers.map((header: any) => {
+  global.polly.server.any().on('beforePersist', (_, recording) => {
+    recording.request.headers.map((header: { name: string; value: string }) => {
       if (header.name === 'authorization') {
         header.value = '<token>';
       }

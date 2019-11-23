@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Polly } from '@pollyjs/core';
 
 declare global {
