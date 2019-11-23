@@ -16,8 +16,9 @@ declare global {
       addReporter(reporter: CustomReporter): void;
     }
 
-    let fullName: string;
     function getEnv(): Env;
+
+    let fullName: string;
   }
 
   namespace NodeJS {
