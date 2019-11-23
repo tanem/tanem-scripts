@@ -7,6 +7,10 @@ test('throws if any PRs are unlabelled', async () => {
   await expect(release()).rejects.toThrow();
 });
 
+test('throws if any PRs have multiple labels', async () => {
+  await expect(release()).rejects.toThrow();
+});
+
 test('handles no tags', async () => {
   global.polly.server
     .get('https://api.github.com/repos/tanem/tanem-scripts/tags')

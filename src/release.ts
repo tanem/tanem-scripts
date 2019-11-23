@@ -19,6 +19,11 @@ const release = async () => {
         if (pull.labels.length === 0) {
           throw new Error('Unlabelled PRs in release');
         }
+
+        if (pull.labels.length > 1) {
+          throw new Error('PRs with multiple labels in release');
+        }
+
         return pull.labels[0].name;
       })
     )
