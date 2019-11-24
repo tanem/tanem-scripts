@@ -6,13 +6,13 @@ exports[`handles future release 1`] = `
 ## [v4.0.2](https://github.com/tanem/tanem-scripts/tree/v4.0.2) (2019-11-20)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.1...v4.0.2)
 
+#### :memo: Documentation
+
+- [#97](https://github.com/tanem/tanem-scripts/pull/97) Update docs ([@tanem](https://github.com/tanem))
+
 #### :house: Internal
 
 - [#96](https://github.com/tanem/tanem-scripts/pull/96) Update dependency @types/lolex to v5 ([@renovate[bot]](https://github.com/apps/renovate))
-
-#### :question: Unlabelled
-
-- [#97](https://github.com/tanem/tanem-scripts/pull/97) Update docs ([@tanem](https://github.com/tanem))
 
 ## [v4.0.1](https://github.com/tanem/tanem-scripts/tree/v4.0.1) (2019-11-19)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.0...v4.0.1)

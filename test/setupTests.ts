@@ -13,6 +13,7 @@ jasmine.getEnv().addReporter({
 Polly.register(NodeHttpAdapter);
 Polly.register(FSPersister);
 
+// TODO: Put polly inside EACH test to see if it's an issue with recording name?
 beforeEach(() => {
   global.polly = new Polly(jasmine.fullName, {
     adapters: ['node-http'],
@@ -24,7 +25,6 @@ beforeEach(() => {
     },
     recordIfMissing: false
   });
-
   global.polly.server.any().on('beforePersist', (_, recording) => {
     recording.request.headers.map((header: { name: string; value: string }) => {
       if (header.name === 'authorization') {
@@ -36,6 +36,6 @@ beforeEach(() => {
 });
 
 afterEach(async () => {
-  await global.polly.stop();
   cache.clear();
+  await global.polly.stop();
 });

@@ -32,11 +32,11 @@ const getRepoInfo = async () => {
 export const cache = new Map<'data', Data>();
 
 export const get = async (): Promise<Data> => {
-  let data = cache.get('data');
+  // let data = cache.get('data');
 
-  if (data) {
-    return data;
-  }
+  // if (data) {
+  //   return data;
+  // }
 
   const { owner, repo } = await getRepoInfo();
 
@@ -101,7 +101,7 @@ export const get = async (): Promise<Data> => {
 
   tags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
 
-  data = {
+  const data = {
     commits,
     owner,
     pulls,
@@ -109,7 +109,7 @@ export const get = async (): Promise<Data> => {
     tags
   };
 
-  cache.set('data', data);
+  // cache.set('data', data);
 
   return data;
 };
