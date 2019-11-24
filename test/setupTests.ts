@@ -17,6 +17,9 @@ Polly.register(FSPersister);
 beforeEach(() => {
   global.polly = new Polly(jasmine.fullName, {
     adapters: ['node-http'],
+    matchRequestsBy: {
+      headers: false
+    },
     persister: 'fs',
     persisterOptions: {
       fs: {
