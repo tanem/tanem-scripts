@@ -15,15 +15,17 @@ const release = async () => {
 
   const labelsToRelease = [
     ...new Set(
-      pullsToRelease
-        .filter(pull => pull.labels.length)
-        .map(pull => {
-          const firstLabel = pull.labels.pop();
-          if (firstLabel) {
-            // TODO: Throw here?
-            return firstLabel.name;
-          }
-        })
+      pullsToRelease.map(pull => {
+        if (pull.labels.length === 0) {
+          throw new Error('Unlabelled PRs in release');
+        }
+
+        if (pull.labels.length > 1) {
+          throw new Error('PRs with multiple labels in release');
+        }
+
+        return pull.labels[0].name;
+      })
     )
   ];
 
@@ -35,9 +37,8 @@ const release = async () => {
 
   const result = execa('npm', ['version', releaseType, '-m', 'Release v%s']);
 
-  result.stdout && result.stdout.pipe(process.stdout, { end: false });
-
-  result.stderr && result.stderr.pipe(process.stderr, { end: false });
+  result?.stdout?.pipe(process.stdout, { end: false });
+  result?.stderr?.pipe(process.stderr, { end: false });
 };
 
 export default release;

@@ -29,11 +29,11 @@ const getRepoInfo = async () => {
   throw new Error('Unable to parse GitHub url');
 };
 
-let data: Data | null = null;
+export const cache = new Map<'data', Data>();
 
 export const get = async (): Promise<Data> => {
-  if (data) {
-    return data;
+  if (cache.has('data')) {
+    return cache.get('data') as Data;
   }
 
   const { owner, repo } = await getRepoInfo();
@@ -99,13 +99,15 @@ export const get = async (): Promise<Data> => {
 
   tags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));
 
-  data = {
+  const data = {
     commits,
     owner,
     pulls,
     repo,
     tags
   };
+
+  cache.set('data', data);
 
   return data;
 };
