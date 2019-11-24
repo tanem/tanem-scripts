@@ -23,3 +23,10 @@ test('handles future release', async () => {
   });
   expect(result).toMatchSnapshot();
 });
+
+test('handles unlabelled PRs', async () => {
+  const result = await changelog({
+    futureRelease: 'v4.0.2'
+  });
+  expect(result).toMatchSnapshot();
+});
