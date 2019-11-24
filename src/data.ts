@@ -32,11 +32,9 @@ const getRepoInfo = async () => {
 export const cache = new Map<'data', Data>();
 
 export const get = async (): Promise<Data> => {
-  // let data = cache.get('data');
-
-  // if (data) {
-  //   return data;
-  // }
+  if (cache.has('data')) {
+    return cache.get('data') as Data;
+  }
 
   const { owner, repo } = await getRepoInfo();
 
@@ -109,7 +107,7 @@ export const get = async (): Promise<Data> => {
     tags
   };
 
-  // cache.set('data', data);
+  cache.set('data', data);
 
   return data;
 };

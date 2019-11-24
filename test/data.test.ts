@@ -1,4 +1,4 @@
-import { get as getData } from '../src/data';
+import { cache, get as getData } from '../src/data';
 
 beforeEach(() => {
   jest.resetModules();
@@ -24,4 +24,17 @@ test('handles missing tag commits', async () => {
   const result = await getData();
 
   expect(result).toMatchSnapshot();
+});
+
+test('uses cache', async () => {
+  const spy = jest.spyOn(cache, 'get');
+
+  let result = await getData();
+  expect(result).toMatchSnapshot();
+  expect(spy).toHaveBeenCalledTimes(0);
+
+  result = await getData();
+  expect(result).toMatchSnapshot();
+  expect(spy).toHaveBeenCalledTimes(1);
+  expect(spy).toHaveBeenCalledWith('data');
 });
