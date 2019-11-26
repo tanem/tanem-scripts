@@ -7,6 +7,6 @@ module.exports = {
   rootDir: process.cwd(),
   roots: ['<rootDir>/test'],
   setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
-  testMatch: ['<rootDir>/test/release.test.ts'],
+  testMatch: ['<rootDir>/test/*.test.ts'],
   transform: { '^.+\\.ts$': 'ts-jest' }
 };
