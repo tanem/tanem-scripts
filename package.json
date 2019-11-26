@@ -80,6 +80,6 @@
     "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
     "test:src": "jest --config ./scripts/jest/config.src.js",
-    "version": "run-s changelog authors && git add ."
+    "version": "run-s test changelog authors && git add ."
   }
 }
