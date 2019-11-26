@@ -1,5 +1,12 @@
 # Changelog
 
+## [v4.0.5](https://github.com/tanem/tanem-scripts/tree/v4.0.5) (2019-11-26)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.4...v4.0.5)
+
+#### :bug: Bug Fix
+
+- [#107](https://github.com/tanem/tanem-scripts/pull/107) Use correct execa options in release script ([@tanem](https://github.com/tanem))
+
 ## [v4.0.4](https://github.com/tanem/tanem-scripts/tree/v4.0.4) (2019-11-26)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.3...v4.0.4)
 
