@@ -1,5 +1,12 @@
 # Changelog
 
+## [v4.0.4](https://github.com/tanem/tanem-scripts/tree/v4.0.4) (2019-11-26)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.3...v4.0.4)
+
+#### :bug: Bug Fix
+
+- [#105](https://github.com/tanem/tanem-scripts/pull/105) Handle passing otp in release script ([@tanem](https://github.com/tanem))
+
 ## [v4.0.3](https://github.com/tanem/tanem-scripts/tree/v4.0.3) (2019-11-26)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.2...v4.0.3)
 
