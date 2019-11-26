@@ -35,7 +35,8 @@
     "date-fns": "^2.7.0",
     "execa": "^3.0.0",
     "git-remote-origin-url": "^3.0.0",
-    "parse-github-url": "^1.0.2"
+    "parse-github-url": "^1.0.2",
+    "prompt-promise": "^1.0.3"
   },
   "devDependencies": {
     "@pollyjs/adapter-node-http": "2.7.0",
@@ -75,7 +76,6 @@
     "coverage": "codecov",
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .js,.ts",
-    "postversion": "git push && git push --tags && npm publish",
     "release": "node dist/cli release",
     "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",

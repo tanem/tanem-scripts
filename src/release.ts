@@ -1,8 +1,12 @@
 import { isAfter } from 'date-fns';
 import execa from 'execa';
 import { get as getData } from './data';
+import { prompt as promptForOTP } from './otp';
+
+const execaOptions: execa.Options = { stdio: 'ignore' };
 
 const release = async () => {
+  const otp = await promptForOTP();
   const { pulls, tags } = await getData();
 
   const latestTag = tags.pop();
@@ -35,10 +39,15 @@ const release = async () => {
     ? 'minor'
     : 'patch';
 
-  const result = execa('npm', ['version', releaseType, '-m', 'Release v%s']);
+  await execa(
+    'npm',
+    ['version', releaseType, '-m', 'Release v%s'],
+    execaOptions
+  );
 
-  result?.stdout?.pipe(process.stdout, { end: false });
-  result?.stderr?.pipe(process.stderr, { end: false });
+  await execa('git', ['push'], execaOptions);
+  await execa('git', ['push', '--tags'], execaOptions);
+  await execa('npm', ['publish', '--otp', otp], execaOptions);
 };
 
 export default release;

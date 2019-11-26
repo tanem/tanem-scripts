@@ -1,4 +1,7 @@
 jest.mock('execa');
+jest.mock('../src/otp', () => ({
+  prompt: async () => '123'
+}));
 
 import execa from 'execa';
 import { release } from '../src';
@@ -20,47 +23,83 @@ test('handles no tags', async () => {
 
   await release();
 
-  expect(execa).toHaveBeenCalledTimes(1);
-  expect(execa).toHaveBeenCalledWith('npm', [
-    'version',
-    'major',
-    '-m',
-    'Release v%s'
-  ]);
+  expect(execa).toHaveBeenCalledTimes(4);
+  expect(execa).toHaveBeenNthCalledWith(
+    1,
+    'npm',
+    ['version', 'major', '-m', 'Release v%s'],
+    { stdio: 'ignore' }
+  );
+  expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
+    stdio: 'ignore'
+  });
 });
 
 test('runs a major release', async () => {
   await release();
 
-  expect(execa).toHaveBeenCalledTimes(1);
-  expect(execa).toHaveBeenCalledWith('npm', [
-    'version',
-    'major',
-    '-m',
-    'Release v%s'
-  ]);
+  expect(execa).toHaveBeenCalledTimes(4);
+  expect(execa).toHaveBeenNthCalledWith(
+    1,
+    'npm',
+    ['version', 'major', '-m', 'Release v%s'],
+    { stdio: 'ignore' }
+  );
+  expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
+    stdio: 'ignore'
+  });
 });
 
 test('runs a minor release', async () => {
   await release();
 
-  expect(execa).toHaveBeenCalledTimes(1);
-  expect(execa).toHaveBeenCalledWith('npm', [
-    'version',
-    'minor',
-    '-m',
-    'Release v%s'
-  ]);
+  expect(execa).toHaveBeenCalledTimes(4);
+  expect(execa).toHaveBeenNthCalledWith(
+    1,
+    'npm',
+    ['version', 'minor', '-m', 'Release v%s'],
+    { stdio: 'ignore' }
+  );
+  expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
+    stdio: 'ignore'
+  });
 });
 
 test('runs a patch release', async () => {
   await release();
 
-  expect(execa).toHaveBeenCalledTimes(1);
-  expect(execa).toHaveBeenCalledWith('npm', [
-    'version',
-    'patch',
-    '-m',
-    'Release v%s'
-  ]);
+  expect(execa).toHaveBeenCalledTimes(4);
+  expect(execa).toHaveBeenNthCalledWith(
+    1,
+    'npm',
+    ['version', 'patch', '-m', 'Release v%s'],
+    { stdio: 'ignore' }
+  );
+  expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
+    stdio: 'ignore'
+  });
+  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
+    stdio: 'ignore'
+  });
 });
