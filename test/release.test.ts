@@ -28,16 +28,16 @@ test('handles no tags', async () => {
     1,
     'npm',
     ['version', 'major', '-m', 'Release v%s'],
-    { stdio: 'ignore' }
+    { stdio: 'inherit' }
   );
   expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
 });
 
@@ -49,16 +49,16 @@ test('runs a major release', async () => {
     1,
     'npm',
     ['version', 'major', '-m', 'Release v%s'],
-    { stdio: 'ignore' }
+    { stdio: 'inherit' }
   );
   expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
 });
 
@@ -70,16 +70,16 @@ test('runs a minor release', async () => {
     1,
     'npm',
     ['version', 'minor', '-m', 'Release v%s'],
-    { stdio: 'ignore' }
+    { stdio: 'inherit' }
   );
   expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
 });
 
@@ -91,15 +91,15 @@ test('runs a patch release', async () => {
     1,
     'npm',
     ['version', 'patch', '-m', 'Release v%s'],
-    { stdio: 'ignore' }
+    { stdio: 'inherit' }
   );
   expect(execa).toHaveBeenNthCalledWith(2, 'git', ['push'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
   expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'ignore'
+    stdio: 'inherit'
   });
 });

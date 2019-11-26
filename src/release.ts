@@ -3,7 +3,7 @@ import execa from 'execa';
 import { get as getData } from './data';
 import { prompt as promptForOTP } from './otp';
 
-const execaOptions: execa.Options = { stdio: 'ignore' };
+const execaOptions: execa.Options = { stdio: 'inherit' };
 
 const release = async () => {
   const otp = await promptForOTP();
