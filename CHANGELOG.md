@@ -1,5 +1,17 @@
 # Changelog
 
+## [v4.0.3](https://github.com/tanem/tanem-scripts/tree/v4.0.3) (2019-11-26)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.2...v4.0.3)
+
+#### :bug: Bug Fix
+
+- [#106](https://github.com/tanem/tanem-scripts/pull/106) Fix build ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#104](https://github.com/tanem/tanem-scripts/pull/104) Update dependency ts-jest to v24.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#103](https://github.com/tanem/tanem-scripts/pull/103) Update dependency @pollyjs/adapter-node-http to v2.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v4.0.2](https://github.com/tanem/tanem-scripts/tree/v4.0.2) (2019-11-24)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.1...v4.0.2)
 
