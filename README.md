@@ -88,9 +88,6 @@ Returns a `Promise` that will be resolved once the release script completes. If 
 **Example**
 
 ```ts
-// Note: The `fs.promises` API was added in Node.js v10.0.0.
-import { promises as fs } from 'fs';
-import path from 'path';
 import { release } from 'tanem-scripts';
 
 (async () => {
