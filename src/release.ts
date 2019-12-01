@@ -6,7 +6,6 @@ import { prompt as promptForOTP } from './otp';
 const execaOptions: execa.Options = { stdio: 'inherit' };
 
 const release = async () => {
-  const otp = await promptForOTP();
   const { pulls, tags } = await getData();
 
   const latestTag = tags.pop();
@@ -47,6 +46,8 @@ const release = async () => {
 
   await execa('git', ['push'], execaOptions);
   await execa('git', ['push', '--tags'], execaOptions);
+
+  const otp = await promptForOTP();
   await execa('npm', ['publish', '--otp', otp], execaOptions);
 };
 
