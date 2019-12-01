@@ -1,5 +1,19 @@
 # Changelog
 
+## [v4.0.6](https://github.com/tanem/tanem-scripts/tree/v4.0.6) (2019-12-01)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.5...v4.0.6)
+
+#### :memo: Documentation
+
+- [#108](https://github.com/tanem/tanem-scripts/pull/108) Update docs ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#112](https://github.com/tanem/tanem-scripts/pull/112) Move otp prompt ([@tanem](https://github.com/tanem))
+- [#111](https://github.com/tanem/tanem-scripts/pull/111) Update dependency @types/node to v12.12.14 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#110](https://github.com/tanem/tanem-scripts/pull/110) Update typescript-eslint monorepo to v2.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#109](https://github.com/tanem/tanem-scripts/pull/109) Update dependency eslint to v6.7.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v4.0.5](https://github.com/tanem/tanem-scripts/tree/v4.0.5) (2019-11-26)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.4...v4.0.5)
 
