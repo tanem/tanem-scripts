@@ -1,5 +1,12 @@
 # Changelog
 
+## [v4.0.7](https://github.com/tanem/tanem-scripts/tree/v4.0.7) (2019-12-01)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.6...v4.0.7)
+
+#### :house: Internal
+
+- [#113](https://github.com/tanem/tanem-scripts/pull/113) Handle scoped package releases ([@tanem](https://github.com/tanem))
+
 ## [v4.0.6](https://github.com/tanem/tanem-scripts/tree/v4.0.6) (2019-12-01)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.5...v4.0.6)
 
