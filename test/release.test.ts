@@ -36,9 +36,14 @@ test('handles no tags', async () => {
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
     stdio: 'inherit'
   });
-  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'inherit'
-  });
+  expect(execa).toHaveBeenNthCalledWith(
+    4,
+    'npm',
+    ['publish', '--access', 'public', '--otp', '123'],
+    {
+      stdio: 'inherit'
+    }
+  );
 });
 
 test('runs a major release', async () => {
@@ -57,9 +62,14 @@ test('runs a major release', async () => {
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
     stdio: 'inherit'
   });
-  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'inherit'
-  });
+  expect(execa).toHaveBeenNthCalledWith(
+    4,
+    'npm',
+    ['publish', '--access', 'public', '--otp', '123'],
+    {
+      stdio: 'inherit'
+    }
+  );
 });
 
 test('runs a minor release', async () => {
@@ -78,9 +88,14 @@ test('runs a minor release', async () => {
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
     stdio: 'inherit'
   });
-  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'inherit'
-  });
+  expect(execa).toHaveBeenNthCalledWith(
+    4,
+    'npm',
+    ['publish', '--access', 'public', '--otp', '123'],
+    {
+      stdio: 'inherit'
+    }
+  );
 });
 
 test('runs a patch release', async () => {
@@ -99,7 +114,12 @@ test('runs a patch release', async () => {
   expect(execa).toHaveBeenNthCalledWith(3, 'git', ['push', '--tags'], {
     stdio: 'inherit'
   });
-  expect(execa).toHaveBeenNthCalledWith(4, 'npm', ['publish', '--otp', '123'], {
-    stdio: 'inherit'
-  });
+  expect(execa).toHaveBeenNthCalledWith(
+    4,
+    'npm',
+    ['publish', '--access', 'public', '--otp', '123'],
+    {
+      stdio: 'inherit'
+    }
+  );
 });

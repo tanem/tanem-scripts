@@ -48,7 +48,11 @@ const release = async () => {
   await execa('git', ['push', '--tags'], execaOptions);
 
   const otp = await promptForOTP();
-  await execa('npm', ['publish', '--otp', otp], execaOptions);
+  await execa(
+    'npm',
+    ['publish', '--access', 'public', '--otp', otp],
+    execaOptions
+  );
 };
 
 export default release;
