@@ -53,7 +53,7 @@
     "@typescript-eslint/parser": "2.9.0",
     "codecov": "3.6.1",
     "del-cli": "3.0.0",
-    "eslint": "6.7.1",
+    "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
     "jest": "24.9.0",
     "lolex": "5.1.1",
