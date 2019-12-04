@@ -1,5 +1,9 @@
 import { isAfter } from 'date-fns';
 import execa from 'execa';
+import { promises as fs } from 'fs';
+import path from 'path';
+import authors from './authors';
+import changelog from './changelog';
 import { get as getData } from './data';
 import { prompt as promptForOTP } from './otp';
 
@@ -44,7 +48,28 @@ const release = async () => {
     execaOptions
   );
 
+  await execa('npm', ['test'], execaOptions);
+
+  const changelogContent = await changelog({
+    futureRelease: `v${process.env.npm_package_version}`
+  });
+  await fs.writeFile(
+    path.join(process.cwd(), 'CHANGELOG.md'),
+    changelogContent,
+    'utf-8'
+  );
+
+  const authorsContent = await authors();
+  await fs.writeFile(
+    path.join(process.cwd(), 'AUTHORS'),
+    authorsContent,
+    'utf-8'
+  );
+
+  await execa('git', ['add', '.'], execaOptions);
+
   await execa('git', ['push'], execaOptions);
+
   await execa('git', ['push', '--tags'], execaOptions);
 
   const otp = await promptForOTP();
