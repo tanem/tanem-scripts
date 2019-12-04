@@ -8,11 +8,5 @@
     ":assignee(tanem)"
   ],
   "stabilityDays": 3,
-  "prCreation": "not-pending",
-  "packageRules": [
-    {
-      "updateTypes": ["major"],
-      "masterIssueApproval": true
-    }
-  ]
+  "prCreation": "not-pending"
 }
