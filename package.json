@@ -64,9 +64,7 @@
     "typescript": "3.7.2"
   },
   "scripts": {
-    "authors": "node dist/cli authors > AUTHORS",
     "build": "run-s clean compile",
-    "changelog": "node dist/cli changelog -f v$npm_package_version > CHANGELOG.md",
     "check:format": "prettier --list-different \"**/*.{js,ts}\"",
     "check:types": "tsc --noEmit",
     "clean": "run-p clean:*",
@@ -79,7 +77,6 @@
     "release": "node dist/cli release",
     "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
-    "test:src": "jest --config ./scripts/jest/config.src.js",
-    "version": "run-s test changelog authors && git add ."
+    "test:src": "jest --config ./scripts/jest/config.src.js"
   }
 }
