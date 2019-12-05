@@ -1,15 +1,25 @@
 # Changelog
 
+## [v5.0.2](https://github.com/tanem/tanem-scripts/tree/v5.0.2) (2019-12-05)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.1...v5.0.2)
+
+#### :bug: Bug Fix
+
+- [#118](https://github.com/tanem/tanem-scripts/pull/118) Don't remove latest tag from data during release ([@tanem](https://github.com/tanem))
+
 ## [v5.0.1](https://github.com/tanem/tanem-scripts/tree/v5.0.1) (2019-12-05)
-[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.7...v5.0.1)
-
-#### :boom: Breaking Change
-
-- [#115](https://github.com/tanem/tanem-scripts/pull/115) Improve release script ([@tanem](https://github.com/tanem))
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.0...v5.0.1)
 
 #### :bug: Bug Fix
 
 - [#117](https://github.com/tanem/tanem-scripts/pull/117) Fix release script ([@tanem](https://github.com/tanem))
+
+## [v5.0.0](https://github.com/tanem/tanem-scripts/tree/v5.0.0) (2019-12-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.7...v5.0.0)
+
+#### :boom: Breaking Change
+
+- [#115](https://github.com/tanem/tanem-scripts/pull/115) Improve release script ([@tanem](https://github.com/tanem))
 
 #### :house: Internal
 
