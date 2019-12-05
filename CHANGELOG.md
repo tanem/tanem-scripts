@@ -1,5 +1,21 @@
 # Changelog
 
+## [v5.0.1](https://github.com/tanem/tanem-scripts/tree/v5.0.1) (2019-12-05)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.7...v5.0.1)
+
+#### :boom: Breaking Change
+
+- [#115](https://github.com/tanem/tanem-scripts/pull/115) Improve release script ([@tanem](https://github.com/tanem))
+
+#### :bug: Bug Fix
+
+- [#117](https://github.com/tanem/tanem-scripts/pull/117) Fix release script ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#116](https://github.com/tanem/tanem-scripts/pull/116) Remove master issue approval for major dep updates ([@tanem](https://github.com/tanem))
+- [#114](https://github.com/tanem/tanem-scripts/pull/114) Update dependency eslint to v6.7.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v4.0.7](https://github.com/tanem/tanem-scripts/tree/v4.0.7) (2019-12-01)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v4.0.6...v4.0.7)
 
