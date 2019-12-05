@@ -30,7 +30,7 @@ test('throws if any PRs have multiple labels', async () => {
   await expect(release()).rejects.toThrow();
 });
 
-test('handles no tags', async () => {
+test.skip('handles no tags', async () => {
   global.polly.server
     .get('https://api.github.com/repos/tanem/tanem-scripts/tags')
     .intercept((_, res) => {
@@ -61,7 +61,7 @@ test('handles no tags', async () => {
   );
 });
 
-test('runs a major release', async () => {
+test.skip('runs a major release', async () => {
   // Mimic the major version bump from `npm version major`.
   process.env.npm_package_version = '5.0.0';
 
@@ -86,7 +86,7 @@ test('runs a major release', async () => {
   );
 });
 
-test('runs a minor release', async () => {
+test.skip('runs a minor release', async () => {
   // Mimic the minor version bump from `npm version minor`.
   process.env.npm_package_version = '4.1.0';
 
@@ -111,7 +111,7 @@ test('runs a minor release', async () => {
   );
 });
 
-test('runs a patch release', async () => {
+test.skip('runs a patch release', async () => {
   // Mimic the patch version bump from `npm version patch`.
   process.env.npm_package_version = '4.0.7';
 
