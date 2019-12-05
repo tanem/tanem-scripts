@@ -13,7 +13,7 @@ const execaOptions: execa.Options = { stdio: 'inherit' };
 const release = async () => {
   const { pulls, tags } = await getData();
 
-  const latestTag = tags.pop();
+  const latestTag = tags[tags.length - 1];
 
   const pullsToRelease = latestTag
     ? pulls.filter(pull =>
