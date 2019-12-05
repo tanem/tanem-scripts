@@ -1,7 +1,8 @@
 import { isAfter } from 'date-fns';
 import execa from 'execa';
-import { promises as fs } from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
+import semver from 'semver';
 import authors from './authors';
 import changelog from './changelog';
 import { get as getData } from './data';
@@ -42,31 +43,44 @@ const release = async () => {
     ? 'minor'
     : 'patch';
 
-  await execa(
-    'npm',
-    ['version', releaseType, '-m', 'Release v%s'],
-    execaOptions
-  );
+  const packagePath = path.join(process.cwd(), 'package.json');
+  const packageLockPath = path.join(process.cwd(), 'package-lock.json');
+
+  const packageObj = await fs.readJSON(packagePath);
+  const packageLockObj = await fs.readJSON(packageLockPath);
+
+  const newVersion = semver.inc(packageObj.version, releaseType);
 
   await execa('npm', ['test'], execaOptions);
 
   const changelogContent = await changelog({
-    futureRelease: `v${process.env.npm_package_version}`
+    futureRelease: `v${newVersion}`
   });
-  await fs.writeFile(
+  await fs.outputFile(
     path.join(process.cwd(), 'CHANGELOG.md'),
-    changelogContent,
-    'utf-8'
+    changelogContent
   );
 
   const authorsContent = await authors();
-  await fs.writeFile(
-    path.join(process.cwd(), 'AUTHORS'),
-    authorsContent,
-    'utf-8'
+  await fs.outputFile(path.join(process.cwd(), 'AUTHORS'), authorsContent);
+
+  await fs.writeJSON(
+    packagePath,
+    { ...packageObj, version: newVersion },
+    { spaces: 2 }
+  );
+
+  await fs.writeJSON(
+    packageLockPath,
+    { ...packageLockObj, version: newVersion },
+    { spaces: 2 }
   );
 
   await execa('git', ['add', '.'], execaOptions);
+
+  await execa('git', ['commit', '-m', `Release v${newVersion}`], execaOptions);
+
+  await execa('git', ['tag', `v${newVersion}`]);
 
   await execa('git', ['push'], execaOptions);
 
