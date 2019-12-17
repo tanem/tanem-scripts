@@ -4,9 +4,21 @@
     ":rebaseStalePrs",
     ":automergeMinor",
     ":label(internal)",
-    ":masterIssue",
-    ":assignee(tanem)"
+    ":masterIssue"
   ],
+  "ignorePaths": ["**/node_modules/**"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "stabilityDays": 3,
-  "prCreation": "not-pending"
+  "packageRules": [
+    {
+      "sourceUrlPrefixes": ["https://github.com/tanem/"],
+      "stabilityDays": 0
+    },
+    {
+      "depTypeList": ["dependencies"],
+      "rangeStrategy": "bump"
+    }
+  ]
 }
