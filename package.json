@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^16.33.1",
-    "commander": "^4.0.0",
+    "commander": "^4.0.1",
     "date-fns": "^2.7.0",
     "execa": "^3.0.0",
     "fs-extra": "^8.1.0",
