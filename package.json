@@ -33,7 +33,7 @@
     "@octokit/rest": "^16.35.2",
     "commander": "^4.0.1",
     "date-fns": "^2.8.1",
-    "execa": "^3.4.0",
+    "execa": "^4.0.0",
     "fs-extra": "^8.1.0",
     "git-remote-origin-url": "^3.0.0",
     "parse-github-url": "^1.0.2",
