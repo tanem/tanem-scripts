@@ -1,5 +1,35 @@
 # Changelog
 
+## [v5.0.3](https://github.com/tanem/tanem-scripts/tree/v5.0.3) (2019-12-27)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.2...v5.0.3)
+
+#### :house: Internal
+
+- [#143](https://github.com/tanem/tanem-scripts/pull/143) Update dependency @octokit/rest to ^16.36.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#142](https://github.com/tanem/tanem-scripts/pull/142) Update typescript-eslint monorepo to v2.13.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#148](https://github.com/tanem/tanem-scripts/pull/148) Update pollyjs monorepo to v3 (major) ([@renovate[bot]](https://github.com/apps/renovate))
+- [#147](https://github.com/tanem/tanem-scripts/pull/147) Group pollyjs packages ([@tanem](https://github.com/tanem))
+- [#134](https://github.com/tanem/tanem-scripts/pull/134) Update dependency semver to v7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#136](https://github.com/tanem/tanem-scripts/pull/136) Update dependency execa to v4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#141](https://github.com/tanem/tanem-scripts/pull/141) Update dependency @types/node to v12.12.22 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#139](https://github.com/tanem/tanem-scripts/pull/139) Update dependency typescript to v3.7.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#138](https://github.com/tanem/tanem-scripts/pull/138) Update dependency eslint to v6.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#140](https://github.com/tanem/tanem-scripts/pull/140) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#137](https://github.com/tanem/tanem-scripts/pull/137) Update dependency lolex to v5.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#126](https://github.com/tanem/tanem-scripts/pull/126) Update dependency @types/node to v12.12.21 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#135](https://github.com/tanem/tanem-scripts/pull/135) Update dependency @types/jest to v24.0.24 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#130](https://github.com/tanem/tanem-scripts/pull/130) Update typescript-eslint monorepo to v2.12.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#129](https://github.com/tanem/tanem-scripts/pull/129) Update dependency execa to ^3.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#128](https://github.com/tanem/tanem-scripts/pull/128) Update dependency date-fns to ^2.8.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#125](https://github.com/tanem/tanem-scripts/pull/125) Update dependency @octokit/rest to ^16.35.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#127](https://github.com/tanem/tanem-scripts/pull/127) Update dependency commander to ^4.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#124](https://github.com/tanem/tanem-scripts/pull/124) Reconfigure renovate ([@tanem](https://github.com/tanem))
+- [#123](https://github.com/tanem/tanem-scripts/pull/123) Update dependency @types/node to v12.12.17 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#122](https://github.com/tanem/tanem-scripts/pull/122) Update typescript-eslint monorepo to v2.11.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#121](https://github.com/tanem/tanem-scripts/pull/121) Update dependency typescript to v3.7.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#120](https://github.com/tanem/tanem-scripts/pull/120) Pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+- [#119](https://github.com/tanem/tanem-scripts/pull/119) Update typescript-eslint monorepo to v2.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.2](https://github.com/tanem/tanem-scripts/tree/v5.0.2) (2019-12-05)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.1...v5.0.2)
 
