@@ -1,5 +1,16 @@
 # Changelog
 
+## [v5.0.4](https://github.com/tanem/tanem-scripts/tree/v5.0.4) (2020-01-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.3...v5.0.4)
+
+#### :house: Internal
+
+- [#146](https://github.com/tanem/tanem-scripts/pull/146) Update dependency @types/pollyjs__core to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#150](https://github.com/tanem/tanem-scripts/pull/150) Update typescript-eslint monorepo to v2.14.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#144](https://github.com/tanem/tanem-scripts/pull/144) Update dependency eslint-config-prettier to v6.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#149](https://github.com/tanem/tanem-scripts/pull/149) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#145](https://github.com/tanem/tanem-scripts/pull/145) Update dependency @types/jest to v24.0.25 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.3](https://github.com/tanem/tanem-scripts/tree/v5.0.3) (2019-12-27)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.2...v5.0.3)
 
