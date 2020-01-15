@@ -1,5 +1,19 @@
 # Changelog
 
+## [v5.0.5](https://github.com/tanem/tanem-scripts/tree/v5.0.5) (2020-01-15)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.4...v5.0.5)
+
+#### :house: Internal
+
+- [#158](https://github.com/tanem/tanem-scripts/pull/158) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#157](https://github.com/tanem/tanem-scripts/pull/157) Update dependency @pollyjs/adapter-node-http to v3.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#156](https://github.com/tanem/tanem-scripts/pull/156) Update dependency date-fns to ^2.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#155](https://github.com/tanem/tanem-scripts/pull/155) Update dependency ts-jest to v24.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#154](https://github.com/tanem/tanem-scripts/pull/154) Update typescript-eslint monorepo to v2.15.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#152](https://github.com/tanem/tanem-scripts/pull/152) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#153](https://github.com/tanem/tanem-scripts/pull/153) Update dependency commander to ^4.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#151](https://github.com/tanem/tanem-scripts/pull/151) Update dependency @types/node to v12.12.24 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.4](https://github.com/tanem/tanem-scripts/tree/v5.0.4) (2020-01-04)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.3...v5.0.4)
 
