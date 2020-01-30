@@ -13,10 +13,6 @@
     {
       "depTypeList": ["dependencies"],
       "rangeStrategy": "bump"
-    },
-    {
-      "groupName": "pollyjs monorepo",
-      "packagePatterns": ["^@pollyjs/"]
     }
   ],
   "prCreation": "not-pending",
