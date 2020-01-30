@@ -1,5 +1,27 @@
 # Changelog
 
+## [v5.0.6](https://github.com/tanem/tanem-scripts/tree/v5.0.6) (2020-01-30)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.5...v5.0.6)
+
+#### :house: Internal
+
+- [#182](https://github.com/tanem/tanem-scripts/pull/182) Remove pollyjs grouping now it has been centralised ([@tanem](https://github.com/tanem))
+- [#171](https://github.com/tanem/tanem-scripts/pull/171) Update dependency ts-jest to v25 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#172](https://github.com/tanem/tanem-scripts/pull/172) Update dependency @types/pollyjs__core to v4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#181](https://github.com/tanem/tanem-scripts/pull/181) Reconfigure renovate ([@tanem](https://github.com/tanem))
+- [#167](https://github.com/tanem/tanem-scripts/pull/167) Update dependency jest to v25 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#173](https://github.com/tanem/tanem-scripts/pull/173) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#169](https://github.com/tanem/tanem-scripts/pull/169) Update dependency @types/jest to v24.9.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#170](https://github.com/tanem/tanem-scripts/pull/170) Update dependency codecov to v3.6.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#159](https://github.com/tanem/tanem-scripts/pull/159) Update pollyjs monorepo to v4 (major) ([@renovate[bot]](https://github.com/apps/renovate))
+- [#166](https://github.com/tanem/tanem-scripts/pull/166) Update typescript-eslint monorepo to v2.17.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#164](https://github.com/tanem/tanem-scripts/pull/164) Update dependency @octokit/rest to ^16.37.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#163](https://github.com/tanem/tanem-scripts/pull/163) Update dependency @types/node to v12.12.25 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#165](https://github.com/tanem/tanem-scripts/pull/165) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#162](https://github.com/tanem/tanem-scripts/pull/162) Update dependency typescript to v3.7.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#161](https://github.com/tanem/tanem-scripts/pull/161) Update dependency @types/jest to v24.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#160](https://github.com/tanem/tanem-scripts/pull/160) Update typescript-eslint monorepo to v2.16.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.5](https://github.com/tanem/tanem-scripts/tree/v5.0.5) (2020-01-15)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.4...v5.0.5)
 
