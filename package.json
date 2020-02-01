@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@pollyjs/adapter-node-http": "4.0.0",
-    "@pollyjs/core": "4.0.0",
+    "@pollyjs/core": "4.0.2",
     "@pollyjs/persister-fs": "4.0.0",
     "@types/fs-extra": "8.0.1",
     "@types/jest": "24.9.1",
