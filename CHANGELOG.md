@@ -1,5 +1,27 @@
 # Changelog
 
+## [v5.0.7](https://github.com/tanem/tanem-scripts/tree/v5.0.7) (2020-02-11)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.6...v5.0.7)
+
+#### :house: Internal
+
+- [#168](https://github.com/tanem/tanem-scripts/pull/168) Update dependency @octokit/rest to ^16.43.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#193](https://github.com/tanem/tanem-scripts/pull/193) Update dependency codecov to v3.6.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#192](https://github.com/tanem/tanem-scripts/pull/192) Update dependency @types/jest to v25.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#191](https://github.com/tanem/tanem-scripts/pull/191) Update dependency ts-jest to v25.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#190](https://github.com/tanem/tanem-scripts/pull/190) Update typescript-eslint monorepo to v2.19.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#189](https://github.com/tanem/tanem-scripts/pull/189) Update dependency commander to ^4.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#188](https://github.com/tanem/tanem-scripts/pull/188) Update dependency codecov to v3.6.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#187](https://github.com/tanem/tanem-scripts/pull/187) Update dependency semver to ^7.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#186](https://github.com/tanem/tanem-scripts/pull/186) Update dependency @pollyjs/adapter-node-http to v4.0.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#185](https://github.com/tanem/tanem-scripts/pull/185) Update dependency ts-jest to v25.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#175](https://github.com/tanem/tanem-scripts/pull/175) Update dependency @types/jest to v25 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#184](https://github.com/tanem/tanem-scripts/pull/184) Update dependency @pollyjs/persister-fs to v4.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#183](https://github.com/tanem/tanem-scripts/pull/183) Update dependency @pollyjs/core to v4.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#178](https://github.com/tanem/tanem-scripts/pull/178) Update dependency eslint-config-prettier to v6.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#177](https://github.com/tanem/tanem-scripts/pull/177) Update dependency @types/semver to v7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#174](https://github.com/tanem/tanem-scripts/pull/174) Update typescript-eslint monorepo to v2.18.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.6](https://github.com/tanem/tanem-scripts/tree/v5.0.6) (2020-01-30)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.5...v5.0.6)
 
