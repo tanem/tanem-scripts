@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.0.11](https://github.com/tanem/tanem-scripts/tree/v5.0.11) (2020-02-13)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.10...v5.0.11)
+
+#### :house: Internal
+
+- [#196](https://github.com/tanem/tanem-scripts/pull/196) Update typescript-eslint monorepo to v2.19.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.10](https://github.com/tanem/tanem-scripts/tree/v5.0.10) (2020-02-13)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.9...v5.0.10)
 
