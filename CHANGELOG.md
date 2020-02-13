@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.0.9](https://github.com/tanem/tanem-scripts/tree/v5.0.9) (2020-02-13)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.8...v5.0.9)
+
+#### :bug: Bug Fix
+
+- [#194](https://github.com/tanem/tanem-scripts/pull/194) Don't release if there's nothing to release ([@tanem](https://github.com/tanem))
+
 ## [v5.0.8](https://github.com/tanem/tanem-scripts/tree/v5.0.8) (2020-02-13)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.7...v5.0.8)
 
