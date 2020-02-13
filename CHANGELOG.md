@@ -1,5 +1,8 @@
 # Changelog
 
+## [v5.0.8](https://github.com/tanem/tanem-scripts/tree/v5.0.8) (2020-02-13)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.7...v5.0.8)
+
 ## [v5.0.7](https://github.com/tanem/tanem-scripts/tree/v5.0.7) (2020-02-11)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.6...v5.0.7)
 
