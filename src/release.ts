@@ -21,7 +21,7 @@ const release = async () => {
       )
     : pulls;
 
-  if (pulls.length === 0) {
+  if (pullsToRelease.length === 0) {
     throw new Error('Nothing to release');
   }
 
