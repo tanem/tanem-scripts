@@ -21,6 +21,10 @@ const release = async () => {
       )
     : pulls;
 
+  if (pulls.length === 0) {
+    throw new Error('Nothing to release');
+  }
+
   const labelsToRelease = [
     ...new Set(
       pullsToRelease.map(pull => {
