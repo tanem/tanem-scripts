@@ -1,5 +1,15 @@
 # Changelog
 
+## [v5.0.12](https://github.com/tanem/tanem-scripts/tree/v5.0.12) (2020-02-21)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.11...v5.0.12)
+
+#### :house: Internal
+
+- [#200](https://github.com/tanem/tanem-scripts/pull/200) Update dependency @types/fs-extra to v8.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#199](https://github.com/tanem/tanem-scripts/pull/199) Update typescript-eslint monorepo to v2.20.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#198](https://github.com/tanem/tanem-scripts/pull/198) Update dependency make-dir to v3.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#197](https://github.com/tanem/tanem-scripts/pull/197) Update dependency semver to ^7.1.3 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.11](https://github.com/tanem/tanem-scripts/tree/v5.0.11) (2020-02-13)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.10...v5.0.11)
 
