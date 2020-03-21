@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.0.16](https://github.com/tanem/tanem-scripts/tree/v5.0.16) (2020-03-21)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.15...v5.0.16)
+
+#### :house: Internal
+
+- [#213](https://github.com/tanem/tanem-scripts/pull/213) Update dependency date-fns to ^2.11.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#214](https://github.com/tanem/tanem-scripts/pull/214) Update dependency commander to v5 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.15](https://github.com/tanem/tanem-scripts/tree/v5.0.15) (2020-03-13)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.14...v5.0.15)
 
