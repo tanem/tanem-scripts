@@ -13,36 +13,36 @@ const labelHeadings: { [label: string]: string } = {
   documentation: ':memo: Documentation',
   enhancement: ':rocket: Enhancement',
   internal: ':house: Internal',
-  unlabelled: ':question: Unlabelled'
+  unlabelled: ':question: Unlabelled',
 };
 
 const changelog = async ({ futureRelease }: Options = {}) => {
   const { owner, pulls: rawPulls, repo, tags: rawTags } = await getData();
 
-  const cleanedPulls = rawPulls.map(pull => ({
+  const cleanedPulls = rawPulls.map((pull) => ({
     label: pull.labels.length ? pull.labels[0].name : UNLABELLED,
     mergedAt: pull.merged_at,
     number: pull.number,
     title: pull.title,
     userHtmlUrl: pull.user.html_url,
-    userLogin: pull.user.login
+    userLogin: pull.user.login,
   }));
 
-  const cleanedTags = rawTags.map(tag => ({
+  const cleanedTags = rawTags.map((tag) => ({
     ...tag,
-    pulls: {} as { [key: string]: typeof cleanedPulls }
+    pulls: {} as { [key: string]: typeof cleanedPulls },
   }));
 
   if (futureRelease) {
     cleanedTags.push({
       date: new Date().toISOString(),
       name: futureRelease,
-      pulls: {}
+      pulls: {},
     });
   }
 
-  cleanedPulls.map(p => {
-    const tag = cleanedTags.find(t =>
+  cleanedPulls.map((p) => {
+    const tag = cleanedTags.find((t) =>
       isBefore(new Date(p.mergedAt), new Date(t.date))
     );
     /* istanbul ignore else */

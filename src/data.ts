@@ -22,7 +22,7 @@ const getRepoInfo = async () => {
   if (parsed && parsed.owner && parsed.name) {
     return {
       owner: parsed.owner,
-      repo: parsed.name
+      repo: parsed.name,
     };
   }
 
@@ -39,13 +39,13 @@ export const get = async (): Promise<Data> => {
   const { owner, repo } = await getRepoInfo();
 
   const octokit = new Octokit({
-    auth: process.env.CHANGELOG_GITHUB_TOKEN
+    auth: process.env.CHANGELOG_GITHUB_TOKEN,
   });
 
   const baseEndpointOptions = {
     owner,
     per_page: 100, // eslint-disable-line @typescript-eslint/camelcase
-    repo
+    repo,
   };
 
   const [rawPulls, rawTags, commits]: [
@@ -56,7 +56,7 @@ export const get = async (): Promise<Data> => {
     octokit.paginate(
       octokit.pulls.list.endpoint.merge({
         ...baseEndpointOptions,
-        state: 'closed'
+        state: 'closed',
       })
     ),
     octokit.paginate(
@@ -64,35 +64,35 @@ export const get = async (): Promise<Data> => {
     ),
     octokit.paginate(
       octokit.repos.listCommits.endpoint.merge(baseEndpointOptions)
-    )
+    ),
   ]);
 
-  const pulls = rawPulls.filter(pull => Boolean(pull.merged_at));
+  const pulls = rawPulls.filter((pull) => Boolean(pull.merged_at));
 
   pulls.sort((a, b) =>
     compareAsc(new Date(a.merged_at), new Date(b.merged_at))
   );
 
   const tags = await Promise.all(
-    rawTags.map(async tag => {
-      const commit = commits.find(commit => commit.sha === tag.commit.sha);
+    rawTags.map(async (tag) => {
+      const commit = commits.find((commit) => commit.sha === tag.commit.sha);
 
       if (commit) {
         return {
           date: commit.commit.committer.date,
-          name: tag.name
+          name: tag.name,
         };
       }
 
       const { data: tagCommit } = await octokit.git.getCommit({
         commit_sha: tag.commit.sha, // eslint-disable-line @typescript-eslint/camelcase
         owner,
-        repo
+        repo,
       });
 
       return {
         date: tagCommit.committer.date,
-        name: tag.name
+        name: tag.name,
       };
     })
   );
@@ -104,7 +104,7 @@ export const get = async (): Promise<Data> => {
     owner,
     pulls,
     repo,
-    tags
+    tags,
   };
 
   cache.set('data', data);

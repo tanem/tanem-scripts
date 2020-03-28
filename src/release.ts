@@ -16,7 +16,7 @@ const release = async () => {
   const latestTag = tags[tags.length - 1];
 
   const pullsToRelease = latestTag
-    ? pulls.filter(pull =>
+    ? pulls.filter((pull) =>
         isAfter(new Date(pull.merged_at), new Date(latestTag.date))
       )
     : pulls;
@@ -27,7 +27,7 @@ const release = async () => {
 
   const labelsToRelease = [
     ...new Set(
-      pullsToRelease.map(pull => {
+      pullsToRelease.map((pull) => {
         if (pull.labels.length === 0) {
           throw new Error('Unlabelled PRs in release');
         }
@@ -38,7 +38,7 @@ const release = async () => {
 
         return pull.labels[0].name;
       })
-    )
+    ),
   ];
 
   const releaseType = labelsToRelease.includes('breaking')
@@ -58,7 +58,7 @@ const release = async () => {
   await execa('npm', ['test'], execaOptions);
 
   const changelogContent = await changelog({
-    futureRelease: `v${newVersion}`
+    futureRelease: `v${newVersion}`,
   });
   await fs.outputFile(
     path.join(process.cwd(), 'CHANGELOG.md'),
