@@ -3,8 +3,8 @@
     "config:js-lib",
     ":rebaseStalePrs",
     ":automergeAll",
-    ":label(internal)",
-    ":masterIssue"
+    ":masterIssue",
+    ":label(internal)"
   ],
   "lockFileMaintenance": {
     "enabled": true
