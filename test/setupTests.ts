@@ -5,9 +5,9 @@ import path from 'path';
 import { cache } from '../src/data';
 
 jasmine.getEnv().addReporter({
-  specStarted: result => {
+  specStarted: (result) => {
     jasmine.fullName = result.fullName;
-  }
+  },
 });
 
 Polly.register(NodeHttpAdapter);
@@ -17,15 +17,15 @@ beforeEach(() => {
   global.polly = new Polly(jasmine.fullName, {
     adapters: ['node-http'],
     matchRequestsBy: {
-      headers: false
+      headers: false,
     },
     persister: 'fs',
     persisterOptions: {
       fs: {
-        recordingsDir: path.resolve(process.cwd(), 'test', '__recordings__')
-      }
+        recordingsDir: path.resolve(process.cwd(), 'test', '__recordings__'),
+      },
     },
-    recordIfMissing: false
+    recordIfMissing: false,
   });
 
   global.polly.server.any().on('beforePersist', (_, recording) => {

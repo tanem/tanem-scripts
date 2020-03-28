@@ -7,7 +7,7 @@ beforeEach(() => {
 test(`throws if can't parse GitHub url`, async () => {
   jest.doMock('parse-github-url', () => ({
     __esModule: true,
-    default: () => null
+    default: () => null,
   }));
   const { get: getData } = await import('../src/data');
 

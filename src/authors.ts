@@ -5,7 +5,7 @@ const authors = async () => {
   const { commits } = await getData();
 
   const authors = commits
-    .map(commit => {
+    .map((commit) => {
       let author = `${commit.commit.author.name} <${commit.commit.author.email}>`;
       ({ stdout: author } = execa.sync('git', ['check-mailmap', author]));
       return author;

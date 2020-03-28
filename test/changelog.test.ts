@@ -19,14 +19,14 @@ test('handles no options passed', async () => {
 
 test('handles future release', async () => {
   const result = await changelog({
-    futureRelease: 'v4.0.2'
+    futureRelease: 'v4.0.2',
   });
   expect(result).toMatchSnapshot();
 });
 
 test('handles unlabelled PRs', async () => {
   const result = await changelog({
-    futureRelease: 'v4.0.2'
+    futureRelease: 'v4.0.2',
   });
   expect(result).toMatchSnapshot();
 });

@@ -7,6 +7,6 @@ module.exports = Object.assign({}, srcConfig, {
     '^../src/data$': '<rootDir>/dist/data.js',
     '^../src/otp$': '<rootDir>/dist/otp.js',
     '^../src/changelog$': '<rootDir>/dist/changelog.js',
-    '^../src/authors$': '<rootDir>/dist/authors.js'
-  }
+    '^../src/authors$': '<rootDir>/dist/authors.js',
+  },
 });
