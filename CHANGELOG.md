@@ -1,5 +1,15 @@
 # Changelog
 
+## [v5.0.22](https://github.com/tanem/tanem-scripts/tree/v5.0.22) (2020-05-02)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.21...v5.0.22)
+
+#### :house: Internal
+
+- [#247](https://github.com/tanem/tanem-scripts/pull/247) Update typescript-eslint monorepo to v2.30.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#246](https://github.com/tanem/tanem-scripts/pull/246) Update dependency commander to ^5.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#245](https://github.com/tanem/tanem-scripts/pull/245) Update dependency @pollyjs/persister-fs to v4.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#242](https://github.com/tanem/tanem-scripts/pull/242) Update dependency make-dir to v3.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.21](https://github.com/tanem/tanem-scripts/tree/v5.0.21) (2020-04-24)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.20...v5.0.21)
 
