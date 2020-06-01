@@ -7,9 +7,9 @@ export enum Messages {
 
 // Hat-tip: https://github.com/facebook/react/blob/master/scripts/release/publish-commands/prompt-for-otp.js.
 // TODO (Tane): This'll be nice to do at some point: https://github.com/facebook/react/blob/master/scripts/release/theme.js.
-export const prompt = async () => {
+export const prompt = async (): Promise<string> => {
   while (true) {
-    const otp = await promptPromise(Messages.PROMPT);
+    const otp: string = await promptPromise(Messages.PROMPT);
     promptPromise.done();
 
     if (otp) {

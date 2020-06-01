@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 jest.mock('execa');
 jest.mock('fs', () => ({
   promises: {

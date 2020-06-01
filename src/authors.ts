@@ -1,7 +1,7 @@
 import execa from 'execa';
 import { get as getData } from './data';
 
-const authors = async () => {
+const authors = async (): Promise<string> => {
   const { commits } = await getData();
 
   const authors = commits
