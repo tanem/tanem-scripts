@@ -16,7 +16,7 @@ const labelHeadings: { [label: string]: string } = {
   unlabelled: ':question: Unlabelled',
 };
 
-const changelog = async ({ futureRelease }: Options = {}) => {
+const changelog = async ({ futureRelease }: Options = {}): Promise<string> => {
   const { owner, pulls: rawPulls, repo, tags: rawTags } = await getData();
 
   const cleanedPulls = rawPulls.map((pull) => ({

@@ -44,7 +44,7 @@ export const get = async (): Promise<Data> => {
 
   const baseEndpointOptions = {
     owner,
-    per_page: 100, // eslint-disable-line @typescript-eslint/camelcase
+    per_page: 100,
     repo,
   };
 
@@ -85,7 +85,7 @@ export const get = async (): Promise<Data> => {
       }
 
       const { data: tagCommit } = await octokit.git.getCommit({
-        commit_sha: tag.commit.sha, // eslint-disable-line @typescript-eslint/camelcase
+        commit_sha: tag.commit.sha,
         owner,
         repo,
       });

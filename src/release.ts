@@ -10,7 +10,7 @@ import { prompt as promptForOTP } from './otp';
 
 const execaOptions: execa.Options = { stdio: 'inherit' };
 
-const release = async () => {
+const release = async (): Promise<void> => {
   const { pulls, tags } = await getData();
 
   const latestTag = tags[tags.length - 1];
