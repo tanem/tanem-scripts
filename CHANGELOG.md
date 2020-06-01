@@ -1,5 +1,17 @@
 # Changelog
 
+## [v5.0.25](https://github.com/tanem/tanem-scripts/tree/v5.0.25) (2020-06-01)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.24...v5.0.25)
+
+#### :house: Internal
+
+- [#269](https://github.com/tanem/tanem-scripts/pull/269) Update typescript-eslint monorepo to v3 (major) ([@renovate[bot]](https://github.com/apps/renovate))
+- [#272](https://github.com/tanem/tanem-scripts/pull/272) Update dependency @types/pollyjs__core to v4.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#271](https://github.com/tanem/tanem-scripts/pull/271) Update dependency eslint to v7.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#270](https://github.com/tanem/tanem-scripts/pull/270) Update dependency execa to ^4.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#268](https://github.com/tanem/tanem-scripts/pull/268) Update dependency typescript to v3.9.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#267](https://github.com/tanem/tanem-scripts/pull/267) Update dependency @types/fs-extra to v9.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.24](https://github.com/tanem/tanem-scripts/tree/v5.0.24) (2020-05-22)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.23...v5.0.24)
 
