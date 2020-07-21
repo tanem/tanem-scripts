@@ -56,7 +56,7 @@
     "@typescript-eslint/eslint-plugin": "3.6.1",
     "@typescript-eslint/parser": "3.6.1",
     "del-cli": "3.0.1",
-    "eslint": "7.4.0",
+    "eslint": "7.5.0",
     "eslint-config-prettier": "6.11.0",
     "jest": "26.1.0",
     "lolex": "5.1.2",
