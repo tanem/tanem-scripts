@@ -1,5 +1,14 @@
 # Changelog
 
+## [v5.0.36](https://github.com/tanem/tanem-scripts/tree/v5.0.36) (2020-08-14)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.35...v5.0.36)
+
+#### :house: Internal
+
+- [#315](https://github.com/tanem/tanem-scripts/pull/315) Update dependency ts-jest to v26.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#314](https://github.com/tanem/tanem-scripts/pull/314) Update typescript-eslint monorepo to v3.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#313](https://github.com/tanem/tanem-scripts/pull/313) Update dependency @types/jest to v26.0.9 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.35](https://github.com/tanem/tanem-scripts/tree/v5.0.35) (2020-08-07)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.34...v5.0.35)
 
