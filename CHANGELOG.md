@@ -1,5 +1,17 @@
 # Changelog
 
+## [v5.0.37](https://github.com/tanem/tanem-scripts/tree/v5.0.37) (2020-08-21)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.36...v5.0.37)
+
+#### :house: Internal
+
+- [#321](https://github.com/tanem/tanem-scripts/pull/321) Update typescript-eslint monorepo to v3.9.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#320](https://github.com/tanem/tanem-scripts/pull/320) Update dependency @types/semver to v7.3.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#319](https://github.com/tanem/tanem-scripts/pull/319) Update dependency @types/jest to v26.0.10 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#318](https://github.com/tanem/tanem-scripts/pull/318) Update dependency eslint to v7.7.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#317](https://github.com/tanem/tanem-scripts/pull/317) Update dependency @types/semver to v7.3.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#316](https://github.com/tanem/tanem-scripts/pull/316) Update dependency jest to v26.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.36](https://github.com/tanem/tanem-scripts/tree/v5.0.36) (2020-08-14)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.35...v5.0.36)
 
