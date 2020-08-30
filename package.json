@@ -32,7 +32,7 @@
   "dependencies": {
     "@octokit/rest": "^16.43.1",
     "commander": "^6.0.0",
-    "date-fns": "^2.15.0",
+    "date-fns": "^2.16.0",
     "execa": "^4.0.3",
     "fs-extra": "^9.0.1",
     "git-remote-origin-url": "^3.1.0",
