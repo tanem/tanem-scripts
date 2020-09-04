@@ -1,5 +1,17 @@
 # Changelog
 
+## [v5.0.39](https://github.com/tanem/tanem-scripts/tree/v5.0.39) (2020-09-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.38...v5.0.39)
+
+#### :house: Internal
+
+- [#330](https://github.com/tanem/tanem-scripts/pull/330) Update typescript-eslint monorepo to v4 (major) ([@renovate[bot]](https://github.com/apps/renovate))
+- [#329](https://github.com/tanem/tanem-scripts/pull/329) Update dependency date-fns to ^2.16.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#328](https://github.com/tanem/tanem-scripts/pull/328) Update dependency commander to ^6.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#327](https://github.com/tanem/tanem-scripts/pull/327) Update dependency date-fns to ^2.16.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#326](https://github.com/tanem/tanem-scripts/pull/326) Update dependency ts-jest to v26.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#325](https://github.com/tanem/tanem-scripts/pull/325) Update dependency prettier to v2.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.38](https://github.com/tanem/tanem-scripts/tree/v5.0.38) (2020-08-28)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.37...v5.0.38)
 
