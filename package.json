@@ -51,7 +51,7 @@
     "@types/parse-github-url": "1.0.0",
     "@types/pollyjs__adapter-node-http": "2.0.1",
     "@types/pollyjs__core": "4.3.1",
-    "@types/pollyjs__persister-fs": "2.0.0",
+    "@types/pollyjs__persister-fs": "2.0.1",
     "@types/semver": "7.3.4",
     "@typescript-eslint/eslint-plugin": "4.2.0",
     "@typescript-eslint/parser": "4.2.0",
