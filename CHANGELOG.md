@@ -1,5 +1,18 @@
 # Changelog
 
+## [v5.0.43](https://github.com/tanem/tanem-scripts/tree/v5.0.43) (2020-10-02)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.42...v5.0.43)
+
+#### :house: Internal
+
+- [#348](https://github.com/tanem/tanem-scripts/pull/348) Update dependency ts-jest to v26.4.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#347](https://github.com/tanem/tanem-scripts/pull/347) Update typescript-eslint monorepo to v4.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#346](https://github.com/tanem/tanem-scripts/pull/346) Update dependency eslint to v7.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#345](https://github.com/tanem/tanem-scripts/pull/345) Update dependency @types/pollyjs__persister-fs to v2.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#344](https://github.com/tanem/tanem-scripts/pull/344) Update dependency @types/pollyjs__core to v4.3.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#343](https://github.com/tanem/tanem-scripts/pull/343) Update dependency @types/pollyjs__adapter-node-http to v2.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#342](https://github.com/tanem/tanem-scripts/pull/342) Update dependency eslint-config-prettier to v6.12.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v5.0.42](https://github.com/tanem/tanem-scripts/tree/v5.0.42) (2020-09-25)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.41...v5.0.42)
 
