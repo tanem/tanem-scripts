@@ -1,5 +1,12 @@
 # Changelog
 
+## [v6.0.1](https://github.com/tanem/tanem-scripts/tree/v6.0.1) (2020-11-23)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.0...v6.0.1)
+
+#### :house: Internal
+
+- [#381](https://github.com/tanem/tanem-scripts/pull/381) Fix audit issues ([@tanem](https://github.com/tanem))
+
 ## [v6.0.0](https://github.com/tanem/tanem-scripts/tree/v6.0.0) (2020-11-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v5.0.44...v6.0.0)
 
