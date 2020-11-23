@@ -6,7 +6,6 @@ import semver from 'semver';
 import authors from './authors';
 import changelog from './changelog';
 import { get as getData } from './data';
-import { prompt as promptForOTP } from './otp';
 
 const execaOptions: execa.Options = { stdio: 'inherit' };
 
@@ -90,12 +89,7 @@ const release = async (): Promise<void> => {
 
   await execa('git', ['push', '--tags'], execaOptions);
 
-  const otp = await promptForOTP();
-  await execa(
-    'npm',
-    ['publish', '--access', 'public', '--otp', otp],
-    execaOptions
-  );
+  await execa('npm', ['publish', '--access', 'public'], execaOptions);
 };
 
 export default release;
