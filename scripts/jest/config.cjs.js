@@ -5,7 +5,6 @@ module.exports = Object.assign({}, srcConfig, {
   moduleNameMapper: {
     '^../src$': '<rootDir>/dist/index.js',
     '^../src/data$': '<rootDir>/dist/data.js',
-    '^../src/otp$': '<rootDir>/dist/otp.js',
     '^../src/changelog$': '<rootDir>/dist/changelog.js',
     '^../src/authors$': '<rootDir>/dist/authors.js',
   },

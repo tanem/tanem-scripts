@@ -6,9 +6,6 @@ jest.mock('fs', () => ({
 }));
 jest.mock('../src/changelog');
 jest.mock('../src/authors');
-jest.mock('../src/otp', () => ({
-  prompt: async () => '123',
-}));
 
 import execa from 'execa';
 import { release } from '../src';
@@ -50,13 +47,9 @@ test.skip('handles no tags', async () => {
   expect(changelog).toHaveBeenCalledWith({
     futureRelease: `v${process.env.npm_package_version}`,
   });
-  expect(execa).toHaveBeenCalledWith(
-    'npm',
-    ['publish', '--access', 'public', '--otp', '123'],
-    {
-      stdio: 'inherit',
-    }
-  );
+  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
+    stdio: 'inherit',
+  });
 });
 
 test.skip('runs a major release', async () => {
@@ -75,13 +68,9 @@ test.skip('runs a major release', async () => {
   expect(changelog).toHaveBeenCalledWith({
     futureRelease: `v${process.env.npm_package_version}`,
   });
-  expect(execa).toHaveBeenCalledWith(
-    'npm',
-    ['publish', '--access', 'public', '--otp', '123'],
-    {
-      stdio: 'inherit',
-    }
-  );
+  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
+    stdio: 'inherit',
+  });
 });
 
 test.skip('runs a minor release', async () => {
@@ -100,13 +89,9 @@ test.skip('runs a minor release', async () => {
   expect(changelog).toHaveBeenCalledWith({
     futureRelease: `v${process.env.npm_package_version}`,
   });
-  expect(execa).toHaveBeenCalledWith(
-    'npm',
-    ['publish', '--access', 'public', '--otp', '123'],
-    {
-      stdio: 'inherit',
-    }
-  );
+  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
+    stdio: 'inherit',
+  });
 });
 
 test.skip('runs a patch release', async () => {
@@ -125,11 +110,7 @@ test.skip('runs a patch release', async () => {
   expect(changelog).toHaveBeenCalledWith({
     futureRelease: `v${process.env.npm_package_version}`,
   });
-  expect(execa).toHaveBeenCalledWith(
-    'npm',
-    ['publish', '--access', 'public', '--otp', '123'],
-    {
-      stdio: 'inherit',
-    }
-  );
+  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
+    stdio: 'inherit',
+  });
 });
