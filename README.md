@@ -1,7 +1,7 @@
 # tanem-scripts
 
 [![npm version](https://img.shields.io/npm/v/tanem-scripts.svg?style=flat-square)](https://www.npmjs.com/package/tanem-scripts)
-[![build status](https://img.shields.io/travis/tanem/tanem-scripts/master.svg?style=flat-square)](https://travis-ci.org/tanem/tanem-scripts)
+[![build status](https://img.shields.io/github/workflow/status/tanem/tanem-scripts/ci?style=flat-square)](https://github.com/tanem/tanem-scripts/actions?query=workflow%3ACI)
 [![coverage status](https://img.shields.io/codecov/c/github/tanem/tanem-scripts.svg?style=flat-square)](https://codecov.io/gh/tanem/tanem-scripts)
 [![npm downloads](https://img.shields.io/npm/dm/tanem-scripts.svg?style=flat-square)](https://www.npmjs.com/package/tanem-scripts)
 
@@ -70,7 +70,7 @@ import { changelog } from 'tanem-scripts';
 (async () => {
   try {
     const result = await changelog({
-      futureRelease: 'v2.0.0'
+      futureRelease: 'v2.0.0',
     });
     await fs.writeFile(path.join(__dirname, 'CHANGELOG.md'), result, 'utf-8');
   } catch (error) {
