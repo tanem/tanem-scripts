@@ -1,5 +1,18 @@
 # Changelog
 
+## [v6.0.3](https://github.com/tanem/tanem-scripts/tree/v6.0.3) (2020-12-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.2...v6.0.3)
+
+#### :memo: Documentation
+
+- [#385](https://github.com/tanem/tanem-scripts/pull/385) Fix workflow badge link ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#387](https://github.com/tanem/tanem-scripts/pull/387) Update typescript-eslint monorepo to v4.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#386](https://github.com/tanem/tanem-scripts/pull/386) Update dependency prettier to v2.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#384](https://github.com/tanem/tanem-scripts/pull/384) Switch from travis to gh actions ([@tanem](https://github.com/tanem))
+
 ## [v6.0.2](https://github.com/tanem/tanem-scripts/tree/v6.0.2) (2020-11-27)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.1...v6.0.2)
 
