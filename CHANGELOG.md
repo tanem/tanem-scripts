@@ -1,5 +1,25 @@
 # Changelog
 
+## [v6.0.4](https://github.com/tanem/tanem-scripts/tree/v6.0.4) (2020-12-18)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.3...v6.0.4)
+
+#### :house: Internal
+
+- [#401](https://github.com/tanem/tanem-scripts/pull/401) Update typescript-eslint monorepo to v4.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#400](https://github.com/tanem/tanem-scripts/pull/400) Update dependency commander to ^6.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#399](https://github.com/tanem/tanem-scripts/pull/399) Update dependency @pollyjs/core to v5.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#398](https://github.com/tanem/tanem-scripts/pull/398) Update dependency @pollyjs/adapter-node-http to v5.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#397](https://github.com/tanem/tanem-scripts/pull/397) Update dependency typescript to v4.1.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#396](https://github.com/tanem/tanem-scripts/pull/396) Update dependency @types/jest to v26.0.19 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#395](https://github.com/tanem/tanem-scripts/pull/395) Update dependency @types/fs-extra to v9.0.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#394](https://github.com/tanem/tanem-scripts/pull/394) Update typescript-eslint monorepo to v4.9.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#393](https://github.com/tanem/tanem-scripts/pull/393) Update dependency @pollyjs/adapter-node-http to v5.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#392](https://github.com/tanem/tanem-scripts/pull/392) Update dependency eslint-config-prettier to v7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#391](https://github.com/tanem/tanem-scripts/pull/391) Update dependency eslint to v7.15.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#390](https://github.com/tanem/tanem-scripts/pull/390) Update dependency execa to v5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#389](https://github.com/tanem/tanem-scripts/pull/389) Update dependency semver to ^7.3.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#388](https://github.com/tanem/tanem-scripts/pull/388) Update dependency @types/jest to v26.0.16 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.3](https://github.com/tanem/tanem-scripts/tree/v6.0.3) (2020-12-04)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.2...v6.0.3)
 
