@@ -44,7 +44,7 @@
     "@pollyjs/adapter-node-http": "5.1.0",
     "@pollyjs/core": "5.1.0",
     "@pollyjs/persister-fs": "5.0.0",
-    "@types/fs-extra": "9.0.6",
+    "@types/fs-extra": "9.0.7",
     "@types/jest": "26.0.20",
     "@types/lolex": "5.1.0",
     "@types/node": "12.12.25",
