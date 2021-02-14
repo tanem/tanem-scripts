@@ -1,5 +1,19 @@
 # Changelog
 
+## [v6.0.8](https://github.com/tanem/tanem-scripts/tree/v6.0.8) (2021-02-14)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.7...v6.0.8)
+
+#### :house: Internal
+
+- [#426](https://github.com/tanem/tanem-scripts/pull/426) Update dependency typescript to v4.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#425](https://github.com/tanem/tanem-scripts/pull/425) Update dependency @octokit/rest to ^16.43.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#424](https://github.com/tanem/tanem-scripts/pull/424) Update dependency ts-jest to v26.5.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#423](https://github.com/tanem/tanem-scripts/pull/423) Update typescript-eslint monorepo to v4.15.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#422](https://github.com/tanem/tanem-scripts/pull/422) Update dependency date-fns to ^2.17.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#421](https://github.com/tanem/tanem-scripts/pull/421) Update dependency @types/pollyjs__core to v4.3.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#420](https://github.com/tanem/tanem-scripts/pull/420) Update typescript-eslint monorepo to v4.14.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#419](https://github.com/tanem/tanem-scripts/pull/419) Update dependency eslint to v7.19.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.7](https://github.com/tanem/tanem-scripts/tree/v6.0.7) (2021-02-03)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.6...v6.0.7)
 
