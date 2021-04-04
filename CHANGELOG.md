@@ -1,5 +1,16 @@
 # Changelog
 
+## [v6.0.14](https://github.com/tanem/tanem-scripts/tree/v6.0.14) (2021-04-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.13...v6.0.14)
+
+#### :house: Internal
+
+- [#460](https://github.com/tanem/tanem-scripts/pull/460) Update typescript-eslint monorepo to v4.20.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#458](https://github.com/tanem/tanem-scripts/pull/458) Update dependency eslint to v7.23.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#457](https://github.com/tanem/tanem-scripts/pull/457) Update dependency @types/node to v12.20.7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#456](https://github.com/tanem/tanem-scripts/pull/456) Update dependency @types/jest to v26.0.22 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#438](https://github.com/tanem/tanem-scripts/pull/438) Update dependency @types/fs-extra to v9.0.9 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.13](https://github.com/tanem/tanem-scripts/tree/v6.0.13) (2021-03-27)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.12...v6.0.13)
 
