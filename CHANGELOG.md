@@ -1,5 +1,14 @@
 # Changelog
 
+## [v6.0.16](https://github.com/tanem/tanem-scripts/tree/v6.0.16) (2021-04-22)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.15...v6.0.16)
+
+#### :house: Internal
+
+- [#469](https://github.com/tanem/tanem-scripts/pull/469) Update dependency @types/node to v12.20.10 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#468](https://github.com/tanem/tanem-scripts/pull/468) Update dependency ts-jest to v26.5.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#467](https://github.com/tanem/tanem-scripts/pull/467) Update dependency date-fns to ^2.21.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.15](https://github.com/tanem/tanem-scripts/tree/v6.0.15) (2021-04-17)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.14...v6.0.15)
 
