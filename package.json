@@ -52,7 +52,7 @@
     "@types/pollyjs__adapter-node-http": "2.0.1",
     "@types/pollyjs__core": "4.3.2",
     "@types/pollyjs__persister-fs": "2.0.1",
-    "@types/semver": "7.3.5",
+    "@types/semver": "7.3.6",
     "@typescript-eslint/eslint-plugin": "4.23.0",
     "@typescript-eslint/parser": "4.23.0",
     "del-cli": "3.0.1",
