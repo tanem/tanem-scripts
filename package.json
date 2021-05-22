@@ -1,6 +1,6 @@
 {
   "name": "tanem-scripts",
-  "version": "6.0.17",
+  "version": "6.0.18",
   "description": "Common scripts for my projects.",
   "author": "Tane Morgan (https://github.com/tanem)",
   "bin": {
