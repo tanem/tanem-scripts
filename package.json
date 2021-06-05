@@ -41,7 +41,7 @@
     "semver": "^7.3.5"
   },
   "devDependencies": {
-    "@pollyjs/adapter-node-http": "5.1.0",
+    "@pollyjs/adapter-node-http": "5.1.1",
     "@pollyjs/core": "5.1.0",
     "@pollyjs/persister-fs": "5.0.0",
     "@types/fs-extra": "9.0.11",
