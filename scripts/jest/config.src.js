@@ -8,5 +8,6 @@ module.exports = {
   roots: ['<rootDir>/test'],
   setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
   testMatch: ['<rootDir>/test/*.test.ts'],
+  testRunner: 'jest-jasmine2',
   transform: { '^.+\\.ts$': 'ts-jest' },
 };
