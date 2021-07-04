@@ -1,5 +1,17 @@
 # Changelog
 
+## [v6.0.22](https://github.com/tanem/tanem-scripts/tree/v6.0.22) (2021-07-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.21...v6.0.22)
+
+#### :house: Internal
+
+- [#515](https://github.com/tanem/tanem-scripts/pull/515) Update dependency typescript to v4.3.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#514](https://github.com/tanem/tanem-scripts/pull/514) Update typescript-eslint monorepo to v4.28.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#513](https://github.com/tanem/tanem-scripts/pull/513) Update dependency jest to v27.0.6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#511](https://github.com/tanem/tanem-scripts/pull/511) Update dependency commander to v8 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#512](https://github.com/tanem/tanem-scripts/pull/512) Update dependency prettier to v2.3.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#510](https://github.com/tanem/tanem-scripts/pull/510) Update dependency @types/node to v14.17.4 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.21](https://github.com/tanem/tanem-scripts/tree/v6.0.21) (2021-06-25)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.20...v6.0.21)
 
