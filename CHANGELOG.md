@@ -1,5 +1,16 @@
 # Changelog
 
+## [v6.0.25](https://github.com/tanem/tanem-scripts/tree/v6.0.25) (2021-07-22)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.24...v6.0.25)
+
+#### :bug: Bug Fix
+
+- [#527](https://github.com/tanem/tanem-scripts/pull/527) Handle safe to test label ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#525](https://github.com/tanem/tanem-scripts/pull/525) Update dependency eslint to v7.31.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.24](https://github.com/tanem/tanem-scripts/tree/v6.0.24) (2021-07-16)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.23...v6.0.24)
 
