@@ -27,15 +27,19 @@ const release = async (): Promise<void> => {
   const labelsToRelease = [
     ...new Set(
       pullsToRelease.map((pull) => {
-        if (pull.labels.length === 0) {
+        const labels = pull.labels.filter(
+          (label) => label.name !== 'safe to test'
+        );
+
+        if (labels.length === 0) {
           throw new Error('Unlabelled PRs in release');
         }
 
-        if (pull.labels.length > 1) {
+        if (labels.length > 1) {
           throw new Error('PRs with multiple labels in release');
         }
 
-        return pull.labels[0].name;
+        return labels[0].name;
       })
     ),
   ];
