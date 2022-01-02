@@ -14,6 +14,12 @@
     {
       "depTypeList": ["dependencies"],
       "rangeStrategy": "bump"
+    },
+    {
+      "matchPackageNames": [
+        "execa"
+      ],
+      "allowedVersions": "< 6.0.0"
     }
   ],
   "prCreation": "not-pending",
