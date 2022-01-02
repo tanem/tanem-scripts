@@ -4,6 +4,11 @@ import FSPersister from '@pollyjs/persister-fs';
 import path from 'path';
 import { cache } from '../src/data';
 
+declare global {
+  // eslint-disable-next-line no-var
+  var polly: InstanceType<typeof Polly>;
+}
+
 jasmine.getEnv().addReporter({
   specStarted: (result) => {
     jasmine.fullName = result.fullName;
