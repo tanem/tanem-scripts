@@ -16,10 +16,12 @@
       "rangeStrategy": "bump"
     },
     {
-      "matchPackageNames": [
-        "execa"
-      ],
+      "matchPackageNames": ["execa"],
       "allowedVersions": "< 6.0.0"
+    },
+    {
+      "matchPackageNames": ["git-remote-origin-url"],
+      "allowedVersions": "< 4.0.0"
     }
   ],
   "prCreation": "not-pending",
