@@ -1,5 +1,16 @@
 # Changelog
 
+## [v6.0.40](https://github.com/tanem/tanem-scripts/tree/v6.0.40) (2022-02-04)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.39...v6.0.40)
+
+#### :house: Internal
+
+- [#641](https://github.com/tanem/tanem-scripts/pull/641) Update caniuse-lite ([@tanem](https://github.com/tanem))
+- [#640](https://github.com/tanem/tanem-scripts/pull/640) Update dependency @types/node to v16.11.22 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#639](https://github.com/tanem/tanem-scripts/pull/639) Update typescript-eslint monorepo to v5.10.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#638](https://github.com/tanem/tanem-scripts/pull/638) Update dependency commander to v9 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#637](https://github.com/tanem/tanem-scripts/pull/637) Update dependency eslint to v8.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.39](https://github.com/tanem/tanem-scripts/tree/v6.0.39) (2022-01-28)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.38...v6.0.39)
 
