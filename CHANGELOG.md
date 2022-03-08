@@ -1,5 +1,22 @@
 # Changelog
 
+## [v6.0.43](https://github.com/tanem/tanem-scripts/tree/v6.0.43) (2022-03-08)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.42...v6.0.43)
+
+#### :house: Internal
+
+- [#661](https://github.com/tanem/tanem-scripts/pull/661) Update dependency eslint-config-prettier to v8.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#660](https://github.com/tanem/tanem-scripts/pull/660) Update dependency typescript to v4.6.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#659](https://github.com/tanem/tanem-scripts/pull/659) Update typescript-eslint monorepo to v5.13.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#658](https://github.com/tanem/tanem-scripts/pull/658) Update actions/checkout action to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#657](https://github.com/tanem/tanem-scripts/pull/657) Update dependency eslint to v8.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#656](https://github.com/tanem/tanem-scripts/pull/656) Update dependency @types/node to v16.11.26 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#655](https://github.com/tanem/tanem-scripts/pull/655) Update actions/setup-node action to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#654](https://github.com/tanem/tanem-scripts/pull/654) Update dependency @types/jest to v27.4.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#653](https://github.com/tanem/tanem-scripts/pull/653) Update dependency fs-extra to ^10.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#652](https://github.com/tanem/tanem-scripts/pull/652) Update typescript-eslint monorepo to v5.12.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#651](https://github.com/tanem/tanem-scripts/pull/651) Update dependency eslint-config-prettier to v8.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.42](https://github.com/tanem/tanem-scripts/tree/v6.0.42) (2022-02-18)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.41...v6.0.42)
 
