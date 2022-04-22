@@ -1,5 +1,22 @@
 # Changelog
 
+## [v6.0.47](https://github.com/tanem/tanem-scripts/tree/v6.0.47) (2022-04-22)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.46...v6.0.47)
+
+#### :house: Internal
+
+- [#683](https://github.com/tanem/tanem-scripts/pull/683) Update typescript-eslint monorepo to v5.20.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#682](https://github.com/tanem/tanem-scripts/pull/682) Update dependency fs-extra to ^10.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#681](https://github.com/tanem/tanem-scripts/pull/681) Update dependency commander to ^9.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#680](https://github.com/tanem/tanem-scripts/pull/680) Update dependency @types/node to v16.11.27 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#679](https://github.com/tanem/tanem-scripts/pull/679) Update dependency semver to ^7.3.7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#678](https://github.com/tanem/tanem-scripts/pull/678) Update typescript-eslint monorepo to v5.19.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#677](https://github.com/tanem/tanem-scripts/pull/677) Update dependency eslint to v8.13.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#676](https://github.com/tanem/tanem-scripts/pull/676) Update dependency semver to ^7.3.6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#675](https://github.com/tanem/tanem-scripts/pull/675) Update typescript-eslint monorepo to v5.18.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#674](https://github.com/tanem/tanem-scripts/pull/674) Update pollyjs monorepo to v6.0.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#673](https://github.com/tanem/tanem-scripts/pull/673) Update dependency prettier to v2.6.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.46](https://github.com/tanem/tanem-scripts/tree/v6.0.46) (2022-04-01)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.45...v6.0.46)
 
