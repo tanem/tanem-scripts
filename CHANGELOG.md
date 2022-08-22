@@ -1,5 +1,19 @@
 # Changelog
 
+## [v6.0.58](https://github.com/tanem/tanem-scripts/tree/v6.0.58) (2022-08-22)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.57...v6.0.58)
+
+#### :house: Internal
+
+- [#749](https://github.com/tanem/tanem-scripts/pull/749) Update dependency date-fns to ^2.29.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#747](https://github.com/tanem/tanem-scripts/pull/747) Update typescript-eslint monorepo to v5.33.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#748](https://github.com/tanem/tanem-scripts/pull/748) Update dependency @types/node to v16.11.49 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#746](https://github.com/tanem/tanem-scripts/pull/746) Update dependency @types/jest to v28.1.7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#745](https://github.com/tanem/tanem-scripts/pull/745) Update dependency ts-jest to v28.0.8 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#744](https://github.com/tanem/tanem-scripts/pull/744) Update dependency eslint to v8.22.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#743](https://github.com/tanem/tanem-scripts/pull/743) Update dependency @types/node to v16.11.48 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#742](https://github.com/tanem/tanem-scripts/pull/742) Update dependency @types/semver to v7.3.12 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.57](https://github.com/tanem/tanem-scripts/tree/v6.0.57) (2022-08-14)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.56...v6.0.57)
 
