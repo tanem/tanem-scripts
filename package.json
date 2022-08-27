@@ -45,7 +45,7 @@
     "@pollyjs/core": "6.0.5",
     "@pollyjs/persister-fs": "6.0.5",
     "@types/fs-extra": "9.0.13",
-    "@types/jest": "28.1.7",
+    "@types/jest": "28.1.8",
     "@types/lolex": "5.1.2",
     "@types/node": "16.11.56",
     "@types/parse-github-url": "1.0.0",
