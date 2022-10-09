@@ -1,5 +1,25 @@
 # Changelog
 
+## [v6.0.61](https://github.com/tanem/tanem-scripts/tree/v6.0.61) (2022-10-09)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.60...v6.0.61)
+
+#### :house: Internal
+
+- [#776](https://github.com/tanem/tanem-scripts/pull/776) Update dependency semver to ^7.3.8 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#775](https://github.com/tanem/tanem-scripts/pull/775) Update dependency @types/node to v16.11.64 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#774](https://github.com/tanem/tanem-scripts/pull/774) Update typescript-eslint monorepo to v5.39.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#773](https://github.com/tanem/tanem-scripts/pull/773) Update jest monorepo ([@renovate[bot]](https://github.com/apps/renovate))
+- [#772](https://github.com/tanem/tanem-scripts/pull/772) Update dependency commander to ^9.4.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#771](https://github.com/tanem/tanem-scripts/pull/771) Update dependency ts-jest to v29.0.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#770](https://github.com/tanem/tanem-scripts/pull/770) Update styfle/cancel-workflow-action action to v0.10.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#769](https://github.com/tanem/tanem-scripts/pull/769) Update dependency typescript to v4.8.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#768](https://github.com/tanem/tanem-scripts/pull/768) Update dependency @types/node to v16.11.62 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#767](https://github.com/tanem/tanem-scripts/pull/767) Update typescript-eslint monorepo to v5.38.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#766](https://github.com/tanem/tanem-scripts/pull/766) Update dependency ts-jest to v29.0.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#765](https://github.com/tanem/tanem-scripts/pull/765) Update dependency eslint to v8.24.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#754](https://github.com/tanem/tanem-scripts/pull/754) Update jest monorepo to v29 (major) ([@renovate[bot]](https://github.com/apps/renovate))
+- [#764](https://github.com/tanem/tanem-scripts/pull/764) Update typescript-eslint monorepo to v5.38.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.60](https://github.com/tanem/tanem-scripts/tree/v6.0.60) (2022-09-18)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.59...v6.0.60)
 
