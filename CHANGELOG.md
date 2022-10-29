@@ -1,5 +1,24 @@
 # Changelog
 
+## [v6.0.62](https://github.com/tanem/tanem-scripts/tree/v6.0.62) (2022-10-29)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.61...v6.0.62)
+
+#### :house: Internal
+
+- [#790](https://github.com/tanem/tanem-scripts/pull/790) Update jest monorepo to v29.2.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#789](https://github.com/tanem/tanem-scripts/pull/789) Update typescript-eslint monorepo to v5.41.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#787](https://github.com/tanem/tanem-scripts/pull/787) Update dependency @types/node to v18 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#786](https://github.com/tanem/tanem-scripts/pull/786) Update dependency eslint to v8.26.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#785](https://github.com/tanem/tanem-scripts/pull/785) Update dependency @types/node to v16.11.68 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#784](https://github.com/tanem/tanem-scripts/pull/784) Update jest monorepo ([@renovate[bot]](https://github.com/apps/renovate))
+- [#783](https://github.com/tanem/tanem-scripts/pull/783) Update typescript-eslint monorepo to v5.40.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#782](https://github.com/tanem/tanem-scripts/pull/782) Update jest monorepo to v29.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#781](https://github.com/tanem/tanem-scripts/pull/781) Update styfle/cancel-workflow-action action to v0.11.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#780](https://github.com/tanem/tanem-scripts/pull/780) Update dependency @types/node to v16.11.65 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#779](https://github.com/tanem/tanem-scripts/pull/779) Update typescript-eslint monorepo to v5.40.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#778](https://github.com/tanem/tanem-scripts/pull/778) Update dependency eslint to v8.25.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#777](https://github.com/tanem/tanem-scripts/pull/777) Update dependency @types/jest to v29.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.61](https://github.com/tanem/tanem-scripts/tree/v6.0.61) (2022-10-09)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.60...v6.0.61)
 
