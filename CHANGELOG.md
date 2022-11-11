@@ -1,5 +1,23 @@
 # Changelog
 
+## [v6.0.63](https://github.com/tanem/tanem-scripts/tree/v6.0.63) (2022-11-11)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.62...v6.0.63)
+
+#### :house: Internal
+
+- [#802](https://github.com/tanem/tanem-scripts/pull/802) Update jest monorepo to v29.3.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#801](https://github.com/tanem/tanem-scripts/pull/801) Update typescript-eslint monorepo to v5.42.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#800](https://github.com/tanem/tanem-scripts/pull/800) Update dependency eslint to v8.27.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#799](https://github.com/tanem/tanem-scripts/pull/799) Update dependency @types/jest to v29.2.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#798](https://github.com/tanem/tanem-scripts/pull/798) Update dependency @types/node to v18.11.9 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#797](https://github.com/tanem/tanem-scripts/pull/797) Update dependency @types/jest to v29.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#796](https://github.com/tanem/tanem-scripts/pull/796) Update typescript-eslint monorepo to v5.42.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#795](https://github.com/tanem/tanem-scripts/pull/795) Update dependency @types/node to v18.11.8 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#794](https://github.com/tanem/tanem-scripts/pull/794) Update dependency @types/node to v18.11.7 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#793](https://github.com/tanem/tanem-scripts/pull/793) Update dependency @types/semver to v7.3.13 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#792](https://github.com/tanem/tanem-scripts/pull/792) Update dependency @types/node to v18.11.6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#791](https://github.com/tanem/tanem-scripts/pull/791) Update dependency @types/node to v18.11.5 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.62](https://github.com/tanem/tanem-scripts/tree/v6.0.62) (2022-10-29)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.61...v6.0.62)
 
