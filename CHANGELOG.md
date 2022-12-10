@@ -1,5 +1,19 @@
 # Changelog
 
+## [v6.0.66](https://github.com/tanem/tanem-scripts/tree/v6.0.66) (2022-12-10)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.65...v6.0.66)
+
+#### :house: Internal
+
+- [#817](https://github.com/tanem/tanem-scripts/pull/817) Update dependency @types/node to v18.11.11 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#816](https://github.com/tanem/tanem-scripts/pull/816) Update typescript-eslint monorepo to v5.45.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#815](https://github.com/tanem/tanem-scripts/pull/815) Update dependency @types/jest to v29.2.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#814](https://github.com/tanem/tanem-scripts/pull/814) Update dependency eslint to v8.29.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#813](https://github.com/tanem/tanem-scripts/pull/813) Update dependency @types/node to v18.11.10 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#812](https://github.com/tanem/tanem-scripts/pull/812) Update dependency fs-extra to ^11.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#811](https://github.com/tanem/tanem-scripts/pull/811) Update dependency fs-extra to v11 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#810](https://github.com/tanem/tanem-scripts/pull/810) Update typescript-eslint monorepo to v5.45.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.65](https://github.com/tanem/tanem-scripts/tree/v6.0.65) (2022-11-27)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.64...v6.0.65)
 
