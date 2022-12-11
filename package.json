@@ -65,7 +65,7 @@
     "prettier": "2.8.1",
     "shx": "0.3.4",
     "ts-jest": "29.0.3",
-    "typescript": "4.9.3"
+    "typescript": "4.9.4"
   },
   "scripts": {
     "build": "run-s clean compile",
