@@ -1,5 +1,21 @@
 # Changelog
 
+## [v6.0.69](https://github.com/tanem/tanem-scripts/tree/v6.0.69) (2023-01-13)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.68...v6.0.69)
+
+#### :house: Internal
+
+- [#839](https://github.com/tanem/tanem-scripts/pull/839) Update typescript-eslint monorepo to v5.48.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#838](https://github.com/tanem/tanem-scripts/pull/838) Update dependency @types/fs-extra to v11 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#837](https://github.com/tanem/tanem-scripts/pull/837) Update dependency prettier to v2.8.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#836](https://github.com/tanem/tanem-scripts/pull/836) Update dependency commander to ^9.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#835](https://github.com/tanem/tanem-scripts/pull/835) Update typescript-eslint monorepo to v5.48.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#834](https://github.com/tanem/tanem-scripts/pull/834) Update dependency eslint-config-prettier to v8.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#833](https://github.com/tanem/tanem-scripts/pull/833) Update dependency eslint to v8.31.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#832](https://github.com/tanem/tanem-scripts/pull/832) Update dependency @types/jest to v29.2.5 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#831](https://github.com/tanem/tanem-scripts/pull/831) Update typescript-eslint monorepo to v5.47.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#830](https://github.com/tanem/tanem-scripts/pull/830) Update dependency @types/node to v18.11.18 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.68](https://github.com/tanem/tanem-scripts/tree/v6.0.68) (2022-12-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.67...v6.0.68)
 
