@@ -1,5 +1,14 @@
 # Changelog
 
+## [v6.0.77](https://github.com/tanem/tanem-scripts/tree/v6.0.77) (2023-03-23)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.76...v6.0.77)
+
+#### :house: Internal
+
+- [#877](https://github.com/tanem/tanem-scripts/pull/877) Add universal-user-agent override ([@tanem](https://github.com/tanem))
+- [#876](https://github.com/tanem/tanem-scripts/pull/876) Update dependency eslint to v8.36.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#875](https://github.com/tanem/tanem-scripts/pull/875) Update dependency @types/node to v18.15.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v6.0.76](https://github.com/tanem/tanem-scripts/tree/v6.0.76) (2023-03-10)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.75...v6.0.76)
 
