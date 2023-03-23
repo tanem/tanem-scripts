@@ -80,5 +80,8 @@
     "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
     "test:src": "jest --config ./scripts/jest/config.src.js"
+  },
+  "overrides": {
+    "universal-user-agent": "6.0.0"
   }
 }
