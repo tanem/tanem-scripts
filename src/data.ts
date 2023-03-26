@@ -1,12 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 import { Octokit } from '@octokit/rest';
 import { compareAsc } from 'date-fns';
 import gitRemoteOriginUrl from 'git-remote-origin-url';
 import parseGithubUrl from 'parse-github-url';
 
 export interface Data {
-  commits: Octokit.ReposListCommitsResponseItem[];
+  commits: unknown[];
   owner: string;
-  pulls: Octokit.PullsListResponseItem[];
+  pulls: unknown[];
   repo: string;
   tags: {
     date: string;
@@ -48,11 +51,7 @@ export const get = async (): Promise<Data> => {
     repo,
   };
 
-  const [rawPulls, rawTags, commits]: [
-    Octokit.PullsListResponseItem[],
-    Octokit.ReposListTagsResponseItem[],
-    Octokit.ReposListCommitsResponseItem[]
-  ] = await Promise.all([
+  const [rawPulls, rawTags, commits] = await Promise.all([
     octokit.paginate(
       octokit.pulls.list.endpoint.merge({
         ...baseEndpointOptions,

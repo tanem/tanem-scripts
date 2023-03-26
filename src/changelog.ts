@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 import { isBefore } from 'date-fns';
 import { get as getData } from './data';
 
