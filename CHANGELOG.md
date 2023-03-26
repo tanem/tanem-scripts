@@ -1,5 +1,12 @@
 # Changelog
 
+## [v7.0.0](https://github.com/tanem/tanem-scripts/tree/v7.0.0) (2023-03-26)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.77...v7.0.0)
+
+#### :boom: Breaking Change
+
+- [#878](https://github.com/tanem/tanem-scripts/pull/878) Hacks for latest @octokit/rest version & @pollyjs issues ([@tanem](https://github.com/tanem))
+
 ## [v6.0.77](https://github.com/tanem/tanem-scripts/tree/v6.0.77) (2023-03-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v6.0.76...v6.0.77)
 
