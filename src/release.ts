@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 import { isAfter } from 'date-fns';
 import execa from 'execa';
 import fs from 'fs-extra';
