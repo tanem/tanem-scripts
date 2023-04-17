@@ -12,22 +12,29 @@
   },
   "packageRules": [
     {
-      "depTypeList": ["dependencies"],
+      "depTypeList": [
+        "dependencies"
+      ],
       "rangeStrategy": "bump"
     },
     {
-      "matchPackageNames": ["execa"],
+      "matchPackageNames": [
+        "execa"
+      ],
       "allowedVersions": "< 6.0.0"
     },
     {
-      "matchPackageNames": ["git-remote-origin-url"],
+      "matchPackageNames": [
+        "git-remote-origin-url"
+      ],
       "allowedVersions": "< 4.0.0"
     },
     {
-      "matchPackageNames": ["@octokit/rest"],
+      "matchPackageNames": [
+        "@octokit/rest"
+      ],
       "allowedVersions": "< 17.0.0"
     }
   ],
-  "prCreation": "not-pending",
   "stabilityDays": 3
 }
