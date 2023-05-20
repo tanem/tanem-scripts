@@ -1,5 +1,18 @@
 # Changelog
 
+## [v7.0.6](https://github.com/tanem/tanem-scripts/tree/v7.0.6) (2023-05-20)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.5...v7.0.6)
+
+#### :house: Internal
+
+- [#924](https://github.com/tanem/tanem-scripts/pull/924) Update dependency @types/node to v18.16.10 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#923](https://github.com/tanem/tanem-scripts/pull/923) Update typescript-eslint monorepo to v5.59.6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#922](https://github.com/tanem/tanem-scripts/pull/922) Update dependency @types/node to v18.16.9 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#921](https://github.com/tanem/tanem-scripts/pull/921) Update dependency semver to ^7.5.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#920](https://github.com/tanem/tanem-scripts/pull/920) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#919](https://github.com/tanem/tanem-scripts/pull/919) Update dependency @types/node to v18.16.8 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#918](https://github.com/tanem/tanem-scripts/pull/918) Update dependency @types/node to v18.16.7 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v7.0.5](https://github.com/tanem/tanem-scripts/tree/v7.0.5) (2023-05-12)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.4...v7.0.5)
 
