@@ -1,5 +1,15 @@
 # Changelog
 
+## [v7.0.8](https://github.com/tanem/tanem-scripts/tree/v7.0.8) (2023-06-02)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.7...v7.0.8)
+
+#### :house: Internal
+
+- [#934](https://github.com/tanem/tanem-scripts/pull/934) Update typescript-eslint monorepo to v5.59.8 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#933](https://github.com/tanem/tanem-scripts/pull/933) Update dependency @types/node to v18.16.16 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#932](https://github.com/tanem/tanem-scripts/pull/932) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#931](https://github.com/tanem/tanem-scripts/pull/931) Update dependency @types/node to v18.16.15 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v7.0.7](https://github.com/tanem/tanem-scripts/tree/v7.0.7) (2023-05-26)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.6...v7.0.7)
 
