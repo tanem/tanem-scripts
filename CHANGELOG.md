@@ -1,5 +1,29 @@
 # Changelog
 
+## [v7.0.12](https://github.com/tanem/tanem-scripts/tree/v7.0.12) (2023-07-20)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.11...v7.0.12)
+
+#### :house: Internal
+
+- [#970](https://github.com/tanem/tanem-scripts/pull/970) Update dependency eslint to v8.45.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#969](https://github.com/tanem/tanem-scripts/pull/969) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#968](https://github.com/tanem/tanem-scripts/pull/968) Update typescript-eslint monorepo to v6 (major) ([@renovate[bot]](https://github.com/apps/renovate))
+- [#967](https://github.com/tanem/tanem-scripts/pull/967) Update typescript-eslint monorepo to v5.62.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#966](https://github.com/tanem/tanem-scripts/pull/966) Update dependency @types/jest to v29.5.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#965](https://github.com/tanem/tanem-scripts/pull/965) Update dependency semver to ^7.5.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#964](https://github.com/tanem/tanem-scripts/pull/964) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#963](https://github.com/tanem/tanem-scripts/pull/963) Update jest monorepo to v29.6.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#962](https://github.com/tanem/tanem-scripts/pull/962) Update dependency prettier to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#961](https://github.com/tanem/tanem-scripts/pull/961) Update jest monorepo to v29.6.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#960](https://github.com/tanem/tanem-scripts/pull/960) Update typescript-eslint monorepo to v5.61.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#959](https://github.com/tanem/tanem-scripts/pull/959) Update dependency eslint to v8.44.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#958](https://github.com/tanem/tanem-scripts/pull/958) Update dependency @types/node to v18.16.19 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#957](https://github.com/tanem/tanem-scripts/pull/957) Update dependency ts-jest to v29.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#956](https://github.com/tanem/tanem-scripts/pull/956) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#955](https://github.com/tanem/tanem-scripts/pull/955) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#954](https://github.com/tanem/tanem-scripts/pull/954) Update dependency typescript to v5.1.6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#953](https://github.com/tanem/tanem-scripts/pull/953) Update dependency typescript to v5.1.5 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v7.0.11](https://github.com/tanem/tanem-scripts/tree/v7.0.11) (2023-06-30)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.10...v7.0.11)
 
