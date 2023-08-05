@@ -1,5 +1,23 @@
 # Changelog
 
+## [v7.0.13](https://github.com/tanem/tanem-scripts/tree/v7.0.13) (2023-08-05)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.12...v7.0.13)
+
+#### :house: Internal
+
+- [#982](https://github.com/tanem/tanem-scripts/pull/982) Update typescript-eslint monorepo to v6.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#981](https://github.com/tanem/tanem-scripts/pull/981) Update dependency eslint to v8.46.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#980](https://github.com/tanem/tanem-scripts/pull/980) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#979](https://github.com/tanem/tanem-scripts/pull/979) Update dependency eslint-config-prettier to v8.9.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#978](https://github.com/tanem/tanem-scripts/pull/978) Update jest monorepo to v29.6.2 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#977](https://github.com/tanem/tanem-scripts/pull/977) Update dependency @types/node to v18.17.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#976](https://github.com/tanem/tanem-scripts/pull/976) Update typescript-eslint monorepo to v6.2.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#975](https://github.com/tanem/tanem-scripts/pull/975) Update dependency @types/node to v18.17.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#974](https://github.com/tanem/tanem-scripts/pull/974) Update dependency @types/node to v18.16.20 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#973](https://github.com/tanem/tanem-scripts/pull/973) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#972](https://github.com/tanem/tanem-scripts/pull/972) Update pollyjs monorepo to v6.0.6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#971](https://github.com/tanem/tanem-scripts/pull/971) Update typescript-eslint monorepo to v6.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v7.0.12](https://github.com/tanem/tanem-scripts/tree/v7.0.12) (2023-07-20)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.11...v7.0.12)
 
