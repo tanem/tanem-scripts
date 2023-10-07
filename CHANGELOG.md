@@ -1,5 +1,15 @@
 # Changelog
 
+## [v7.0.21](https://github.com/tanem/tanem-scripts/tree/v7.0.21) (2023-10-07)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.20...v7.0.21)
+
+#### :house: Internal
+
+- [#1044](https://github.com/tanem/tanem-scripts/pull/1044) Update styfle/cancel-workflow-action action to v0.12.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1043](https://github.com/tanem/tanem-scripts/pull/1043) Update dependency @types/node to v18.18.3 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1042](https://github.com/tanem/tanem-scripts/pull/1042) Update typescript-eslint monorepo to v6.7.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1041](https://github.com/tanem/tanem-scripts/pull/1041) Update dependency @types/node to v18.18.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v7.0.20](https://github.com/tanem/tanem-scripts/tree/v7.0.20) (2023-09-29)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.19...v7.0.20)
 
