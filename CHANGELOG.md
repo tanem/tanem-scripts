@@ -1,5 +1,17 @@
 # Changelog
 
+## [v7.0.24](https://github.com/tanem/tanem-scripts/tree/v7.0.24) (2023-11-21)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.23...v7.0.24)
+
+#### :house: Internal
+
+- [#1083](https://github.com/tanem/tanem-scripts/pull/1083) Update dependency eslint to v8.54.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1082](https://github.com/tanem/tanem-scripts/pull/1082) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1081](https://github.com/tanem/tanem-scripts/pull/1081) Update dependency @types/node to v20.9.1 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1080](https://github.com/tanem/tanem-scripts/pull/1080) Update typescript-eslint monorepo to v6.11.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1079](https://github.com/tanem/tanem-scripts/pull/1079) Update dependency prettier to v3.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1078](https://github.com/tanem/tanem-scripts/pull/1078) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v7.0.23](https://github.com/tanem/tanem-scripts/tree/v7.0.23) (2023-11-12)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.22...v7.0.23)
 
