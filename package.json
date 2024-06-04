@@ -59,7 +59,7 @@
     "lolex": "6.0.0",
     "make-dir": "5.0.0",
     "npm-run-all2": "6.2.0",
-    "prettier": "3.2.5",
+    "prettier": "3.3.0",
     "shx": "0.3.4",
     "ts-jest": "29.1.4",
     "typescript": "5.4.5"
