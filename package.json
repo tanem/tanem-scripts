@@ -58,7 +58,7 @@
     "jest-jasmine2": "29.7.0",
     "lolex": "6.0.0",
     "make-dir": "5.0.0",
-    "npm-run-all2": "7.0.1",
+    "npm-run-all2": "7.0.2",
     "prettier": "3.4.2",
     "shx": "0.3.4",
     "ts-jest": "29.2.5",
