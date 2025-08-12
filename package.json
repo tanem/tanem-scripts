@@ -52,7 +52,7 @@
     "@types/semver": "7.7.0",
     "@typescript-eslint/eslint-plugin": "8.39.0",
     "@typescript-eslint/parser": "8.39.0",
-    "eslint": "9.32.0",
+    "eslint": "9.33.0",
     "eslint-config-prettier": "10.1.8",
     "jest": "30.0.5",
     "jest-jasmine2": "30.0.5",
