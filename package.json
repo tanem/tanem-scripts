@@ -49,7 +49,7 @@
     "@types/lolex": "5.1.6",
     "@types/node": "22.18.1",
     "@types/parse-github-url": "1.0.3",
-    "@types/semver": "7.7.0",
+    "@types/semver": "7.7.1",
     "@typescript-eslint/eslint-plugin": "8.41.0",
     "@typescript-eslint/parser": "8.41.0",
     "eslint": "9.34.0",
