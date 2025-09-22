@@ -61,7 +61,7 @@
     "npm-run-all2": "8.0.4",
     "prettier": "3.6.2",
     "shx": "0.4.0",
-    "ts-jest": "29.4.3",
+    "ts-jest": "29.4.4",
     "typescript": "5.9.2"
   },
   "scripts": {
