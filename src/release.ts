@@ -96,7 +96,7 @@ const release = async (): Promise<void> => {
 
   await execa('git', ['push', '--tags'], execaOptions);
 
-  await execa('npm', ['publish', '--access', 'public'], execaOptions);
+  await execa('npm', ['publish', '--provenance', '--access', 'public'], execaOptions)
 };
 
 export default release;
