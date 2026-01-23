@@ -11,7 +11,10 @@
   ],
   "homepage": "https://github.com/tanem/tanem-scripts",
   "bugs": "https://github.com/tanem/tanem-scripts/issues",
-  "repository": "github:tanem/tanem-scripts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanem/tanem-scripts.git"
+  },
   "keywords": [
     "authors",
     "changelog",
