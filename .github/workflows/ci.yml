@@ -20,4 +20,6 @@ jobs:
           check-latest: true
       - run: npm ci
       - run: npm test
+        env:
+          CHANGELOG_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: codecov/codecov-action@v5

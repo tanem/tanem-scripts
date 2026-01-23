@@ -1,116 +1,93 @@
-jest.mock('execa');
-jest.mock('fs', () => ({
-  promises: {
-    writeFile: jest.fn(),
-  },
-}));
 jest.mock('../src/changelog');
 jest.mock('../src/authors');
 
-import execa from 'execa';
 import { release } from '../src';
 import changelog from '../src/changelog';
+import authors from '../src/authors';
+import * as data from '../src/data';
 
-const originalNpmPackageVersion = process.env.npm_package_version;
+const mockDataWithLabels = {
+  commits: [],
+  owner: 'tanem',
+  pulls: [
+    {
+      number: 100,
+      title: 'Test PR',
+      labels: [{ name: 'enhancement' }],
+      merged_at: '2019-01-15T00:00:00Z',
+    },
+  ],
+  repo: 'tanem-scripts',
+  tags: [{ date: '2019-01-01T00:00:00Z', name: 'v1.0.0' }],
+};
 
-afterEach(() => {
-  process.env.npm_package_version = originalNpmPackageVersion;
-});
+const mockDataUnlabelled = {
+  ...mockDataWithLabels,
+  pulls: [
+    {
+      number: 100,
+      title: 'Unlabelled PR',
+      labels: [],
+      merged_at: '2019-01-15T00:00:00Z',
+    },
+  ],
+};
 
-test('throws if any PRs are unlabelled', async () => {
-  await expect(release()).rejects.toThrow();
-});
+const mockDataMultipleLabels = {
+  ...mockDataWithLabels,
+  pulls: [
+    {
+      number: 100,
+      title: 'Multi-label PR',
+      labels: [{ name: 'enhancement' }, { name: 'bug' }],
+      merged_at: '2019-01-15T00:00:00Z',
+    },
+  ],
+};
 
-test('throws if any PRs have multiple labels', async () => {
-  await expect(release()).rejects.toThrow();
-});
-
-test.skip('handles no tags', async () => {
-  global.polly.server
-    .get('https://api.github.com/repos/tanem/tanem-scripts/tags')
-    .intercept((_, res) => {
-      res.status(200).json([]);
-    });
-
-  // Mimic the major version bump from `npm version major`.
-  process.env.npm_package_version = '5.0.0';
-
-  await release();
-
-  expect(execa).toHaveBeenNthCalledWith(
-    1,
-    'npm',
-    ['version', 'major', '-m', 'Release v%s'],
-    { stdio: 'inherit' }
-  );
-  expect(changelog).toHaveBeenCalledTimes(1);
-  expect(changelog).toHaveBeenCalledWith({
-    futureRelease: `v${process.env.npm_package_version}`,
+describe('release validation', () => {
+  beforeEach(() => {
+    (changelog as jest.MockedFunction<typeof changelog>).mockResolvedValue(
+      '# Changelog',
+    );
+    (authors as jest.MockedFunction<typeof authors>).mockResolvedValue(
+      'Author1',
+    );
   });
-  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
-    stdio: 'inherit',
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
-});
 
-test.skip('runs a major release', async () => {
-  // Mimic the major version bump from `npm version major`.
-  process.env.npm_package_version = '5.0.0';
-
-  await release();
-
-  expect(execa).toHaveBeenNthCalledWith(
-    1,
-    'npm',
-    ['version', 'major', '-m', 'Release v%s'],
-    { stdio: 'inherit' }
-  );
-  expect(changelog).toHaveBeenCalledTimes(1);
-  expect(changelog).toHaveBeenCalledWith({
-    futureRelease: `v${process.env.npm_package_version}`,
+  test('throws if any PRs are unlabelled', async () => {
+    jest
+      .spyOn(data, 'get')
+      .mockResolvedValue(mockDataUnlabelled as unknown as data.Data);
+    await expect(release()).rejects.toThrow('Unlabelled PRs in release');
   });
-  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
-    stdio: 'inherit',
+
+  test('throws if any PRs have multiple labels', async () => {
+    jest
+      .spyOn(data, 'get')
+      .mockResolvedValue(mockDataMultipleLabels as unknown as data.Data);
+    await expect(release()).rejects.toThrow(
+      'PRs with multiple labels in release',
+    );
   });
-});
 
-test.skip('runs a minor release', async () => {
-  // Mimic the minor version bump from `npm version minor`.
-  process.env.npm_package_version = '4.1.0';
-
-  await release();
-
-  expect(execa).toHaveBeenNthCalledWith(
-    1,
-    'npm',
-    ['version', 'minor', '-m', 'Release v%s'],
-    { stdio: 'inherit' }
-  );
-  expect(changelog).toHaveBeenCalledTimes(1);
-  expect(changelog).toHaveBeenCalledWith({
-    futureRelease: `v${process.env.npm_package_version}`,
-  });
-  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
-    stdio: 'inherit',
-  });
-});
-
-test.skip('runs a patch release', async () => {
-  // Mimic the patch version bump from `npm version patch`.
-  process.env.npm_package_version = '4.0.7';
-
-  await release();
-
-  expect(execa).toHaveBeenNthCalledWith(
-    1,
-    'npm',
-    ['version', 'patch', '-m', 'Release v%s'],
-    { stdio: 'inherit' }
-  );
-  expect(changelog).toHaveBeenCalledTimes(1);
-  expect(changelog).toHaveBeenCalledWith({
-    futureRelease: `v${process.env.npm_package_version}`,
-  });
-  expect(execa).toHaveBeenCalledWith('npm', ['publish', '--access', 'public'], {
-    stdio: 'inherit',
+  test('throws if nothing to release', async () => {
+    const mockDataNoNewPulls = {
+      ...mockDataWithLabels,
+      tags: [
+        {
+          name: 'v4.0.6',
+          date: '2099-01-01T00:00:00Z',
+        },
+      ],
+    };
+    jest
+      .spyOn(data, 'get')
+      .mockResolvedValue(mockDataNoNewPulls as unknown as data.Data);
+    await expect(release()).rejects.toThrow('Nothing to release');
   });
 });

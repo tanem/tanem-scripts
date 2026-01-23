@@ -19,7 +19,7 @@ const release = async (): Promise<void> => {
 
   const pullsToRelease = latestTag
     ? pulls.filter((pull) =>
-        isAfter(new Date(pull.merged_at), new Date(latestTag.date))
+        isAfter(new Date(pull.merged_at), new Date(latestTag.date)),
       )
     : pulls;
 
@@ -31,7 +31,7 @@ const release = async (): Promise<void> => {
     ...new Set(
       pullsToRelease.map((pull) => {
         const labels = pull.labels.filter(
-          (label) => label.name !== 'safe to test'
+          (label) => label.name !== 'safe to test',
         );
 
         if (labels.length === 0) {
@@ -43,15 +43,15 @@ const release = async (): Promise<void> => {
         }
 
         return labels[0].name;
-      })
+      }),
     ),
   ];
 
   const releaseType = labelsToRelease.includes('breaking')
     ? 'major'
     : labelsToRelease.includes('enhancement')
-    ? 'minor'
-    : 'patch';
+      ? 'minor'
+      : 'patch';
 
   const packagePath = path.join(process.cwd(), 'package.json');
   const packageLockPath = path.join(process.cwd(), 'package-lock.json');
@@ -68,7 +68,7 @@ const release = async (): Promise<void> => {
   });
   await fs.outputFile(
     path.join(process.cwd(), 'CHANGELOG.md'),
-    changelogContent
+    changelogContent,
   );
 
   const authorsContent = await authors();
@@ -77,13 +77,13 @@ const release = async (): Promise<void> => {
   await fs.writeJSON(
     packagePath,
     { ...packageObj, version: newVersion },
-    { spaces: 2 }
+    { spaces: 2 },
   );
 
   await fs.writeJSON(
     packageLockPath,
     { ...packageLockObj, version: newVersion },
-    { spaces: 2 }
+    { spaces: 2 },
   );
 
   await execa('git', ['add', '.'], execaOptions);
@@ -96,7 +96,11 @@ const release = async (): Promise<void> => {
 
   await execa('git', ['push', '--tags'], execaOptions);
 
-  await execa('npm', ['publish', '--provenance', '--access', 'public'], execaOptions)
+  await execa(
+    'npm',
+    ['publish', '--provenance', '--access', 'public'],
+    execaOptions,
+  );
 };
 
 export default release;

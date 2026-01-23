@@ -3,6 +3,7 @@
     "allowJs": true,
     "declaration": true,
     "esModuleInterop": true,
+    "lib": ["es2022"],
     "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "dist",

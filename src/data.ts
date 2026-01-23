@@ -56,20 +56,20 @@ export const get = async (): Promise<Data> => {
       octokit.pulls.list.endpoint.merge({
         ...baseEndpointOptions,
         state: 'closed',
-      })
+      }),
     ),
     octokit.paginate(
-      octokit.repos.listTags.endpoint.merge(baseEndpointOptions)
+      octokit.repos.listTags.endpoint.merge(baseEndpointOptions),
     ),
     octokit.paginate(
-      octokit.repos.listCommits.endpoint.merge(baseEndpointOptions)
+      octokit.repos.listCommits.endpoint.merge(baseEndpointOptions),
     ),
   ]);
 
   const pulls = rawPulls.filter((pull) => Boolean(pull.merged_at));
 
   pulls.sort((a, b) =>
-    compareAsc(new Date(a.merged_at), new Date(b.merged_at))
+    compareAsc(new Date(a.merged_at), new Date(b.merged_at)),
   );
 
   const tags = await Promise.all(
@@ -93,7 +93,7 @@ export const get = async (): Promise<Data> => {
         date: tagCommit.committer.date,
         name: tag.name,
       };
-    })
+    }),
   );
 
   tags.sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)));

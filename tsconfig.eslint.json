@@ -4,5 +4,5 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": [".eslintrc.js", "scripts", "src", "test", "types"]
+  "include": ["eslint.config.js", "scripts", "src", "test", "types"]
 }
