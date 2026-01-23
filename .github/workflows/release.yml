@@ -1,6 +1,8 @@
 name: Release
 
 on:
+  schedule:
+    - cron: '0 9 * * 1' # Every Monday at 9:00 AM UTC
   workflow_dispatch:
     branches:
       - master
