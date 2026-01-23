@@ -1,5 +1,12 @@
 # Changelog
 
+## [v7.0.29](https://github.com/tanem/tanem-scripts/tree/v7.0.29) (2026-01-23)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.28...v7.0.29)
+
+#### :house: Internal
+
+- [#1684](https://github.com/tanem/tanem-scripts/pull/1684) Use trusted publishing ([@tanem](https://github.com/tanem))
+
 ## [v7.0.28](https://github.com/tanem/tanem-scripts/tree/v7.0.28) (2026-01-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.27...v7.0.28)
 
