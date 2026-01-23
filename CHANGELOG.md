@@ -1,5 +1,18 @@
 # Changelog
 
+## [v8.0.0](https://github.com/tanem/tanem-scripts/tree/v8.0.0) (2026-01-23)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.29...v8.0.0)
+
+#### :boom: Breaking Change
+
+- [#1687](https://github.com/tanem/tanem-scripts/pull/1687) Address security issues, upgrade deps, rework tests ([@tanem](https://github.com/tanem))
+
+#### :house: Internal
+
+- [#1682](https://github.com/tanem/tanem-scripts/pull/1682) Update actions/checkout action to v6 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1686](https://github.com/tanem/tanem-scripts/pull/1686) Fix warnings and some audit issues ([@tanem](https://github.com/tanem))
+- [#1685](https://github.com/tanem/tanem-scripts/pull/1685) Add release schedule ([@tanem](https://github.com/tanem))
+
 ## [v7.0.29](https://github.com/tanem/tanem-scripts/tree/v7.0.29) (2026-01-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.28...v7.0.29)
 
