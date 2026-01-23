@@ -7,7 +7,7 @@ import release from './release';
 
 const program = new Command();
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { description, version } = require('../package.json');
 
 program.version(version).name('tanem-scripts').description(description);
@@ -15,7 +15,7 @@ program.version(version).name('tanem-scripts').description(description);
 program.on('command:*', function () {
   console.error(
     'Invalid command: %s\nSee --help for a list of available commands.',
-    program.args.join(' ')
+    program.args.join(' '),
   );
   process.exit(1);
 });
@@ -23,7 +23,7 @@ program.on('command:*', function () {
 program
   .command('authors')
   .description(
-    'generates an alphabetised list of authors in a format suitable for inclusion in an AUTHORS file'
+    'generates an alphabetised list of authors in a format suitable for inclusion in an AUTHORS file',
   )
   .action(async () => {
     try {
@@ -45,7 +45,7 @@ program
   .description('generates a changelog using GitHub tags and pull requests')
   .option(
     '-f, --future-release <tag>',
-    'tag to use for PRs merged since the last published tag'
+    'tag to use for PRs merged since the last published tag',
   )
   .action(async (cmd) => {
     try {

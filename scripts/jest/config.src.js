@@ -9,6 +9,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
   testMatch: ['<rootDir>/test/*.test.ts'],
   testRunner: 'jest-jasmine2',
-  transform: { '^.+\\.ts$': 'ts-jest' },
-  transformIgnorePatterns: ['node_modules/(?!git-remote-origin-url)'],
+  transform: { '^.+\\.(ts|js)$': 'ts-jest' },
+  transformIgnorePatterns: [
+    'node_modules/(?!(@octokit|universal-user-agent|before-after-hook|git-remote-origin-url)/)',
+  ],
 };

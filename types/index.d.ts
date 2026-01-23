@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Polly } from '@pollyjs/core';
+export {};
 
 declare global {
   // The jasmine & jest globals are incompatible, so just the types required for
@@ -20,11 +19,5 @@ declare global {
     function getEnv(): Env;
 
     let fullName: string;
-  }
-
-  namespace NodeJS {
-    interface Global {
-      polly: Polly;
-    }
   }
 }

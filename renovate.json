@@ -28,12 +28,6 @@
         "git-remote-origin-url"
       ],
       "allowedVersions": "< 4.0.0"
-    },
-    {
-      "matchPackageNames": [
-        "@octokit/rest"
-      ],
-      "allowedVersions": "< 17.0.0"
     }
   ],
   "stabilityDays": 3

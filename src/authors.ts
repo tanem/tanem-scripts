@@ -16,7 +16,7 @@ const authors = async (): Promise<string> => {
     .reduce(
       (result, author) =>
         result.includes(author) ? result : [...result, author],
-      [] as string[]
+      [] as string[],
     );
 
   authors.sort();

@@ -1,6 +1,6 @@
 {
   "name": "tanem-scripts",
-  "version": "7.0.29",
+  "version": "7.12.0",
   "description": "Common scripts for my projects.",
   "author": "Tane Morgan (https://github.com/tanem)",
   "bin": {
@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^19.0.7",
+    "@octokit/rest": "^22.0.1",
     "commander": "^14.0.2",
     "date-fns": "^4.1.0",
     "execa": "^5.1.1",
@@ -44,9 +44,6 @@
     "semver": "^7.7.3"
   },
   "devDependencies": {
-    "@pollyjs/adapter-node-http": "6.0.6",
-    "@pollyjs/core": "6.0.6",
-    "@pollyjs/persister-fs": "6.0.6",
     "@types/fs-extra": "11.0.4",
     "@types/jest": "30.0.0",
     "@types/lolex": "5.1.6",
@@ -77,8 +74,7 @@
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .js,.ts",
     "release": "node dist/cli release",
-    "// test": "run-s check:* lint build test:*",
-    "test": "echo \"Tests temporarily disabled\"",
+    "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
     "test:src": "jest --config ./scripts/jest/config.src.js"
   }

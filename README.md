@@ -1,7 +1,7 @@
 # tanem-scripts
 
 [![npm version](https://img.shields.io/npm/v/tanem-scripts.svg?style=flat-square)](https://www.npmjs.com/package/tanem-scripts)
-[![build status](https://img.shields.io/github/workflow/status/tanem/tanem-scripts/CI?style=flat-square)](https://github.com/tanem/tanem-scripts/actions?query=workflow%3ACI)
+[![build status](https://img.shields.io/github/actions/workflow/status/tanem/tanem-scripts/ci.yml?branch=master&style=flat-square)](https://github.com/tanem/tanem-scripts/actions/workflows/ci.yml)
 [![coverage status](https://img.shields.io/codecov/c/github/tanem/tanem-scripts.svg?style=flat-square)](https://codecov.io/gh/tanem/tanem-scripts)
 [![npm downloads](https://img.shields.io/npm/dm/tanem-scripts.svg?style=flat-square)](https://www.npmjs.com/package/tanem-scripts)
 

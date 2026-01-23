@@ -46,7 +46,7 @@ const changelog = async ({ futureRelease }: Options = {}): Promise<string> => {
 
   cleanedPulls.map((p) => {
     const tag = cleanedTags.find((t) =>
-      isBefore(new Date(p.mergedAt), new Date(t.date))
+      isBefore(new Date(p.mergedAt), new Date(t.date)),
     );
     /* istanbul ignore else */
     if (tag) {
@@ -79,9 +79,9 @@ const changelog = async ({ futureRelease }: Options = {}): Promise<string> => {
               (result += tag.pulls[label].reduce(
                 (result, pull) =>
                   (result += `- [\#${pull.number}](https://github.com/${owner}/${repo}/pull/${pull.number}) ${pull.title} ([@${pull.userLogin}](${pull.userHtmlUrl}))\n`),
-                `\n#### ${labelHeadings[label]}\n\n`
+                `\n#### ${labelHeadings[label]}\n\n`,
               )),
-            ''
+            '',
           );
 
         return result;
