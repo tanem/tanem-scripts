@@ -1,5 +1,13 @@
 # Changelog
 
+## [v8.0.1](https://github.com/tanem/tanem-scripts/tree/v8.0.1) (2026-02-02)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.0...v8.0.1)
+
+#### :house: Internal
+
+- [#1689](https://github.com/tanem/tanem-scripts/pull/1689) Update typescript-eslint monorepo to v8.54.0 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1688](https://github.com/tanem/tanem-scripts/pull/1688) Update dependency prettier to v3.8.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v8.0.0](https://github.com/tanem/tanem-scripts/tree/v8.0.0) (2026-01-23)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v7.0.29...v8.0.0)
 
