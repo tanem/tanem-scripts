@@ -1,5 +1,15 @@
 # Changelog
 
+## [v8.0.2](https://github.com/tanem/tanem-scripts/tree/v8.0.2) (2026-02-09)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.1...v8.0.2)
+
+#### :house: Internal
+
+- [#1693](https://github.com/tanem/tanem-scripts/pull/1693) Update dependency semver to ^7.7.4 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1692](https://github.com/tanem/tanem-scripts/pull/1692) Update dependency @types/node to v24.10.11 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1691](https://github.com/tanem/tanem-scripts/pull/1691) Update dependency @types/node to v24.10.10 ([@renovate[bot]](https://github.com/apps/renovate))
+- [#1690](https://github.com/tanem/tanem-scripts/pull/1690) Update dependency commander to ^14.0.3 ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v8.0.1](https://github.com/tanem/tanem-scripts/tree/v8.0.1) (2026-02-02)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.0...v8.0.1)
 
