@@ -83,7 +83,7 @@ import { changelog } from 'tanem-scripts';
 
 ### release()
 
-Returns a `Promise` that will be resolved once the release script completes. If an error occurs during execution, the `Promise` is rejected with an `Error` object.
+Returns a `Promise` that resolves with `'released'` once the release script completes, or `'nothing-to-release'` if no pull requests have merged since the last published tag. If an error occurs during execution, the `Promise` is rejected with an `Error` object.
 
 **Example**
 
