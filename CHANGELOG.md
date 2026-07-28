@@ -1,5 +1,14 @@
 # Changelog
 
+## [v8.0.7](https://github.com/tanem/tanem-scripts/tree/v8.0.7) (2026-07-28)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.6...v8.0.7)
+
+#### :house: Internal
+
+- [#1706](https://github.com/tanem/tanem-scripts/pull/1706) fix: resolve dependabot alerts and unblock renovate lock file maintenance ([@tanem](https://github.com/tanem))
+- [#1705](https://github.com/tanem/tanem-scripts/pull/1705) fix: exit 0 when there is nothing to release ([@tanem](https://github.com/tanem))
+- [#1704](https://github.com/tanem/tanem-scripts/pull/1704) fix: upgrade minimatch to resolve ReDoS vulnerability ([@tanem](https://github.com/tanem))
+
 ## [v8.0.6](https://github.com/tanem/tanem-scripts/tree/v8.0.6) (2026-03-09)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.5...v8.0.6)
 
