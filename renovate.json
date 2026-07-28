@@ -4,15 +4,17 @@
     ":rebaseStalePrs",
     ":automergeAll",
     ":label(internal)",
-    ":masterIssue",
+    ":dependencyDashboard",
     ":enableVulnerabilityAlerts"
   ],
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "minimumReleaseAge": null
   },
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies"
       ],
       "rangeStrategy": "bump"
@@ -29,6 +31,5 @@
       ],
       "allowedVersions": "< 4.0.0"
     }
-  ],
-  "stabilityDays": 3
+  ]
 }
