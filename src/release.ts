@@ -12,7 +12,7 @@ import { get as getData } from './data';
 
 const execaOptions: execa.Options = { stdio: 'inherit' };
 
-const release = async (): Promise<void> => {
+const release = async (): Promise<'released' | 'nothing-to-release'> => {
   const { pulls, tags } = await getData();
 
   const latestTag = tags[tags.length - 1];
@@ -24,7 +24,7 @@ const release = async (): Promise<void> => {
     : pulls;
 
   if (pullsToRelease.length === 0) {
-    throw new Error('Nothing to release');
+    return 'nothing-to-release';
   }
 
   const labelsToRelease = [
@@ -101,6 +101,8 @@ const release = async (): Promise<void> => {
     ['publish', '--provenance', '--access', 'public'],
     execaOptions,
   );
+
+  return 'released';
 };
 
 export default release;

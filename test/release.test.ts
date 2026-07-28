@@ -75,7 +75,7 @@ describe('release validation', () => {
     );
   });
 
-  test('throws if nothing to release', async () => {
+  test("returns 'nothing-to-release' if there is nothing to release", async () => {
     const mockDataNoNewPulls = {
       ...mockDataWithLabels,
       tags: [
@@ -88,6 +88,6 @@ describe('release validation', () => {
     jest
       .spyOn(data, 'get')
       .mockResolvedValue(mockDataNoNewPulls as unknown as data.Data);
-    await expect(release()).rejects.toThrow('Nothing to release');
+    await expect(release()).resolves.toBe('nothing-to-release');
   });
 });

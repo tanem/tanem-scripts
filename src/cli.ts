@@ -71,7 +71,10 @@ program
   .description('publishes a package to npm')
   .action(async () => {
     try {
-      await release();
+      const result = await release();
+      if (result === 'nothing-to-release') {
+        process.stdout.write('Nothing to release\n');
+      }
     } catch (error) {
       console.error(error);
       process.exit(1);
