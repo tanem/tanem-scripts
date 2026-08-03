@@ -1,5 +1,12 @@
 # Changelog
 
+## [v8.0.8](https://github.com/tanem/tanem-scripts/tree/v8.0.8) (2026-08-03)
+[Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.7...v8.0.8)
+
+#### :house: Internal
+
+- [#1655](https://github.com/tanem/tanem-scripts/pull/1655) Lock file maintenance ([@renovate[bot]](https://github.com/apps/renovate))
+
 ## [v8.0.7](https://github.com/tanem/tanem-scripts/tree/v8.0.7) (2026-07-28)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.6...v8.0.7)
 
