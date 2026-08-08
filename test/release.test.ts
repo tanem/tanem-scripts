@@ -1,9 +1,7 @@
 jest.mock('../src/changelog');
-jest.mock('../src/authors');
 
 import { release } from '../src';
 import changelog from '../src/changelog';
-import authors from '../src/authors';
 import * as data from '../src/data';
 
 const mockDataWithLabels = {
@@ -49,9 +47,6 @@ describe('release validation', () => {
   beforeEach(() => {
     (changelog as jest.MockedFunction<typeof changelog>).mockResolvedValue(
       '# Changelog',
-    );
-    (authors as jest.MockedFunction<typeof authors>).mockResolvedValue(
-      'Author1',
     );
   });
 

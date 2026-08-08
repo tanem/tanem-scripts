@@ -1,5 +1,9 @@
 # Changelog
 
+This file is frozen history: it covers releases up to and including v8.0.8, and
+is not regenerated any more. This package is deprecated and nothing is released
+from here any more — see the [README](README.md) for the replacement.
+
 ## [v8.0.8](https://github.com/tanem/tanem-scripts/tree/v8.0.8) (2026-08-03)
 [Full Changelog](https://github.com/tanem/tanem-scripts/compare/v8.0.7...v8.0.8)
 

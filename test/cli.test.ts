@@ -11,20 +11,6 @@ describe('CLI integration tests', () => {
     }
   });
 
-  test('authors command produces valid output', () => {
-    const output = execSync(`${CLI_PATH} authors`, {
-      encoding: 'utf-8',
-      env: process.env,
-    });
-
-    // Should contain valid author entries
-    expect(output).toMatch(/[\w\s<>@\[\].-]+/);
-    expect(output.split('\n').length).toBeGreaterThan(0);
-
-    // Should contain at least one email address
-    expect(output).toMatch(/<[^>]+>/);
-  });
-
   test('changelog command produces valid markdown', () => {
     const output = execSync(`${CLI_PATH} changelog`, {
       encoding: 'utf-8',
