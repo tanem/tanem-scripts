@@ -6,7 +6,6 @@ import execa from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
 import semver from 'semver';
-import authors from './authors';
 import changelog from './changelog';
 import { get as getData } from './data';
 
@@ -70,9 +69,6 @@ const release = async (): Promise<'released' | 'nothing-to-release'> => {
     path.join(process.cwd(), 'CHANGELOG.md'),
     changelogContent,
   );
-
-  const authorsContent = await authors();
-  await fs.outputFile(path.join(process.cwd(), 'AUTHORS'), authorsContent);
 
   await fs.writeJSON(
     packagePath,

@@ -16,7 +16,6 @@
     "url": "git+https://github.com/tanem/tanem-scripts.git"
   },
   "keywords": [
-    "authors",
     "changelog",
     "changelog-generator",
     "cli",
@@ -28,7 +27,6 @@
     "node",
     "script",
     "scripts",
-    "shortlog",
     "typescript"
   ],
   "license": "MIT",
@@ -73,7 +71,6 @@
     "compile": "tsc -p tsconfig.base.json",
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint . --ext .js,.ts",
-    "release": "node dist/cli release",
     "test": "run-s check:* lint build test:*",
     "test:cjs": "jest --config ./scripts/jest/config.cjs.js",
     "test:src": "jest --config ./scripts/jest/config.src.js"

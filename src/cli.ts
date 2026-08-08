@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import authors from './authors';
 import changelog from './changelog';
 import release from './release';
 
@@ -19,26 +18,6 @@ program.on('command:*', function () {
   );
   process.exit(1);
 });
-
-program
-  .command('authors')
-  .description(
-    'generates an alphabetised list of authors in a format suitable for inclusion in an AUTHORS file',
-  )
-  .action(async () => {
-    try {
-      const result = await authors();
-      process.stdout.write(result);
-    } catch (error) {
-      console.error(error);
-      process.exit(1);
-    }
-  })
-  .on('--help', () => {
-    console.log(`
-Examples:
-  $ authors`);
-  });
 
 program
   .command('changelog')
